@@ -1,0 +1,57 @@
+.accordion {
+	border: solid 1px #c0c0c0;
+	margin-bottom: .125em;
+}
+
+.accordion-head {
+	border-bottom: solid 1px #c0c0c0;
+	cursor: pointer;
+	display: block;
+	padding: .5em;
+
+	a {
+		outline: none;
+	}
+
+}
+
+.accordion-body {
+	padding: 0 .5em;
+
+	&.collapse {
+		margin-top: -1px;
+	}
+
+}
+
+.trans, .collapse {
+	-webkit-transition: height 0.5s ease, width 0.5s ease;
+	-moz-transition: height 0.5s ease, width 0.5s ease;
+	-o-transition: height 0.5s ease, width 0.5s ease;
+	transition: height 0.5s ease, width 0.5s ease;
+}
+
+.expand {
+	display: block;
+	height: auto;
+	margin-top: 0;
+	overflow: hidden;
+	position: relative;
+	width: auto;
+}
+
+.collapse {
+	display: block;
+	height: auto;
+	margin-top: 0;
+	overflow: hidden;
+	position: relative;
+	width: auto;
+	height: 0;
+
+	&.width {
+		height: auto;
+		width: 0;
+	}
+
+}

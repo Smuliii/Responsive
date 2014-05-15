@@ -1,0 +1,72 @@
+/*
+ *  Make it responsive
+ */
+
+table {
+	margin: 1em 0;
+	max-width: 100%;
+	width: 100%;
+
+	th, td {
+		padding: .5em;
+		text-align: left;
+		vertical-align: top;
+	}
+
+}
+
+/*
+ *  Bordered tables
+ */
+
+.table-bordered {
+	border: solid 1px #c0c0c0;
+	border-left-width: 0;
+	border-collapse: separate;
+
+	th, td {
+		border-top: 1px solid #c0c0c0;
+		border-left: 1px solid #c0c0c0;
+	}
+
+	thead:first-child tr:first-child th, tbody:first-child tr:first-child td {
+		border-top-width: 0;
+	}
+
+}
+
+/*
+ *  Striped tables
+ */
+
+.table-striped tbody > tr:nth-child(odd) > {
+
+	td, th {
+		background-color: #e7e7e7;
+	}
+
+}
+
+.table-row-alt > {
+
+	td, th {
+		background-color: #e7e7e7;
+	}
+
+}
+
+/*
+ * Overflow helpers
+ */
+
+.table-scrollable {
+	margin: 1em 0;
+	overflow-y: hidden;
+	overflow: auto;
+	width: 100%;
+
+	table {
+		margin: 0;
+	}
+
+}
