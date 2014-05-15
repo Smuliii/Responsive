@@ -1,113 +1,113 @@
-/* 
- * Unordered and ordered lists 
+/*
+ * Unordered and ordered lists
  * Scale the padding/margin with the base font.
  */
 ul, ol {
-    margin: 1em 0;
-    padding-left: 2.5em;
+	margin: 1em 0;
+	padding-left: 2.5em;
 }
 
-    ul ul, ol ol {
-        margin: 0;
-    }
+	ul ul, ol ol {
+		margin: 0;
+	}
 
-    /* 
-     * No bullets on first level.
-     */
-    ul.no-bullets,
-    ol.no-bullets {
-        padding-left: 0;
-    }
+	/*
+	 * No bullets on first level.
+	 */
+	ul.no-bullets,
+	ol.no-bullets {
+		padding-left: 0;
+	}
 
-        ul.no-bullets > li,
-        ol.no-bullets > li {
-            list-style: none;
-        }
+		ul.no-bullets > li,
+		ol.no-bullets > li {
+			list-style: none;
+		}
 
-    /* 
-     * Coloured lists.
-     */
-    ul.colored, ol.colored {
-        padding-left: 40px;
-    }
+	/*
+	 * Coloured lists.
+	 */
+	ul.colored, ol.colored {
+		padding-left: 40px;
+	}
 
-        ul.colored > li, ol.colored > li {
-            list-style-type: none;
-            position: relative;
-        }
+		ul.colored > li, ol.colored > li {
+			list-style-type: none;
+			position: relative;
+		}
 
-            /*
-             * 1. Escaped unicode coloured circle.
-             * 2. Edit this property to change all colored class lists.
-             * 3. Normalize funky webkit margin
-             */
-            ul.colored > li:before,
-            ol.colored > li:before {
-                content: "\25CF"; /* 1 */
-                color: #00a9ec; /* 2 */
-                font-weight: bold;
-                font-size: 1em;
-                text-align: right;
-                position: absolute;
-                left: -1em;
-                top: 0;
-                text-decoration: none;
-                -webkit-margin-start: -.25em; /* 3 */
-            }
+			/*
+			 * 1. Escaped unicode coloured circle.
+			 * 2. Edit this property to change all colored class lists.
+			 * 3. Normalize funky webkit margin
+			 */
+			ul.colored > li:before,
+			ol.colored > li:before {
+				color: #00a9ec; /* 2 */
+				content: "\25CF"; /* 1 */
+				font-size: 1em;
+				font-weight: bold;
+				left: -1em;
+				-webkit-margin-start: -.25em; /* 3 */
+				position: absolute;
+				text-align: right;
+				text-decoration: none;
+				top: 0;
+			}
 
-    /* 
-     * Counter increment to replace standard numbers.
-     */
-    ol.colored {
-        counter-reset: foo;
-    }
+	/*
+	 * Counter increment to replace standard numbers.
+	 */
+	ol.colored {
+		counter-reset: foo;
+	}
 
-        ol.colored > li {
-            counter-increment: foo;
-        }
+		ol.colored > li {
+			counter-increment: foo;
+		}
 
-            /* 
-             * Use the :before pseudo element to supply numbers.
-             * 1. The counter value.
-             * 2. Normalize funky webkit margin
-             */
-            ol.colored > li:before {
-                content: counter(foo)"."; /* 1 */
-                left: -3.125em;
-                font-weight: normal;
-                width: 2.5em;
-                -webkit-margin-start: 0; /* 2 */
-            }
+			/*
+			 * Use the :before pseudo element to supply numbers.
+			 * 1. The counter value.
+			 * 2. Normalize funky webkit margin
+			 */
+			ol.colored > li:before {
+				content: counter(foo)"."; /* 1 */
+				font-weight: normal;
+				left: -3.125em;
+				-webkit-margin-start: 0; /* 2 */
+				width: 2.5em;
+			}
 
-/* 
+/*
  * Prevent dt and dd collapse.
  */
 dt, dd {
-    min-height: 1.4em;
+	min-height: 1.4em;
 }
 
 
 @media (min-width: 48em) {
 
-    /* Definition lists */
+	/* Definition lists */
 
-    /* 
- * Horizontally styled definition list 
+	/*
+ * Horizontally styled definition list
  */
 
-    .dl-horizontal > dt {
-        float: left;
-        clear: left;
-        width: 150px;
-        overflow: hidden;
-        text-align: right;
-        -ms-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+	.dl-horizontal > dt {
+		clear: left;
+		float: left;
+		overflow: hidden;
+		text-align: right;
+		-ms-text-overflow: ellipsis;
+		 -o-text-overflow: ellipsis;
+		    text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 150px;
+	}
 
-    .dl-horizontal > dd {
-        margin-left: 166px;
-    }
+	.dl-horizontal > dd {
+		margin-left: 166px;
+	}
 }

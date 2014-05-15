@@ -2,25 +2,25 @@
  * Image replacement
  */
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
 }
 
-    .ir:before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 150%;
-    }
+	.ir:before {
+		content: '';
+		display: block;
+		height: 150%;
+		width: 0;
+	}
 
 /*
  * Hide from both screen readers and browsers: h5bp.com/u
  */
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+	display: none !important;
+	visibility: hidden;
 }
 
 /*
@@ -28,37 +28,37 @@
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
-    /*
-     * Extends the .visuallyhidden class to allow the element to be focusable
-     * when navigated to via the keyboard: h5bp.com/p
-     */
+	/*
+	 * Extends the .visuallyhidden class to allow the element to be focusable
+	 * when navigated to via the keyboard: h5bp.com/p
+	 */
 
-    .visuallyhidden.focusable:active,
-    .visuallyhidden.focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-    }
+	.visuallyhidden.focusable:active,
+	.visuallyhidden.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
 .invisible {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 /*
@@ -66,116 +66,116 @@
  *
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
+ *	`contenteditable` attribute is included anywhere else in the document.
+ *	Otherwise it causes space to appear at the top and bottom of elements
+ *	that receive the `clearfix` class.
  * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
+ *	`:before` to contain the top-margins of child elements.
  */
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 
 /*
  * Float helpers
  */
 .push-left {
-    float: left !important;
+	float: left !important;
 }
 
 .push-right {
-    float: right !important;
+	float: right !important;
 }
 
 /*
  * Layout helpers
  */
 .block {
-    display: block !important;
+	display: block !important;
 }
 
 .inline-block {
-    display: inline-block !important;
+	display: inline-block !important;
 }
 
 .inline {
-    display: inline !important;
+	display: inline !important;
 }
 
 /*
  * Fade opacity with animation
  */
 .fade-out {
-    opacity: 0 !important;
+	opacity: 0 !important;
 }
 
 /*
  * Opacity helper to add to elements to allow fade animation
  */
 .fade-in {
-    opacity: 1 !important;
+	opacity: 1 !important;
 }
 
 .fade-out, .fade-in {
-    -moz-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	   -moz-transition: opacity 0.3s;
+		 -o-transition: opacity 0.3s;
+			transition: opacity 0.3s;
 }
 
 /*
- * Responsive helpers to toggle visibility. 
+ * Responsive helpers to toggle visibility.
  */
 
 .visible-xs,
 .visible-s,
 .visible-m,
 .visible-l {
-    display: none !important;
+	display: none !important;
 }
 
 @media (max-width: 47.99em) {
-    .hidden-xs {
-        display: none !important;
-    }
+	.hidden-xs {
+		display: none !important;
+	}
 
-    .visible-xs {
-        display: block !important;
-    }
+	.visible-xs {
+		display: block !important;
+	}
 
-    table.visible-xs {
-        display: table;
-    }
+	table.visible-xs {
+		display: table;
+	}
 
-    thead.visible-xs {
-        display: table-header-group !important;
-    }
+	thead.visible-xs {
+		display: table-header-group !important;
+	}
 
-    tfoot.visible-xs {
-        display: table-footer-group !important;
-    }
+	tfoot.visible-xs {
+		display: table-footer-group !important;
+	}
 
-    tr.visible-xs {
-        display: table-row !important;
-    }
+	tr.visible-xs {
+		display: table-row !important;
+	}
 
-    th.visible-xs,
-    td.visible-xs {
-        display: table-cell !important;
-    }
+	th.visible-xs,
+	td.visible-xs {
+		display: table-cell !important;
+	}
 
-    col.visible-xs {
-        display: table-column !important;
-    }
+	col.visible-xs {
+		display: table-column !important;
+	}
 
-    caption.visible-xs {
-        display: table-caption !important;
-    }
+	caption.visible-xs {
+		display: table-caption !important;
+	}
 }

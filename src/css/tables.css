@@ -1,46 +1,46 @@
-/* 
+/*
  *  Make it responsive
  */
 table {
-    max-width: 100%;
-    width: 100%;
-    margin: 1em 0;
+	margin: 1em 0;
+	max-width: 100%;
+	width: 100%;
 }
 
-    table th, table td {
-        padding: .5em;
-        text-align: left;
-        vertical-align: top;
-    }
+	table th, table td {
+		padding: .5em;
+		text-align: left;
+		vertical-align: top;
+	}
 
-/* 
+/*
  *  Bordered tables
  */
 .table-bordered {
-    border-collapse: separate;
-    border: solid 1px #c0c0c0;
-    border-left-width: 0;
+	border: solid 1px #c0c0c0;
+	border-left-width: 0;
+	border-collapse: separate;
 }
 
-    .table-bordered th,
-    .table-bordered td {
-        border-top: 1px solid #c0c0c0;
-        border-left: 1px solid #c0c0c0;
-    }
+	.table-bordered th,
+	.table-bordered td {
+		border-top: 1px solid #c0c0c0;
+		border-left: 1px solid #c0c0c0;
+	}
 
-    .table-bordered thead:first-child tr:first-child th,
-    .table-bordered tbody:first-child tr:first-child td {
-        border-top-width: 0;
-    }
+	.table-bordered thead:first-child tr:first-child th,
+	.table-bordered tbody:first-child tr:first-child td {
+		border-top-width: 0;
+	}
 
-/* 
+/*
  *  Striped tables
  */
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th,
 .table-row-alt > td,
 .table-row-alt > th {
-    background-color: #e7e7e7;
+	background-color: #e7e7e7;
 }
 
 
@@ -48,12 +48,12 @@ table {
  * Overflow helpers
  */
 .table-scrollable {
-    width: 100%;
-    margin: 1em 0;
-    overflow: auto;
-    overflow-y: hidden;
+	margin: 1em 0;
+	overflow-y: hidden;
+	overflow: auto;
+	width: 100%;
 }
 
-    .table-scrollable table {
-        margin: 0;
-    }
+	.table-scrollable table {
+		margin: 0;
+	}

@@ -2,24 +2,24 @@
  * Colors and padding.
  */
 pre, code, samp, kbd {
-    background-color: #f7f7f9;
-    border: 1px solid #c0c0c0;
-    color: #ad0d36;
-    padding: .5em;
+	background-color: #f7f7f9;
+	border: 1px solid #c0c0c0;
+	color: #ad0d36;
+	padding: .5em;
 }
 
 /*
  * Prevent overlap on concurrent lines.
  */
 code, samp, kbd {
-    padding: .067em .25em;
+	padding: .067em .25em;
 }
 
 /*
  * Prevent wrapping.
  */
 kbd {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 /*
@@ -27,27 +27,27 @@ kbd {
  */
 pre code,
 pre samp {
-    border: none;
-    padding: 0;
+	border: none;
+	padding: 0;
 }
 
 /*
  * Reassert no wrapping.
  */
 pre {
-    overflow-x: auto;
+	overflow-x: auto;
 }
 
-    pre code {
-        -ms-word-wrap: normal;
-        word-wrap: normal;
-        white-space: pre;
-    }
+	pre code {
+		white-space: pre;
+		-ms-word-wrap: normal;
+		    word-wrap: normal;
+	}
 
 /*
  * Fixed height with overflow.
  */
 .pre-scrollable {
-    max-height: 20em;
-    overflow-y: scroll;
+	max-height: 20em;
+	overflow-y: scroll;
 }

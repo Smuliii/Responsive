@@ -4,9 +4,9 @@
  */
 *, *:before, *:after,
 hr, input[type="search"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /*
@@ -15,17 +15,17 @@ hr, input[type="search"] {
  * versions prior to WP8 Update 3 (GDR3).
  */
 @-ms-viewport {
-    width: device-width;
+	width: device-width;
 }
 
 /*
  * 1. Use the iOS devices hardware accelerator to provide native scrolling.
  */
 html {
-    -webkit-overflow-scrolling: touch; /* 1 */
-    font-size: 100%;
-    line-height: 1.4;
-    color: #222;
+	color: #222;
+	font-size: 100%;
+	line-height: 1.4;
+	-webkit-overflow-scrolling: touch; /* 1 */
 }
 
 /*
@@ -34,8 +34,8 @@ html {
  * 2: Prevent page breaking.
  */
 h1, h2, h3, h4, h5, h6 {
-    text-rendering: optimizeLegibility; /* 1 */
-    page-break-after: avoid; /* 2 */
+	page-break-after: avoid; /* 2 */
+	text-rendering: optimizeLegibility; /* 1 */
 }
 
 /*
@@ -45,13 +45,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 /*
@@ -59,17 +59,17 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #c0c0c0;
-    margin: 1em 0;
-    padding: 0;
+	border-top: 1px solid #c0c0c0;
+	border: 0;
+	display: block;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
 }
 
 /*
  * Add query indicator to abbr
  */
 abbr {
-    cursor: help;
+	cursor: help;
 }
