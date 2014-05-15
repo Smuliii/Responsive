@@ -1,189 +1,189 @@
 /*
- * Responsive Dropdown 
+ * Responsive Dropdown
  */
 /*jshint expr:true*/
 /*global jQuery*/
 (function ($, w, ns) {
 
-    "use strict";
+	"use strict";
 
-    if (w.RESPONSIVE_DROPDOWN) {
-        return;
-    }
+	if (w.RESPONSIVE_DROPDOWN) {
+		return;
+	}
 
-    // General variables.
-    var supportTransition = w.getComputedStyle && $.support.transition,
-        eclick = "click" + ns,
-        eshow = "show" + ns,
-        eshown = "shown" + ns,
-        ehide = "hide" + ns,
-        ehidden = "hidden" + ns;
+	// General variables.
+	var supportTransition = w.getComputedStyle && $.support.transition,
+		eclick = "click" + ns,
+		eshow = "show" + ns,
+		eshown = "shown" + ns,
+		ehide = "hide" + ns,
+		ehidden = "hidden" + ns;
 
-    // Private methods.
-    var transition = function (method, startEvent, completeEvent) {
+	// Private methods.
+	var transition = function (method, startEvent, completeEvent) {
 
-        var self = this,
-            complete = function () {
+		var self = this,
+			complete = function () {
 
-                // The event to expose.
-                var eventToTrigger = $.Event(completeEvent);
+				// The event to expose.
+				var eventToTrigger = $.Event(completeEvent);
 
-                // Ensure the height/width is set to auto.
-                self.$element.removeClass("trans")[self.options.dimension]("");
+				// Ensure the height/width is set to auto.
+				self.$element.removeClass("trans")[self.options.dimension]("");
 
-                self.transitioning = false;
-                self.$element.trigger(eventToTrigger);
-            };
+				self.transitioning = false;
+				self.$element.trigger(eventToTrigger);
+			};
 
-        if (this.transitioning || startEvent.isDefaultPrevented()) {
-            return;
-        }
+		if (this.transitioning || startEvent.isDefaultPrevented()) {
+			return;
+		}
 
-        this.transitioning = true;
+		this.transitioning = true;
 
-        // Remove or add the expand classes.
-        this.$element.trigger(startEvent)[method]("collapse");
-        this.$element[startEvent.type === "show" ? "addClass" : "removeClass"]("expand trans");
+		// Remove or add the expand classes.
+		this.$element.trigger(startEvent)[method]("collapse");
+		this.$element[startEvent.type === "show" ? "addClass" : "removeClass"]("expand trans");
 
-        this.$element.onTransitionEnd(complete);
-    };
+		this.$element.onTransitionEnd(complete);
+	};
 
-    // The Dropdown class definition
-    var Dropdown = function (element, options) {
+	// The Dropdown class definition
+	var Dropdown = function (element, options) {
 
-        this.$element = $(element);
-        this.defaults = {
-            toggle: true,
-            dimension: "height"
-        };
-        this.options = $.extend({}, this.defaults, options);
-        this.$parent = null;
-        this.transitioning = null;
-        this.endSize = null;
+		this.$element = $(element);
+		this.defaults = {
+			toggle: true,
+			dimension: "height"
+		};
+		this.options = $.extend({}, this.defaults, options);
+		this.$parent = null;
+		this.transitioning = null;
+		this.endSize = null;
 
-        if (this.options.parent) {
-            this.$parent = this.$element.parents(this.options.parent + ":first");
-        }
+		if (this.options.parent) {
+			this.$parent = this.$element.parents(this.options.parent + ":first");
+		}
 
-        // Check to see if the plug-in is set to toggle and trigger 
-        // the correct internal method if so.
-        if (this.options.toggle) {
-            this.toggle();
-        }
-    };
+		// Check to see if the plug-in is set to toggle and trigger
+		// the correct internal method if so.
+		if (this.options.toggle) {
+			this.toggle();
+		}
+	};
 
-    Dropdown.prototype.show = function () {
+	Dropdown.prototype.show = function () {
 
-        if (this.transitioning || this.$element.hasClass("expand")) {
-            return;
-        }
+		if (this.transitioning || this.$element.hasClass("expand")) {
+			return;
+		}
 
-        var dimension = this.options.dimension,
-            actives = this.$parent && this.$parent.find(".dropdown-group:not(.collapse)"),
-            hasData;
+		var dimension = this.options.dimension,
+			actives = this.$parent && this.$parent.find(".dropdown-group:not(.collapse)"),
+			hasData;
 
-        if (actives && actives.length) {
-            hasData = actives.data("r.dropdown");
-            actives.dropdown("hide");
+		if (actives && actives.length) {
+			hasData = actives.data("r.dropdown");
+			actives.dropdown("hide");
 
-            if (!hasData) {
-                actives.data("r.dropdown", null);
-            }
-        }
+			if (!hasData) {
+				actives.data("r.dropdown", null);
+			}
+		}
 
-        // Set the height/width to zero then to the height/width
-        // so animation can take place.
-        this.$element[dimension](0);
+		// Set the height/width to zero then to the height/width
+		// so animation can take place.
+		this.$element[dimension](0);
 
-        if (supportTransition) {
+		if (supportTransition) {
 
-            // Calculate the height/width.
-            this.$element[dimension]("auto");
-            this.endSize = w.getComputedStyle(this.$element[0])[dimension];
+			// Calculate the height/width.
+			this.$element[dimension]("auto");
+			this.endSize = w.getComputedStyle(this.$element[0])[dimension];
 
-            // Reset to zero and force repaint.
-            this.$element[dimension](0).redraw();
-        }
+			// Reset to zero and force repaint.
+			this.$element[dimension](0).redraw();
+		}
 
-        this.$element[dimension](this.endSize || "");
+		this.$element[dimension](this.endSize || "");
 
-        transition.call(this, "removeClass", $.Event(eshow), eshown);
-    };
+		transition.call(this, "removeClass", $.Event(eshow), eshown);
+	};
 
-    Dropdown.prototype.hide = function () {
+	Dropdown.prototype.hide = function () {
 
-        if (this.transitioning || this.$element.hasClass("collapse")) {
-            return;
-        }
+		if (this.transitioning || this.$element.hasClass("collapse")) {
+			return;
+		}
 
-        // Reset the height/width and then reduce to zero.
-        var dimension = this.options.dimension,
-            size;
+		// Reset the height/width and then reduce to zero.
+		var dimension = this.options.dimension,
+			size;
 
-        if (supportTransition) {
+		if (supportTransition) {
 
-            // Set the height to auto, calculate the height/width and reset.
-            size = w.getComputedStyle(this.$element[0])[dimension];
+			// Set the height to auto, calculate the height/width and reset.
+			size = w.getComputedStyle(this.$element[0])[dimension];
 
-            // Reset the size and force repaint.
-            this.$element[dimension](size).redraw(); // Force reflow ;
-        }
+			// Reset the size and force repaint.
+			this.$element[dimension](size).redraw(); // Force reflow ;
+		}
 
-        this.$element.removeClass("expand");
-        this.$element[dimension](0);
-        transition.call(this, "addClass", $.Event(ehide), ehidden);
-    };
+		this.$element.removeClass("expand");
+		this.$element[dimension](0);
+		transition.call(this, "addClass", $.Event(ehide), ehidden);
+	};
 
-    Dropdown.prototype.toggle = function () {
-        // Run the correct command based on the presence of the class 'collapse'.
-        this[this.$element.hasClass("collapse") ? "show" : "hide"]();
-    };
+	Dropdown.prototype.toggle = function () {
+		// Run the correct command based on the presence of the class 'collapse'.
+		this[this.$element.hasClass("collapse") ? "show" : "hide"]();
+	};
 
-    // Plug-in definition 
-    $.fn.dropdown = function (options) {
-        return this.each(function () {
-            var $this = $(this),
-                data = $this.data("r.dropdown"),
-                opts = typeof options === "object" ? options : null;
+	// Plug-in definition
+	$.fn.dropdown = function (options) {
+		return this.each(function () {
+			var $this = $(this),
+				data = $this.data("r.dropdown"),
+				opts = typeof options === "object" ? options : null;
 
-            if (!data) {
-                // Check the data and reassign if not present.
-                $this.data("r.dropdown", (data = new Dropdown(this, opts)));
-            }
+			if (!data) {
+				// Check the data and reassign if not present.
+				$this.data("r.dropdown", (data = new Dropdown(this, opts)));
+			}
 
-            // Run the appropriate function if a string is passed.
-            if (typeof options === "string") {
-                data[options]();
-            }
-        });
-    };
+			// Run the appropriate function if a string is passed.
+			if (typeof options === "string") {
+				data[options]();
+			}
+		});
+	};
 
-    // Set the public constructor.
-    $.fn.dropdown.Constructor = Dropdown;
+	// Set the public constructor.
+	$.fn.dropdown.Constructor = Dropdown;
 
-    // No conflict.
-    var old = $.fn.dropdown;
-    $.fn.dropdown.noConflict = function () {
-        $.fn.dropdown = old;
-        return this;
-    };
+	// No conflict.
+	var old = $.fn.dropdown;
+	$.fn.dropdown.noConflict = function () {
+		$.fn.dropdown = old;
+		return this;
+	};
 
-    // Dropdown data api initialization.
-    $("body").on(eclick, ":attrStart(data-dropdown)", function (event) {
+	// Dropdown data api initialization.
+	$("body").on(eclick, ":attrStart(data-dropdown)", function (event) {
 
-        event.preventDefault();
+		event.preventDefault();
 
-        var $this = $(this),
-            data = $this.data("r.dropdownOptions"),
-            options = data || $.buildDataOptions($this, {}, "dropdown", "r"),
-            target = options.target || (options.target = $this.attr("href")),
-            $target = $(target),
-            params = $target.data("r.dropdown") ? "toggle" : options;
+		var $this = $(this),
+			data = $this.data("r.dropdownOptions"),
+			options = data || $.buildDataOptions($this, {}, "dropdown", "r"),
+			target = options.target || (options.target = $this.attr("href")),
+			$target = $(target),
+			params = $target.data("r.dropdown") ? "toggle" : options;
 
-        // Run the dropdown method.
-        $target.dropdown(params);
-    });
+		// Run the dropdown method.
+		$target.dropdown(params);
+	});
 
-    w.RESPONSIVE_DROPDOWN = true;
+	w.RESPONSIVE_DROPDOWN = true;
 
 }(jQuery, window, ".r.dropdown"));

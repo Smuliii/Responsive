@@ -1,101 +1,101 @@
 /*
- * Responsive Dismiss 
+ * Responsive Dismiss
  */
 
 /*global jQuery*/
 /*jshint expr:true*/
 (function ($, w, ns) {
 
-    "use strict";
+	"use strict";
 
-    if (w.RESPONSIVE_DISMISS) {
-        return;
-    }
+	if (w.RESPONSIVE_DISMISS) {
+		return;
+	}
 
-    // General variables.
-    var eclick = "click" + ns,
-        edismiss = "dismiss" + ns,
-        edismissed = "dismissed" + ns;
+	// General variables.
+	var eclick = "click" + ns,
+		edismiss = "dismiss" + ns,
+		edismissed = "dismissed" + ns;
 
-    // Dismiss class definition
-    var Dismiss = function (element, target) {
+	// Dismiss class definition
+	var Dismiss = function (element, target) {
 
-        this.$element = $(element);
-        this.$target = this.$element.parents(target);
-        this.dismissing = null;
-    };
+		this.$element = $(element);
+		this.$target = this.$element.parents(target);
+		this.dismissing = null;
+	};
 
-    Dismiss.prototype.close = function () {
+	Dismiss.prototype.close = function () {
 
-        var dismissEvent = $.Event(edismiss),
-            $target = this.$target,
-            self = this,
-            complete = function () {
+		var dismissEvent = $.Event(edismiss),
+			$target = this.$target,
+			self = this,
+			complete = function () {
 
-                self.dismissing = false;
-                $target.addClass("hidden").trigger($.Event(edismissed));
-            };
+				self.dismissing = false;
+				$target.addClass("hidden").trigger($.Event(edismissed));
+			};
 
-        $target.trigger(dismissEvent);
+		$target.trigger(dismissEvent);
 
-        if (this.dismissing || dismissEvent.isDefaultPrevented()) {
-            return;
-        }
+		if (this.dismissing || dismissEvent.isDefaultPrevented()) {
+			return;
+		}
 
-        this.dismissing = true;
+		this.dismissing = true;
 
-        $target.addClass("fade-in fade-out")
-               .redraw()
-               .removeClass("fade-in");
+		$target.addClass("fade-in fade-out")
+			   .redraw()
+			   .removeClass("fade-in");
 
-        // Do our callback
-        this.$target.onTransitionEnd(complete);
-    };
+		// Do our callback
+		this.$target.onTransitionEnd(complete);
+	};
 
-    // Plug-in definition 
-    $.fn.dismiss = function (target) {
+	// Plug-in definition
+	$.fn.dismiss = function (target) {
 
-        return this.each(function () {
+		return this.each(function () {
 
-            var $this = $(this),
-                data = $this.data("dismiss");
+			var $this = $(this),
+				data = $this.data("dismiss");
 
-            if (!data) {
-                // Check the data and reassign if not present.
-                $this.data("dismiss", (data = new Dismiss(this, target + ":first")));
-            }
+			if (!data) {
+				// Check the data and reassign if not present.
+				$this.data("dismiss", (data = new Dismiss(this, target + ":first")));
+			}
 
-            // Close the element.
-            data.close();
-        });
-    };
+			// Close the element.
+			data.close();
+		});
+	};
 
-    // Set the public constructor.
-    $.fn.dismiss.Constructor = Dismiss;
+	// Set the public constructor.
+	$.fn.dismiss.Constructor = Dismiss;
 
-    // No conflict.
-    var old = $.fn.dismiss;
-    $.fn.dismiss.noConflict = function () {
-        $.fn.dismiss = old;
-        return this;
-    };
+	// No conflict.
+	var old = $.fn.dismiss;
+	$.fn.dismiss.noConflict = function () {
+		$.fn.dismiss = old;
+		return this;
+	};
 
-    // Data API
-    $("body").on(eclick, ":attrStart(data-dismiss)", function (event) {
+	// Data API
+	$("body").on(eclick, ":attrStart(data-dismiss)", function (event) {
 
-        event.preventDefault();
+		event.preventDefault();
 
-        var $this = $(this),
-            data = $this.data("r.dismissOptions"),
-            options = data || $.buildDataOptions($this, {}, "dismiss", "r"),
-            target = options.target || (options.target = $this.attr("href"));
+		var $this = $(this),
+			data = $this.data("r.dismissOptions"),
+			options = data || $.buildDataOptions($this, {}, "dismiss", "r"),
+			target = options.target || (options.target = $this.attr("href"));
 
-        // Run the dismiss method.
-        if (target) {
-            $(this).dismiss(options.target);
-        }
-    });
+		// Run the dismiss method.
+		if (target) {
+			$(this).dismiss(options.target);
+		}
+	});
 
-    w.RESPONSIVE_DISMISS = true;
+	w.RESPONSIVE_DISMISS = true;
 
 }(jQuery, window, ".r.dismiss"));
