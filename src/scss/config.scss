@@ -1,0 +1,149 @@
+/* ---------------------------------------------------------------------- */
+/*	Variables
+/* ---------------------------------------------------------------------- */
+
+	/* -------------------------------------------------- */
+	/*	General
+	/* -------------------------------------------------- */
+
+	$site-background: #fff !default;
+	$site-width: 1140px !default;
+	$site-min-width: 320px !default;
+
+	$font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+	$font-size: 100% !default;
+	$line-height: 1.375 !default;
+	$text-color: #222 !default;
+
+	$selection-background: #b3d4fc !default;
+	$selection-color: #fff !default;
+
+	$link-color: #0000ee !default;
+	$link-text-decoration: underline !default;
+	$link-color-hover: #000 !default;
+	$link-text-decoration-hover: null !default;
+
+	/* -------------------------------------------------- */
+	/*	Typography
+	/* -------------------------------------------------- */
+
+	$h1-font-family: null !default;
+	$h1-font-size: null !default;
+	$h1-line-height: null !default;
+	$h1-text-decoration: null !default;
+	$h1-text-transform: null !default;
+
+	$h2-font-family: null !default;
+	$h2-font-size:  null !default;
+	$h2-line-height: null !default;
+	$h2-text-decoration: null !default;
+	$h2-text-transform: null !default;
+
+	$h3-font-family: null !default;
+	$h3-font-size: null !default;
+	$h3-line-height: null !default;
+	$h3-text-decoration: null !default;
+	$h3-text-transform: null !default;
+
+	$h4-font-family: null !default;
+	$h4-font-size: null !default;
+	$h4-line-height: null !default;
+	$h4-text-decoration: null !default;
+	$h4-text-transform: null !default;
+
+	$h5-font-family: null !default;
+	$h5-font-size: null !default;
+	$h5-line-height: null !default;
+	$h5-text-decoration: null !default;
+	$h5-text-transform: null !default;
+
+	$h6-font-family: null !default;
+	$h6-font-size: null !default;
+	$h6-line-height: null !default;
+	$h6-text-decoration: null !default;
+	$h6-text-transform: null !default;
+
+/* ---------------------------------------------------------------------- */
+/*	Mixins
+/* ---------------------------------------------------------------------- */
+
+	/* -------------------------------------------------- */
+	/*	Media Queries
+	/* -------------------------------------------------- */
+
+	@mixin bp($point) {
+		@if $point == xs {
+			@media (max-width: 47.99em) {
+				@content;
+			}
+		} @else if $point == s {
+			@media (min-width: 48em) and (max-width: 61.99em) {
+				@content;
+			}
+		} @else if $point == m {
+			@media (min-width: 62em) and (max-width: 74.99em) {
+				@content;
+			}
+		} @else if $point == l {
+			@media (min-width: 75em) {
+				@content;
+			}
+		}
+	}
+
+	@mixin bp-min($point) {
+		@if $point == s {
+			@media (min-width: 48em) {
+				@content;
+			}
+		} @else if $point == m {
+			@media (min-width: 62em) {
+				@content;
+			}
+		}
+	}
+
+	@mixin bp-max($point) {
+		@if $point == s {
+			@media (max-width: 61.99em) {
+				@content;
+			}
+		} @else if $point == m {
+			@media (max-width: 74.99em) {
+				@content;
+			}
+		}
+	}
+
+/* ---------------------------------------------------------------------- */
+/*	Partials
+/* ---------------------------------------------------------------------- */
+
+/* Basic styles */
+@import 'copyright',
+		'normalize',
+		'base',
+		'helpers-base',
+		'helpers',
+		'grid-base',
+		'grid-small',
+		'grid-medium',
+		'grid-large';
+
+/* Additional styles */
+@import	'forms';
+@import	'buttons';
+@import	'lists';
+@import	'tables';
+@import	'media';
+@import	'code';
+@import	'alerts';
+@import	'tablelist';
+@import	'tabs';
+@import	'dropdown';
+@import	'autosize';
+@import	'lightbox';
+@import	'carousel';
+
+/* Print styles */
+@import 'print';
