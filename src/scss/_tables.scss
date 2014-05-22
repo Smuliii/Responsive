@@ -18,14 +18,14 @@ table {
  *  Bordered tables
  */
 .table-bordered {
-	border: solid 1px #c0c0c0;
+	border: $table-bordered-border;
 	border-left-width: 0;
 	border-collapse: separate;
 
 	th,
 	td {
-		border-top: 1px solid #c0c0c0;
-		border-left: 1px solid #c0c0c0;
+		border-top: $table-bordered-border;
+		border-left: $table-bordered-border;
 	}
 
 	thead:first-child tr:first-child th,
@@ -38,7 +38,7 @@ table {
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th,
 .table-row-alt > td,
-.table-row-alt > th { background-color: #e7e7e7; }
+.table-row-alt > th { background-color: $table-striped-background-color; }
 
 /*
  * Overflow helpers

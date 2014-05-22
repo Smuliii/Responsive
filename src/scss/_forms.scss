@@ -37,10 +37,10 @@ select,
 textarea,
 input,
 .no-edit {
-	background-color: #fff;
-	border-radius: 0;
-	border: 1px solid #c0c0c0;
-	color: #222;
+	background: $form-input-background;
+	border: $form-input-border;
+	border-radius: $form-input-border-radius;
+	color: $form-input-color;
 	display: block;
 	font-family: inherit;
 	margin-bottom: 1em;
@@ -51,7 +51,9 @@ input,
 	 * Focus
 	 */
 	&:focus {
-		border: 1px solid #00a9ec;
+		background: $form-input-background-focus;
+		border-color: $form-input-border-color-focus;
+		color: $form-input-color-focus;
 		outline: 0;
 	}
 
@@ -61,9 +63,9 @@ input,
 	 * 2. Fix IOS 6/7 opacity issue
 	 */
 	&[disabled] {
-		background-color: #ebebeb;
-		border-color: #c0c0c0;
-		color: #c0c0c0;
+		background: $form-input-background-disabled;
+		border-color: $form-input-border-color-disabled;
+		color: $form-input-color-disabled;
 		cursor: not-allowed !important; /* 1 */
 		opacity: 1;
 		outline: 0 !important;
@@ -104,18 +106,19 @@ input {
 		padding: .25em \9;
 	}
 
-	&[type=checkbox] {
-		&:focus,
-		&:checked { border-color: #c0c0c0; }
-	}
-
 	&[type=range]:focus,
 	&[type=checkbox]:focus,
 	&[type=radio]:focus,
 	&[type=checkbox]:checked {
 		border-color: transparent;
-		outline: 1px solid #00a9ec;
+		outline: $form-input-border;
+		outline-color: $form-input-border-color-focus;
 		outline-offset: -1px;
+	}
+
+	&[type=checkbox] {
+		&:focus,
+		&:checked { border-color: #c0c0c0; }
 	}
 
 	/*
@@ -180,8 +183,10 @@ textarea {
  */
 .no-edit,
 [readonly] {
+	background-color: $form-input-background-readonly;
+	border-color: $form-input-border-color-readonly;
+	color: $form-input-color-readonly;
 	cursor: not-allowed;
-	border-color: #ebebeb;
 }
 
 /*
@@ -191,10 +196,10 @@ textarea {
  * 3. Firefox 19+
  * 4. IE10+
  */
-::-webkit-input-placeholder { color: #c0c0c0; /* 1 */ }
-:-moz-placeholder { color: #c0c0c0; /* 2 */ }
-::-moz-placeholder { color: #c0c0c0; /* 3 */ }
-:-ms-input-placeholder { color: #c0c0c0; /* 4 */ }
+::-webkit-input-placeholder { color: $form-placeholder; /* 1 */ }
+:-moz-placeholder { color: $form-placeholder; /* 2 */ }
+::-moz-placeholder { color: $form-placeholder; /* 3 */ }
+:-ms-input-placeholder { color: $form-placeholder; /* 4 */ }
 
 /*
  * Full Width

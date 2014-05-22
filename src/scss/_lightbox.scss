@@ -1,7 +1,6 @@
 .lightbox-on,
 .lightbox-lock > body {
-	-ms-touch-action: none;
-	    touch-action: none;
+	touch-action: none;
 	height: 100%;
 	overflow: hidden;
 }
@@ -37,6 +36,7 @@
 		vertical-align: middle;
 		width: 1px;
 	}
+
 	/*
 	 * 1: Embedded animated gif.
 	 */
@@ -63,7 +63,6 @@
  */
 .lightbox-header,
 .lightbox-footer {
-	color: #fff;
 	left: 0;
 	margin: -1px 0; /* 1 */
 	overflow: hidden;
@@ -75,9 +74,15 @@
 	z-index: 1;
 }
 
-.lightbox-header { padding-right: 4.555em; }
+.lightbox-header {
+	background: $lightbox-header-background;
+	color: $lightbox-header-color;
+	padding-right: 4.555em;
+}
 
 .lightbox-footer {
+	background: $lightbox-footer-background;
+	color: $lightbox-footer-color;
 	bottom: 0;
 	top: auto;
 }
@@ -113,13 +118,13 @@
 	}
 
 	> .media {
-		background-color: #111;
+		background-color: $lightbox-media-background-color;
 		margin: 0 auto;
 	}
 }
 
 .lightbox-content {
-	background-color: #fff;
+	background-color: $lightbox-content-background-color;
 	max-height: 100%;
 	overflow: auto;
 	padding: 1em;
@@ -127,24 +132,27 @@
 }
 
 .lightbox-close {
-	color: #fff;
+	color: $carousel-control-color;
 	display: inline-block;
 	font-size: 1.5em;
 	font-weight: bold;
 	padding: .83em;
 	position: fixed;
 	right: 0;
-	text-decoration: none;
+	text-decoration: $carousel-control-color-hover;
 	top: 0;
 	z-index: 2;
 
-	&:hover { text-decoration: underline; }
+	&:hover {
+		color: $carousel-control-color;
+		text-decoration: $carousel-control-text-decoration-hover;
+	}
 }
 
 .lightbox-direction {
 	&,
 	&:visited {
-		color: #fff;
+		color: $carousel-control-color;
 		display: block;
 		font-size: 2em;
 		font-weight: bold;
@@ -152,7 +160,7 @@
 		padding: .5em;
 		position: fixed;
 		text-align: center;
-		text-decoration: none;
+		text-decoration: $carousel-control-text-decoration;
 		top: 49%;
 		width: 2em;
 		z-index: 2;
@@ -163,5 +171,8 @@
 		right: 0;
 	}
 
-	&:hover { text-decoration: underline; }
+	&:hover {
+		color: $carousel-control-color;
+		text-decoration: $carousel-control-text-decoration-hover;
+	}
 }

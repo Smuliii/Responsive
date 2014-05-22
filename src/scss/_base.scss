@@ -39,6 +39,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $heading-font-family;
 	page-break-after: avoid; /* 2 */
 	text-rendering: optimizeLegibility; /* 1 */
 }
@@ -92,6 +93,13 @@ h6 {
 }
 
 /*
+ * Default margin for paragraph
+ */
+p {
+	margin: $paragraph-margin;
+}
+
+/*
  * Basic styles for links
  */
 a {
@@ -108,10 +116,10 @@ a {
  * A better looking default horizontal rule
  */
 hr {
-	border-top: 1px solid #c0c0c0;
+	border-top: $horizontal-line-height solid $horizontal-line-color;
 	border: 0;
 	display: block;
-	height: 1px;
+	height: $horizontal-line-height;
 	margin: 1em 0;
 	padding: 0;
 }
@@ -119,9 +127,9 @@ hr {
 /*
  * A better looking default blockquote
  */
-
 blockquote {
-	border-left: 5px solid #c0c0c0;
+	background: $blockquote-background;
+	border-left: $blockquote-border-left;
 	padding: 1em 1em 1em 1.5em;
 }
 

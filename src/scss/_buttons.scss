@@ -9,15 +9,16 @@ input[type=button],
 input[type=reset],
 [role=button] {
 	-webkit-appearance: none; /* 1 */
-	background-color: #dadada;
-	border-radius: 0; /* 1 */
-	border: solid 1px #c0c0c0;
-	color: #222;
+	background: $button-background;
+	border: $button-border;
+	border-radius: $button-border-radius; /* 1 */
+	color: $button-color;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1em;
 	line-height: normal;
 	margin-bottom: 0;
+	outline-offset: -1px;
 	padding: .5em 1em;
 	position: relative;
 	text-decoration: none !important;
@@ -27,20 +28,31 @@ input[type=reset],
 	 * Button states.
 	 */
 	&:hover {
-		background-color: #cdcdcd;
-		color: #222;
+		background-color: $button-background-hover;
+		color: $button-color-hover;
+		outline-color: $button-border-color-hover;
 	}
 
 	&:focus {
-		color: #222;
-		outline: 1px solid #00a9ec;
-		outline-offset: -1px;
+		background-color: $button-background-focus;
+		color: $button-color-focus;
+		outline-color: $button-border-color-focus;
 	}
 
 	&:active {
-		background-color: #e7e7e7;
-		color: #222;
-		outline: none;
+		background-color: $button-background-active;
+		color: $button-color-active;
+		outline-color: $button-border-color-active;
+	}
+
+	/*
+	 * Inline buttons designed for rendering next to inputs.
+	 * 1. Fix inline-block margin.
+	 * 2. Pad buttons.
+	 */
+	&.btn-inline {
+		margin-left: -.27em; /* 1 */
+		padding: .25em 1em; /* 2 */
 	}
 }
 
@@ -52,24 +64,11 @@ input[type=reset],
 	input[type=button][disabled],
 	input[type=reset][disabled],
 	[role=button].disabled {
-		background-color: #e7e7e7;
-		color: #5d5d5d;
+		background-color: $button-background-disabled;
+		border-color: $button-border-color-disabled;
+		color: $button-color-disabled;
 		cursor: not-allowed;
 		opacity: 1;
-	}
-
-	/*
-	 * Inline buttons designed for rendering next to inputs.
-	 * 1. Fix inline-block margin.
-	 * 2. Pad buttons.
-	 */
-	button.btn-inline,
-	input[type=submit].btn-inline,
-	input[type=button].btn-inline,
-	input[type=reset].btn-inline,
-	[role=button].btn-inline {
-		margin-left: -.27em; /* 1 */
-		padding: .25em 1em; /* 2 */
 	}
 
 /*

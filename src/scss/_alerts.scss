@@ -1,8 +1,8 @@
 .alert {
 	@extend .clearfix;
-	background-color: #fcf8e3;
-	border: 1px solid #f2e187;
-	color: #9c8611;
+	background-color: lighten($alert-color-scheme, 20);
+	border: 1px solid $alert-color-scheme;
+	color: darken($alert-color-scheme, 40);
 	margin: 1em 0;
 	padding: 0 2.17em 0 1em;
 

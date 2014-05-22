@@ -1,18 +1,22 @@
 .accordion {
-	border: solid 1px #c0c0c0;
+	border: solid 1px $dropdown-border-color;
 	margin-bottom: .125em;
 }
 
 .accordion-head {
-	border-bottom: solid 1px #c0c0c0;
-	cursor: pointer;
+	background-color: $dropdown-head-background-color;
+	border-bottom: solid 1px $dropdown-border-color;
 	display: block;
-	padding: .5em;
 
-	a { outline: none; }
+	a {
+		display: block;
+		outline: none;
+		padding: .5em;
+	}
 }
 
 .accordion-body {
+	background-color: $dropdown-body-background-color;
 	padding: 0 .5em;
 
 	&.collapse { margin-top: -1px; }

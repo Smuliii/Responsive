@@ -39,7 +39,7 @@ ol.colored { padding-left: 40px; }
  */
 ul.colored > li:before,
 ol.colored > li:before {
-	color: #00a9ec; /* 2 */
+	color: $list-colored-bullet; /* 2 */
 	content: '\25cf'; /* 1 */
 	font-size: 1em;
 	font-weight: bold;

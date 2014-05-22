@@ -23,9 +23,9 @@
 		}
 
 		> figcaption {
-			background-color: #111;
+			background-color: $carousel-caption-background-color;
 			bottom: 0;
-			color: #fff;
+			color: $carousel-caption-color;
 			padding: 1px 1em;
 			position: absolute;
 			width: 100%;
@@ -47,17 +47,25 @@
 		z-index: 3;
 
 		li {
-			background-color: transparent;
-			border: 2px solid #111;
+			background-color: $carousel-nav-background-color;
+			border: $carousel-nav-border;
 			cursor: pointer;
 			display: inline-block;
 			height: 1em;
 			margin: 1px;
 			text-indent: -9999px;
 			width: 1em;
-		}
 
-		.active { background-color: #fff; }
+			&:hover {
+				background-color: $carousel-nav-background-color-hover;
+				border-color: $carousel-nav-border-color-hover;
+			}
+
+			.active {
+				background-color: $carousel-nav-background-color-active;
+				border-color: $carousel-nav-border-color-active;
+			}
+		}
 	}
 
 	/*
@@ -117,7 +125,7 @@
 .carousel-control {
 	&,
 	&:visited {
-		color: #fff;
+		color: $carousel-control-color;
 		display: block;
 		font-size: 2em;
 		font-weight: bold;
@@ -126,7 +134,7 @@
 		padding: .5em;
 		position: absolute;
 		text-align: center;
-		text-decoration: none;
+		text-decoration: $carousel-control-text-decoration;
 		top: 40%;
 		width: 2em;
 		z-index: 3;
@@ -137,7 +145,10 @@
 		right: 0;
 	}
 
-	&:hover { text-decoration: underline; }
+	&:hover {
+		color: $carousel-control-color-hover;
+		text-decoration: $carousel-control-text-decoration-hover;
+	}
 }
 
 /*
