@@ -113,7 +113,7 @@
 		$form-input-color: #222 !default;
 
 		$form-input-background-focus: null !default;
-		$form-input-border-color-focus: 1px solid #00a9ec !default;
+		$form-input-border-color-focus: #00a9ec !default;
 		$form-input-color-focus: null !default;
 
 		$form-input-background-disabled: #ebebeb !default;
@@ -121,7 +121,7 @@
 		$form-input-color-disabled: #c0c0c0 !default;
 
 		$form-input-background-readonly: null !default;
-		$form-input-border-color-readonly: 1px solid #ebebeb !default;
+		$form-input-border-color-readonly: #ebebeb !default;
 		$form-input-color-readonly: null !default;
 
 		/* ------------------------------ */
@@ -159,7 +159,7 @@
 		/*	Alerts
 		/* ------------------------------ */
 
-		$alert-color-scheme: #87d0f2 !default;
+		$alert-color-scheme: #f2e187 !default;
 
 	/* -------------------------------------------------- */
 	/*	JS Plugins
@@ -213,7 +213,7 @@
 
 		$tabs-nav-border-color: #c0c0c0 !default;
 
-		$tabs-nav-item-background-color: #c0c0c0 !default;
+		$tabs-nav-item-background-color: null !default;
 		$tabs-nav-item-border-color: transparent !default;
 		$tabs-nav-item-color: null !default;
 
@@ -229,10 +229,16 @@
 		/*	Dropdown
 		/* ------------------------------ */
 
-		$dropdown-border-color: #c0c0c0 !default;
+		$accordion-border-color: #c0c0c0 !default;
 
-		$dropdown-head-background-color: null !default;
-		$dropdown-body-background-color: null !default;
+		$accordion-head-background-color: null !default;
+		$accordion-body-background-color: null !default;
+
+		$accordion-link-color: null !default;
+		$accordion-link-text-decoration: null !default;
+
+		$accordion-link-color-hover: null !default;
+		$accordion-link-text-decoration-hover: null !default;
 
 /* ---------------------------------------------------------------------- */
 /*	Mixins
