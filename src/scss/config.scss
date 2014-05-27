@@ -27,41 +27,53 @@
 
 	$heading-font-family: null !default;
 
+	$h1-color: null !default;
 	$h1-font-family: null !default;
 	$h1-font-size: null !default;
 	$h1-line-height: null !default;
 	$h1-text-decoration: null !default;
 	$h1-text-transform: null !default;
 
+	$h2-color: null !default;
 	$h2-font-family: null !default;
 	$h2-font-size:  null !default;
 	$h2-line-height: null !default;
 	$h2-text-decoration: null !default;
 	$h2-text-transform: null !default;
 
+	$h3-color: null !default;
 	$h3-font-family: null !default;
 	$h3-font-size: null !default;
 	$h3-line-height: null !default;
 	$h3-text-decoration: null !default;
 	$h3-text-transform: null !default;
 
+	$h4-color: null !default;
 	$h4-font-family: null !default;
 	$h4-font-size: null !default;
 	$h4-line-height: null !default;
 	$h4-text-decoration: null !default;
 	$h4-text-transform: null !default;
 
+	$h5-color: null !default;
 	$h5-font-family: null !default;
 	$h5-font-size: null !default;
 	$h5-line-height: null !default;
 	$h5-text-decoration: null !default;
 	$h5-text-transform: null !default;
 
+	$h6-color: null !default;
 	$h6-font-family: null !default;
 	$h6-font-size: null !default;
 	$h6-line-height: null !default;
 	$h6-text-decoration: null !default;
 	$h6-text-transform: null !default;
+
+	/* -------------------------------------------------- */
+	/*	Grid System
+	/* -------------------------------------------------- */
+
+	$grid-column-margin: 2% !default;
 
 	/* -------------------------------------------------- */
 	/*	Basic Elements
@@ -309,7 +321,7 @@
 				@if $level == 'xs' {
 					+ {
 						[class*=col-],
-						[class*=col-xs] + [class*=col-] { margin-left: 2%; }
+						[class*=col-xs] + [class*=col-] { margin-left: $grid-column-margin; }
 
 						[class*=col-s],
 						[class*=col-m],
@@ -321,7 +333,7 @@
 					[class*=col-xs-] + [class*=col-xs-12] { margin-left: 0; }
 				} @else {
 					+ {
-						[class*=col-#{$level}] { margin-left: 2%; }
+						[class*=col-#{$level}] { margin-left: $grid-column-margin; }
 
 						[class*=col-#{$level}-12] { margin-left: 0; }
 					}
@@ -347,21 +359,22 @@
 	/* -------------------------------------------------- */
 
 	@mixin grid-columns($level) {
-		$margin: 2%;
 		$column-width: (100% / 12);
-		$column-width-with-margins: (100% - ($margin * 11)) / 12;
+		$column-width-with-margin: (100% - ($grid-column-margin * 11)) / 12;
 
 		@for $i from 1 to 13 {
-			.col-#{$level}-#{$i} { width: $column-width-with-margins * $i + ($i - 1) * $margin; }
+			$temp-width: $column-width-with-margin * $i + ($grid-column-margin * $i);
+
+			.col-#{$level}-#{$i} { width: $temp-width - $grid-column-margin; }
 
 			@if $i != 12 {
-				.offset-#{$level}-#{$i} { margin-left: $column-width-with-margins * $i + ($margin * $i); }
+				.offset-#{$level}-#{$i} { margin-left: $temp-width; }
 
-				.row [class*=col-] + .offset-#{$level}-#{$i} { margin-left: $column-width-with-margins * $i + ($margin * $i) + $margin; }
+				.row [class*=col-] + .offset-#{$level}-#{$i} { margin-left: $temp-width + $grid-column-margin; }
 
-				.push-#{$level}-#{$i} { left: $column-width-with-margins * $i + ($margin * $i) }
+				.push-#{$level}-#{$i} { left: $temp-width }
 
-				.pull-#{$level}-#{$i} { right: $column-width-with-margins * $i + ($margin * $i); }
+				.pull-#{$level}-#{$i} { right: $temp-width; }
 			} @else {
 				.col-#{$level}-#{$i} { margin-left: 0; }
 			}
@@ -369,14 +382,16 @@
 
 		.no-gutter > {
 			@for $i from 1 to 12 {
-				.col-#{$level}-#{$i} { width: $column-width * $i; }
+				$temp-width: $column-width * $i;
+
+				.col-#{$level}-#{$i} { width: $temp-width; }
 
 				.offset-#{$level}-#{$i},
-				[class*=col-] + [class*=col-].offset-#{$level}-#{$i} { margin-left: $column-width * $i; }
+				[class*=col-] + [class*=col-].offset-#{$level}-#{$i} { margin-left: $temp-width; }
 
-				.push-#{$level}-#{$i} { left: $column-width * $i; }
+				.push-#{$level}-#{$i} { left: $temp-width; }
 
-				.pull-#{$level}-#{$i} { right: $column-width * $i; }
+				.pull-#{$level}-#{$i} { right: $temp-width; }
 			}
 		}
 	}
