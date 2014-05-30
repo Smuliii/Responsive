@@ -219,3 +219,6 @@ node_modules/
 
 dist/vendor/
 _site/
+
+#sass
+.sass-cache/
