@@ -290,11 +290,19 @@
 			@media (min-width: 62em) {
 				@content;
 			}
+		} @else if $point == l {
+			@media (min-width: 75em) {
+				@content;
+			}
 		}
 	}
 
 	@mixin bp-max($point) {
-		@if $point == s {
+		@if $point == xs {
+			@media (max-width: 47.99em) {
+				@content;
+			}
+		} @else if $point == s {
 			@media (max-width: 61.99em) {
 				@content;
 			}
@@ -340,7 +348,7 @@
 				}
 
 			@if $level != 'l' {
-				@include bp($level) {
+				@include bp-max($level) {
 
 					&.reset-#{$level}-only {
 						clear: both;
