@@ -1,0 +1,146 @@
+/* ---------------------------------------------------------------------- */
+/*	Media Queries
+/* ---------------------------------------------------------------------- */
+
+@mixin bp($point) {
+	@if $point == xs {
+		@media (max-width: 47.99em) {
+			@content;
+		}
+	} @else if $point == s {
+		@media (min-width: 48em) and (max-width: 61.99em) {
+			@content;
+		}
+	} @else if $point == m {
+		@media (min-width: 62em) and (max-width: 74.99em) {
+			@content;
+		}
+	} @else if $point == l {
+		@media (min-width: 75em) {
+			@content;
+		}
+	}
+}
+
+@mixin bp-min($point) {
+	@if $point == s {
+		@media (min-width: 48em) {
+			@content;
+		}
+	} @else if $point == m {
+		@media (min-width: 62em) {
+			@content;
+		}
+	} @else if $point == l {
+		@media (min-width: 75em) {
+			@content;
+		}
+	}
+}
+
+@mixin bp-max($point) {
+	@if $point == xs {
+		@media (max-width: 47.99em) {
+			@content;
+		}
+	} @else if $point == s {
+		@media (max-width: 61.99em) {
+			@content;
+		}
+	} @else if $point == m {
+		@media (max-width: 74.99em) {
+			@content;
+		}
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Grid System - Base
+/* ---------------------------------------------------------------------- */
+
+@mixin grid-base($level) {
+	.row [class*=col-] {
+		&.reset-#{$level} {
+			clear: both;
+			margin-left: 0 !important;
+		}
+
+		&[class*=push-#{$level}-right] { float: right; }
+
+			@if $level == 'xs' {
+				+ {
+					[class*=col-],
+					[class*=col-xs] + [class*=col-] { margin-left: $grid-column-margin; }
+
+					[class*=col-s],
+					[class*=col-m],
+					[class*=col-l],
+					[class*=col-xs-12] { margin-left: 0; }
+				}
+
+				[class*=col-xs-12] + [class*=col-xs-],
+				[class*=col-xs-] + [class*=col-xs-12] { margin-left: 0; }
+			} @else {
+				+ {
+					[class*=col-#{$level}] { margin-left: $grid-column-margin; }
+
+					[class*=col-#{$level}-12] { margin-left: 0; }
+				}
+			}
+
+		@if $level != 'l' {
+			@include bp-max($level) {
+
+				&.reset-#{$level}-only {
+					clear: both;
+					margin-left: 0 !important;
+				}
+
+				&[class*=push-#{$level}-right-only] { float: right; }
+
+			}
+		}
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Grid System - Columns
+/* ---------------------------------------------------------------------- */
+
+@mixin grid-columns($level) {
+	$column-width: (100% / 12);
+	$column-width-with-margin: (100% - ($grid-column-margin * 11)) / 12;
+
+	@for $i from 1 to 13 {
+		$temp-width: $column-width-with-margin * $i + ($grid-column-margin * $i);
+
+		.col-#{$level}-#{$i} { width: $temp-width - $grid-column-margin; }
+
+		@if $i != 12 {
+			.offset-#{$level}-#{$i} { margin-left: $temp-width; }
+
+			.row [class*=col-] + .offset-#{$level}-#{$i} { margin-left: $temp-width + $grid-column-margin; }
+
+			.push-#{$level}-#{$i} { left: $temp-width }
+
+			.pull-#{$level}-#{$i} { right: $temp-width; }
+		} @else {
+			.col-#{$level}-#{$i} { margin-left: 0; }
+		}
+	}
+
+	.no-gutter > {
+		@for $i from 1 to 12 {
+			$temp-width: $column-width * $i;
+
+			.col-#{$level}-#{$i} { width: $temp-width; }
+
+			.offset-#{$level}-#{$i},
+			[class*=col-] + [class*=col-].offset-#{$level}-#{$i} { margin-left: $temp-width; }
+
+			.push-#{$level}-#{$i} { left: $temp-width; }
+
+			.pull-#{$level}-#{$i} { right: $temp-width; }
+		}
+	}
+}

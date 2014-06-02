@@ -29,14 +29,13 @@ var jsPlugins = [
 
 // Styles
 gulp.task('css', function() {
-	return gulp.src('./src/scss/config.scss')
+	return gulp.src('./src/scss/base.scss')
 			   .pipe(compass({
 				   config_file : './config.rb',
-				   css         : './build/temp',
+				   css         : './build',
 				   sass        : './src/scss'
 			   }))
 			   .pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			   .pipe(rename({ basename : 'base' }))
 			   .pipe(gulp.dest('./build'))
 			   .pipe(rename({ suffix : '.min' }))
 			   .pipe(minifycss())
@@ -68,12 +67,6 @@ gulp.task('clean', function() {
 			   .pipe(clean());
 });
 
-// Clean temp
-gulp.task('clean-temp', ['css'], function() {
-	return gulp.src('./build/temp', { read : false })
-			     .pipe(clean());
-});
-
 // Copy compiled CSS/JS files to dist folder
 gulp.task('copy-build', ['css', 'js'], function(){
 	gulp.src('./build/*.css')
@@ -85,7 +78,7 @@ gulp.task('copy-build', ['css', 'js'], function(){
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('css', 'js', 'img', 'clean-temp', 'copy-build');
+    gulp.start('css', 'js', 'img', 'copy-build');
 });
 
 // Watch
