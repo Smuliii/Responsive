@@ -161,11 +161,11 @@
 			lazyOnDemand: true
 		};
 		this.options = $.extend({}, this.defaults, options);
-		this.$indicators = this.$element.children("ol:first");
 		this.paused = null;
 		this.interval = null;
 		this.sliding = null;
 		this.$items = null;
+		this.$indicators = [];
 		this.translationDuration = null;
 
 		if (this.options.pause === "hover") {
@@ -183,12 +183,25 @@
 			manageTouch.call(this);
 		}
 
+		var self = this;
 		if (this.options.lazyLoadImages && !this.options.lazyOnDemand) {
-			var self = this;
 			$(w).on("load", function () {
 				manageLazyImages.call(self.$element);
 			});
 		}
+
+		// Find and bind indicators.
+		$("[data-carousel-slide-to]").each(function () {
+			var $this = $(this),
+				$target = $($this.attr("data-carousel-target") || $this.attr("href"));
+
+			if ($target[0] === element) {
+				var $parent = $this.parents("ol:first");
+				if ($.inArray($parent[0], self.$indicators) === -1) {
+					self.$indicators.push($parent[0]);
+				}
+			}
+		});
 	};
 
 	Carousel.prototype.cycle = function (event) {
@@ -330,13 +343,15 @@
 
 		// Highlight the correct indicator.
 		if (this.$indicators.length) {
-			this.$indicators.find(".active").removeClass("active");
-
-			this.$element.one(eslid, function () {
-				var $nextIndicator = $(self.$indicators.children()[getActiveIndex.call(self)]);
-				if ($nextIndicator) {
-					$nextIndicator.addClass("active");
-				}
+			$.each(this.$indicators, function () {
+				var $this = $(this);
+				$this.find(".active").removeClass("active");
+				self.$element.one(eslid, function () {
+					var $nextIndicator = $($this.children()[getActiveIndex.call(self)]);
+					if ($nextIndicator) {
+						$nextIndicator.addClass("active");
+					}
+				});
 			});
 		}
 
@@ -435,6 +450,7 @@
 		if (carousel) {
 			typeof slideIndex === "number" ? carousel.to(slideIndex) : carousel[options.slide]();
 		}
+
 	}).on(eready, function () {
 
 		$(".carousel").each(function () {

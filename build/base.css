@@ -84,7 +84,7 @@
 	Copyright (c),  James South.
 	Licensed under the MIT License.
 	============================================================================== */
-/*! Responsive v2.5.5 | MIT License | responsivebp.com */
+/*! Responsive v2.5.7 | MIT License | responsivebp.com */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2800,14 +2800,11 @@ input[type=reset],
   color: #222222;
   cursor: pointer;
   display: inline-block;
-  font-size: 1em;
   line-height: normal;
   margin-bottom: 0;
   outline: 1px solid transparent;
   outline-offset: -1px;
   padding: .5em 1em;
-  position: relative;
-  text-decoration: none !important;
   -ms-touch-action: none;
   touch-action: none;
   /* 2 */
@@ -2826,7 +2823,6 @@ input[type=button]:hover,
 input[type=reset]:hover,
 [role=button]:hover {
   background-color: #cdcdcd;
-  color: #222222;
 }
 button:focus,
 input[type=submit]:focus,
@@ -2834,7 +2830,6 @@ input[type=button]:focus,
 input[type=reset]:focus,
 [role=button]:focus {
   background-color: #cdcdcd;
-  color: #222222;
   outline-color: #00a9ec;
 }
 button:active,
@@ -2843,7 +2838,6 @@ input[type=button]:active,
 input[type=reset]:active,
 [role=button]:active {
   background-color: #e7e7e7;
-  color: #222222;
   outline-color: transparent;
 }
 button.btn-inline,
@@ -2855,6 +2849,10 @@ input[type=reset].btn-inline,
   /* 1 */
   padding: .25em 1em;
   /* 2 */
+}
+
+[role=button]:hover, [role=button]:focus, [role=button]:active {
+  text-decoration: none;
 }
 
 /*
@@ -2870,15 +2868,13 @@ input[type=reset][disabled],
   color: #5d5d5d;
   cursor: not-allowed;
   opacity: 1;
+  /* 1 */
 }
 
 /*
  * Reset width for inputs
  */
-input[type=submit], input[type=reset], input[type=button],
-.form-no-grid input[type=submit],
-.form-no-grid input[type=reset],
-.form-no-grid input[type=button] {
+input[type=submit], input[type=reset], input[type=button] {
   max-width: none;
   width: auto;
 }
