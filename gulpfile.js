@@ -15,6 +15,7 @@ var es           = require('event-stream'),
 	cache        = require('gulp-cache'),
 	livereload   = require('gulp-livereload');
 
+// JS Files
 var jsPlugins = [
 	'./src/js/responsive.core.js',
 	'./src/js/responsive.autosize.js',
@@ -32,28 +33,28 @@ var jsPlugins = [
 gulp.task('css', function() {
 	return es.concat(
 		gulp.src('./src/scss/base.scss')
-			   .pipe(compass({
-				   config_file : './config.rb',
-				   css         : './dist/css',
-				   sass        : './src/scss'
-			   }))
-			   .pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			   .pipe(gulp.dest('./dist/css'))
-			   .pipe(rename({ suffix : '.min' }))
-			   .pipe(minifycss())
-			   .pipe(gulp.dest('./dist/css')),
+			.pipe(compass({
+				config_file : './config.rb',
+				css         : './dist/css',
+				sass        : './src/scss'
+			}))
+			.pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
+			.pipe(gulp.dest('./dist/css'))
+			.pipe(rename({ suffix : '.min' }))
+			.pipe(minifycss())
+			.pipe(gulp.dest('./dist/css')),
 
 		gulp.src('./src/scss/style.scss')
-			   .pipe(compass({
-				   config_file : './config.rb',
-				   css         : './dist/css',
-				   sass        : './src/scss'
-			   }))
-			   .pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			   .pipe(gulp.dest('./dist/css'))
-			   .pipe(rename({ suffix : '.min' }))
-			   .pipe(minifycss())
-			   .pipe(gulp.dest('./dist/css'))
+			.pipe(compass({
+				config_file : './config.rb',
+				css         : './dist/css',
+				sass        : './src/scss'
+			}))
+			.pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
+			.pipe(gulp.dest('./dist/css'))
+			.pipe(rename({ suffix : '.min' }))
+			.pipe(minifycss())
+			.pipe(gulp.dest('./dist/css'))
 	);
 });
 
@@ -61,21 +62,21 @@ gulp.task('css', function() {
 gulp.task('js', function() {
 	return es.concat(
 		gulp.src( jsPlugins )
-				   .pipe(jshint())
-				   .pipe(jshint.reporter('default'))
-				   .pipe(concat('plugins.js'))
-				   .pipe(gulp.dest('./dist/js'))
-				   .pipe(rename({ suffix: '.min' }))
-				   .pipe(uglify({ preserveComments: 'some' }))
-				   .pipe(gulp.dest('./dist/js')),
+			.pipe(jshint())
+			.pipe(jshint.reporter('default'))
+			.pipe(concat('plugins.js'))
+			.pipe(gulp.dest('./dist/js'))
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(uglify({ preserveComments: 'some' }))
+			.pipe(gulp.dest('./dist/js')),
 
 		gulp.src('./src/js/script.js')
-				   .pipe(jshint())
-				   .pipe(jshint.reporter('default'))
-				   .pipe(gulp.dest('./dist/js'))
-				   .pipe(rename({ suffix: '.min' }))
-				   .pipe(uglify({ preserveComments: 'some' }))
-				   .pipe(gulp.dest('./dist/js'))
+			.pipe(jshint())
+			.pipe(jshint.reporter('default'))
+			.pipe(gulp.dest('./dist/js'))
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(uglify({ preserveComments: 'some' }))
+			.pipe(gulp.dest('./dist/js'))
 	);
 });
 
@@ -94,7 +95,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('css', 'js', 'img');
+	gulp.start('css', 'js', 'img');
 });
 
 // Watch
@@ -112,7 +113,7 @@ gulp.task('watch', function() {
 	var server = livereload();
 
 	// Watch any files in dist/, reload on change
-	gulp.watch('./dist/**').on('change', function(file) {
+	gulp.watch('./dist/**/*').on('change', function(file) {
 		server.changed(file.path);
 	});
 });
