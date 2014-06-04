@@ -1,10 +1,10 @@
 /* ---------------------------------------------------------------------- */
+/*	Utilities
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
 /*	General Styles
 /* ---------------------------------------------------------------------- */
 /* used for calculations */
-/* ---------------------------------------------------------------------- */
-/*	Utilities
-/* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
 /*	Typography
 /* ---------------------------------------------------------------------- */
@@ -3620,8 +3620,7 @@ pre code {
 .carousel-fade .carousel-active {
   opacity: 1;
 }
-.carousel-fade .carousel-active .left,
-.carousel-fade .carousel-active .right {
+.carousel-fade .carousel-active.left, .carousel-fade .carousel-active.right {
   left: 0\9;
   -webkit-transform: none;
   -ms-transform: none;
@@ -3644,10 +3643,6 @@ pre code {
   list-style: none;
   margin-top: 0;
   padding: 0;
-}
-.tabs > ul,
-.tabs > ul *.tab-pane-active {
-  display: block;
 }
 .tabs > ul > li {
   float: left;
@@ -3673,6 +3668,10 @@ pre code {
   border: 1px solid silver;
   color: #454545;
   cursor: default;
+}
+.tabs > ul,
+.tabs > .tab-pane-active {
+  display: block;
 }
 
 .accordion {
