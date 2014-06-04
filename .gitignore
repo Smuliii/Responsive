@@ -217,6 +217,9 @@ pip-log.txt
 #node
 node_modules/
 
+#bower
+bower_components/
+
 dist/vendor/
 _site/
 
