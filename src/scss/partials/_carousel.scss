@@ -183,8 +183,8 @@
 	.carousel-active {
 		opacity: 1;
 
-		.left,
-		.right {
+		&.left,
+		&.right {
 			left: 0\9;
 			transform: none;
 			opacity: 0;

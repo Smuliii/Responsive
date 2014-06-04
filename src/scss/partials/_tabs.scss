@@ -11,9 +11,6 @@
 			margin-top: 0;
 			padding: 0;
 
-			&,
-			*.tab-pane-active { display: block; }
-
 			> li {
 				float: left;
 				margin-bottom: -1px;
@@ -49,5 +46,8 @@
 				}
 			}
 		}
+
+		ul,
+		.tab-pane-active { display: block; }
 	}
 }
