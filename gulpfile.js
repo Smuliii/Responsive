@@ -34,26 +34,26 @@ gulp.task('css', function() {
 		gulp.src('./src/scss/base.scss')
 			   .pipe(compass({
 				   config_file : './config.rb',
-				   css         : './build',
+				   css         : './dist/css',
 				   sass        : './src/scss'
 			   }))
 			   .pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			   .pipe(gulp.dest('./build'))
+			   .pipe(gulp.dest('./dist/css'))
 			   .pipe(rename({ suffix : '.min' }))
 			   .pipe(minifycss())
-			   .pipe(gulp.dest('./build')),
+			   .pipe(gulp.dest('./dist/css')),
 
 		gulp.src('./src/scss/style.scss')
 			   .pipe(compass({
 				   config_file : './config.rb',
-				   css         : './build',
+				   css         : './dist/css',
 				   sass        : './src/scss'
 			   }))
 			   .pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			   .pipe(gulp.dest('./build'))
+			   .pipe(gulp.dest('./dist/css'))
 			   .pipe(rename({ suffix : '.min' }))
 			   .pipe(minifycss())
-			   .pipe(gulp.dest('./build'))
+			   .pipe(gulp.dest('./dist/css'))
 	);
 });
 
@@ -64,18 +64,18 @@ gulp.task('js', function() {
 				   .pipe(jshint())
 				   .pipe(jshint.reporter('default'))
 				   .pipe(concat('plugins.js'))
-				   .pipe(gulp.dest('./build'))
+				   .pipe(gulp.dest('./dist/js'))
 				   .pipe(rename({ suffix: '.min' }))
 				   .pipe(uglify({ preserveComments: 'some' }))
-				   .pipe(gulp.dest('./build')),
+				   .pipe(gulp.dest('./dist/js')),
 
 		gulp.src('./src/js/script.js')
 				   .pipe(jshint())
 				   .pipe(jshint.reporter('default'))
-				   .pipe(gulp.dest('./build'))
+				   .pipe(gulp.dest('./dist/js'))
 				   .pipe(rename({ suffix: '.min' }))
 				   .pipe(uglify({ preserveComments: 'some' }))
-				   .pipe(gulp.dest('./build'))
+				   .pipe(gulp.dest('./dist/js'))
 	);
 });
 
@@ -88,22 +88,13 @@ gulp.task('img', function() {
 
 // Clean
 gulp.task('clean', function() {
-	return gulp.src(['./build/*', './dist/css/**/*.css', './dist/js/plugins*.js', './dist/img/**/*'], { read : false })
+	return gulp.src(['./dist/css/base*.css', './dist/css/style*.css', './dist/js/plugins*.js', './dist/img/**/*'], { read : false })
 			   .pipe(clean());
-});
-
-// Copy compiled CSS/JS files to dist folder
-gulp.task('copy-build', ['css', 'js'], function(){
-	gulp.src('./build/*.css')
-		.pipe(gulp.dest('./dist/css'));
-
-	gulp.src('./build/*.js')
-		.pipe(gulp.dest('./dist/js'));
 });
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('css', 'js', 'img', 'copy-build');
+    gulp.start('css', 'js', 'img');
 });
 
 // Watch
