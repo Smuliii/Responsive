@@ -112,7 +112,7 @@ gulp.task('watch', function() {
 	var server = livereload();
 
 	// Watch any files in dist/, reload on change
-	gulp.watch(['./dist/**']).on('change', function(file) {
+	gulp.watch('./dist/**').on('change', function(file) {
 		server.changed(file.path);
 	});
 });
