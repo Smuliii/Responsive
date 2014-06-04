@@ -1,4 +1,21 @@
 /* ---------------------------------------------------------------------- */
+/*	General Styles
+/* ---------------------------------------------------------------------- */
+
+$site-background: #fff !default;
+$site-width: 1140px !default;
+$site-min-width: 320px !default;
+
+$base-font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+$base-font-size: 100% !default;
+$base-font-size-px: 16px !default; /* used for calculations */
+$base-line-height: 1.375 !default;
+$base-text-color: #222 !default;
+
+$selection-background: #b3d4fc !default;
+$selection-color: #fff !default;
+
+/* ---------------------------------------------------------------------- */
 /*	Typography
 /* ---------------------------------------------------------------------- */
 
