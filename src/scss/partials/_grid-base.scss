@@ -7,6 +7,12 @@
 	.fixed .container { width: $site-width; /* Manages width in a single place */ }
 }
 
+/*
+ * Clearfix: contain floats
+ */
+.row { @extend .clearfix; }
+
+/* Columns */
 [class*=col-] {
 	display: block;
 	float: left;
@@ -15,16 +21,8 @@
 	width: 100%;
 }
 
+.no-gutter.pad-gutter > [class*=col-] { padding: 0 1%; }
+
 @include grid-base(xs);
-
-.row {
-	@extend .clearfix;
-
-	&.no-gutter {
-		&.pad-gutter > [class*=col-] { padding: 0 1%; }
-
-		> [class*=col-] + [class*=col-] { margin-left: 0; }
-	}
-}
 
 @include grid-columns(xs);
