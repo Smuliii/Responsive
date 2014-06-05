@@ -3,6 +3,7 @@ var gulp = require('gulp');
 
 // Load plugins
 var es           = require('event-stream'),
+	plumber      = require('gulp-plumber'),
 	compass      = require('gulp-compass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifycss    = require('gulp-minify-css'),
@@ -33,6 +34,7 @@ var jsPlugins = [
 gulp.task('css', function() {
 	return es.concat(
 		gulp.src('./src/scss/base.scss')
+			.pipe(plumber())
 			.pipe(compass({
 				config_file : './config.rb',
 				css         : './dist/css',
@@ -45,6 +47,7 @@ gulp.task('css', function() {
 			.pipe(gulp.dest('./dist/css')),
 
 		gulp.src('./src/scss/style.scss')
+			.pipe(plumber())
 			.pipe(compass({
 				config_file : './config.rb',
 				css         : './dist/css',
@@ -62,6 +65,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
 	return es.concat(
 		gulp.src( jsPlugins )
+			.pipe(plumber())
 			.pipe(jshint())
 			.pipe(jshint.reporter('default'))
 			.pipe(concat('plugins.js'))
@@ -71,6 +75,7 @@ gulp.task('js', function() {
 			.pipe(gulp.dest('./dist/js')),
 
 		gulp.src('./src/js/script.js')
+			.pipe(plumber())
 			.pipe(jshint())
 			.pipe(jshint.reporter('default'))
 			.pipe(gulp.dest('./dist/js'))
@@ -83,6 +88,7 @@ gulp.task('js', function() {
 // Images
 gulp.task('img', function() {
 	return gulp.src('./src/img/**/*')
+			   .pipe(plumber())
 			   .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
 			   .pipe(gulp.dest('./dist/img'));
 });
@@ -90,6 +96,7 @@ gulp.task('img', function() {
 // Clean
 gulp.task('clean', function() {
 	return gulp.src(['./dist/css/base*.css', './dist/css/style*.css', './dist/js/plugins*.js', './dist/img/**/*'], { read : false })
+			   .pipe(plumber())
 			   .pipe(clean());
 });
 
