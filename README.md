@@ -3,7 +3,6 @@
 
 ###Bootstrap and Foundation are too heavy.
 
-
 They're great for prototyping but every time you start a real, front-facing, project with them you have to overwrite lots of designer styles that do nothing to add to the functionality of the website. That's annoying!
 
 **Responsive** has been built with that in mind. It has been specifically designed and coded to be as lightweight as possible to prevent the need to undo styles set by the framework itself and allow developers to write efficient code and speed up development time.
@@ -20,7 +19,6 @@ Responsives' documentation, included in the [gh-pages](https://github.com/Respon
  - **If you are running Windows** please read this [unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems.
 2. From the root `/Responsive` directory, run `jekyll serve --baseurl '' --watch` in the command line.
  - Open [http://localhost:4000](http://localhost:4000) in your browser to view the compiled docs.
-
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
@@ -47,16 +45,6 @@ There are three types of build available:
 2. `gulp watch` For debug purposes. Compiles the framework to the **build** folder and watches for further changes
 3. `gulp release` Compiles the framework to the **build** folder and zips up the build in the **dist** folder for release.
 
-###Links
-
-1. node.js: http://nodejs.org/
-3. gulp.js: http://gulpjs.com/
-3. Bower: http://bower.io/
-4. Ruby: http://rubyinstaller.org/
-5. Compass: http://compass-style.org/
-6. Python: https://www.python.org/
-7. Git: http://git-scm.com/
-
 ##Bugs and feature requests
 
 Have a bug or a feature request? Please open a new [issue](https://github.com/JimBobSquarePants/Responsive/issues) or even better submit a pull request. Before opening any issue, please search for existing issues and read the Issue Guidelines, written by [Nicolas Gallagher](https://github.com/necolas/).
@@ -72,3 +60,24 @@ Follow [@responsivebp](http://twitter.com/responsivebp) on Twitter.
 ###Copyright and license
 
 Copyright 2013 James South under the [MIT license](http://opensource.org/licenses/MIT).
+
+***
+
+# How to use this fork
+
+More detailed instructions coming soon...
+
+### Installation
+
+First of all, you need to install these:
+
+1. Git: http://git-scm.com/
+2. node.js: http://nodejs.org/
+3. gulp.js: http://gulpjs.com/
+4. Bower: http://bower.io/
+5. Ruby: http://rubyinstaller.org/
+6. Compass: http://compass-style.org/
+
+### Usage
+
+Just run `gulp watch` and start coding!
