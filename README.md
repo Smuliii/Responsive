@@ -26,7 +26,7 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 ##Contributing
 
-Contribution is most welcome, that's the whole idea! Together as a community we can build a boilerplate for building responsive sites that will ensure that high standards can be delivered across all devices.   
+Contribution is most welcome, that's the whole idea! Together as a community we can build a boilerplate for building responsive sites that will ensure that high standards can be delivered across all devices.
 
 Please adhere to existing JavaScript and CSS styles though when submitting code and ensure that you test thoroughly on multiple devices, we don't want another Semicolongate ;)
 
@@ -43,9 +43,19 @@ If you are adding new functionality to the build process use:
 
 There are three types of build available:
 
- 1. `gulp` Compiles the framework to the **build** folder.
- 2. `gulp watch` For debug purposes. Compiles the framework to the **build** folder and watches for further changes
- 3. `gulp release` Compiles the framework to the **build** folder and zips up the build in the **dist** folder for release.
+1. `gulp` Compiles the framework to the **build** folder.
+2. `gulp watch` For debug purposes. Compiles the framework to the **build** folder and watches for further changes
+3. `gulp release` Compiles the framework to the **build** folder and zips up the build in the **dist** folder for release.
+
+###Links
+
+1. node.js: http://nodejs.org/
+3. gulp.js: http://gulpjs.com/
+3. Bower: http://bower.io/
+4. Ruby: http://rubyinstaller.org/
+5. Compass: http://compass-style.org/
+6. Python: https://www.python.org/
+7. Git: http://git-scm.com/
 
 ##Bugs and feature requests
 
