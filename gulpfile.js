@@ -1,126 +1,129 @@
-// Load gulp
-var gulp = require('gulp');
+// Define paths
+var basePath = {
+		src  : './src/',
+		dest : './dist/'
+	},
+	path = {
+		css : {
+			src  : basePath.src + 'scss/',
+			dest : basePath.dest + 'css/'
+		},
+		js : {
+			src  : basePath.src + 'js/',
+			dest : basePath.dest + 'js/'
+		},
+		img : {
+			src  : basePath.src + 'img/',
+			dest : basePath.dest + 'img/'
+		}
+	};
 
-// Load plugins
-var es           = require('event-stream'),
-	plumber      = require('gulp-plumber'),
-	compass      = require('gulp-compass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minifycss    = require('gulp-minify-css'),
-	jshint       = require('gulp-jshint'),
-	uglify       = require('gulp-uglify'),
-	imagemin     = require('gulp-imagemin'),
-	rename       = require('gulp-rename'),
-	clean        = require('gulp-clean'),
-	concat       = require('gulp-concat'),
-	cache        = require('gulp-cache'),
-	livereload   = require('gulp-livereload');
-
-// JS Files
+// Define JS plugins
 var jsPlugins = [
-	'./src/js/responsive.core.js',
-	'./src/js/responsive.autosize.js',
-	'./src/js/responsive.carousel.js',
-	'./src/js/responsive.dismiss.js',
-	'./src/js/responsive.dropdown.js',
-	'./src/js/responsive.lightbox.js',
-	'./src/js/responsive.table.js',
-	'./src/js/responsive.tabs.js',
+		path.js.src + 'responsive.core.js',
+		path.js.src + 'responsive.autosize.js',
+		path.js.src + 'responsive.carousel.js',
+		path.js.src + 'responsive.dismiss.js',
+		path.js.src + 'responsive.dropdown.js',
+		path.js.src + 'responsive.lightbox.js',
+		path.js.src + 'responsive.table.js',
+		path.js.src + 'responsive.tabs.js',
+		path.js.src + 'jquery.doubletaptogo.js'
+	];
 
-	'./src/js/jquery.doubletaptogo.js'
-];
+// Load gulp and plugins
+var es      = require('event-stream'),
+	gulp    = require('gulp'),
+	plugins = require('gulp-load-plugins')();
 
-// Styles
+// Compile SASS files
 gulp.task('css', function() {
-	return es.concat(
-		gulp.src('./src/scss/base.scss')
-			.pipe(plumber())
-			.pipe(compass({
-				config_file : './config.rb',
-				css         : './dist/css',
-				sass        : './src/scss'
-			}))
-			.pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			.pipe(gulp.dest('./dist/css'))
-			.pipe(rename({ suffix : '.min' }))
-			.pipe(minifycss())
-			.pipe(gulp.dest('./dist/css')),
 
-		gulp.src('./src/scss/style.scss')
-			.pipe(plumber())
-			.pipe(compass({
-				config_file : './config.rb',
-				css         : './dist/css',
-				sass        : './src/scss'
-			}))
-			.pipe(autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
-			.pipe(gulp.dest('./dist/css'))
-			.pipe(rename({ suffix : '.min' }))
-			.pipe(minifycss())
-			.pipe(gulp.dest('./dist/css'))
-	);
+	return gulp.src(path.css.src + 'style.scss')
+			   .pipe(plugins.plumber())
+			   .pipe(plugins.compass({
+				   config_file : './config.rb',
+				   css         : path.css.dest,
+				   sass        : path.css.src
+			   }))
+			   .pipe(plugins.autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade : true }))
+			   .pipe(gulp.dest(path.css.dest))
+			   .pipe(plugins.rename({ suffix : '.min' }))
+			   .pipe(plugins.minifyCss())
+			   .pipe(gulp.dest(path.css.dest));
+
 });
 
-// Scripts
+// Minify JS files
 gulp.task('js', function() {
+
 	return es.concat(
 		gulp.src( jsPlugins )
-			.pipe(plumber())
-			.pipe(jshint())
-			.pipe(jshint.reporter('default'))
-			.pipe(concat('plugins.js'))
-			.pipe(gulp.dest('./dist/js'))
-			.pipe(rename({ suffix: '.min' }))
-			.pipe(uglify({ preserveComments: 'some' }))
-			.pipe(gulp.dest('./dist/js')),
+			.pipe(plugins.plumber())
+			.pipe(plugins.jshint())
+			.pipe(plugins.jshint.reporter('default'))
+			.pipe(plugins.concat('plugins.js'))
+			.pipe(gulp.dest(path.js.dest))
+			.pipe(plugins.rename({ suffix : '.min' }))
+			.pipe(plugins.uglify({ preserveComments : 'some' }))
+			.pipe(gulp.dest(path.js.dest)),
 
-		gulp.src('./src/js/script.js')
-			.pipe(plumber())
-			.pipe(jshint())
-			.pipe(jshint.reporter('default'))
-			.pipe(gulp.dest('./dist/js'))
-			.pipe(rename({ suffix: '.min' }))
-			.pipe(uglify({ preserveComments: 'some' }))
-			.pipe(gulp.dest('./dist/js'))
+		gulp.src(path.js.src + 'script.js')
+			.pipe(plugins.plumber())
+			.pipe(plugins.jshint())
+			.pipe(plugins.jshint.reporter('default'))
+			.pipe(gulp.dest(path.js.dest))
+			.pipe(plugins.rename({ suffix : '.min' }))
+			.pipe(plugins.uglify({ preserveComments : 'some' }))
+			.pipe(gulp.dest(path.js.dest))
 	);
+
 });
 
-// Images
+// Compress images
 gulp.task('img', function() {
-	return gulp.src('./src/img/**/*')
-			   .pipe(plumber())
-			   .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-			   .pipe(gulp.dest('./dist/img'));
+
+	return gulp.src(path.img.src + '**/*')
+			   .pipe(plugins.plumber())
+			   .pipe(plugins.cache(plugins.imagemin({ optimizationLevel : 3, progressive : true, interlaced : true })))
+			   .pipe(gulp.dest(path.img.dest));
+
 });
 
-// Clean
+// Remove old files before replacing them with new ones
 gulp.task('clean', function() {
-	return gulp.src(['./dist/css/base*.css', './dist/css/style*.css', './dist/js/plugins*.js', './dist/img/**/*'], { read : false })
-			   .pipe(plumber())
-			   .pipe(clean());
+
+	return gulp.src([path.css.dest + 'style*.css', path.js.dest + 'plugins*.js', path.js.dest + 'script*.js', path.img.dest], { read : false })
+			   .pipe(plugins.plumber())
+			   .pipe(plugins.clean());
+
 });
 
 // Default task
 gulp.task('default', ['clean'], function() {
+
 	gulp.start('css', 'js', 'img');
+
 });
 
-// Watch
+// Watch task
 gulp.task('watch', function() {
+
 	// Watch .scss files
-	gulp.watch('./src/scss/**/*.scss', ['css']);
+	gulp.watch(path.css.src + '**/*.scss', ['css']);
 
 	// Watch .js files
-	gulp.watch('./src/js/**/*.js', ['js']);
+	gulp.watch(path.js.src + '**/*.js', ['js']);
 
-	// Watch image files
-	gulp.watch('./src/img/**/*', ['img']);
+	// Watch images
+	gulp.watch(path.img.src + '**/*', ['img']);
 
 	// Create LiveReload server
-	var server = livereload();
+	var server = plugins.livereload();
 
-	// Watch any files in dist/, reload on change
-	gulp.watch('./dist/**/*').on('change', function(file) {
+	// Watch all the files in the destination folder and reload when a change occurs
+	gulp.watch(basePath.dest + '**/*').on('change', function(file) {
 		server.changed(file.path);
 	});
+
 });

@@ -19,5 +19,5 @@ output_style     = :expanded
 # Obviously
 preferred_syntax = :scss
 
-# Value can have at max *n* decimals
+# Values can have at max *n* decimals
 Sass::Script::Number.precision = 4
