@@ -5,7 +5,7 @@ jQuery('html').removeClass('no-js').addClass('js');
 jQuery(document).ready(function( $ ) {
 
 	/* ---------------------------------------------------------------------- */
-	/*	"Global" Varibles & Functions
+	/*	Variables & Functions
 	/* ---------------------------------------------------------------------- */
 
 	var $window = $(window),
@@ -13,7 +13,13 @@ jQuery(document).ready(function( $ ) {
 		$body   = $('body'),
 		lang    = $html.attr('lang');
 
-	 // Convert pixels to ems
+	/**
+	 * Convert pixels to ems
+	 *
+	 * @param {Number|String} value
+	 * @param {Boolean} [withUnit]
+	 * @return {String}
+	 */
 	function convertPxToEm( value, withUnit ) {
 
 		var baseFontSize = parseFloat( $html.css('font-size') );
@@ -23,19 +29,24 @@ jQuery(document).ready(function( $ ) {
 
 	}
 
-	// Visually inform user that browser is doing something (e.g. an AJAX call)
-	function setLoader( $elem, on ) {
+	/**
+	 * Visually inform user that browser is doing something (e.g. an AJAX call)
+	 *
+	 * @param {jQuery} $elem
+	 * @param {Boolean} [status]
+	 */
+	function setLoader( $elem, status ) {
 
 		if( typeof $elem === 'undefined' )
 			return;
 
-		if( typeof on === 'undefined' || on )
+		if( typeof status === 'undefined' || status )
 			$elem.addClass('loading');
 		else
 			$elem.removeClass('loading');
 
 	}
 
-	/* end "Global" Varibles & Functions */
+	/* end Variables & Functions */
 
 });
