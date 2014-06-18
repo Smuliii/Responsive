@@ -5,7 +5,7 @@
 	width: 95%;
 
 	&.fixed,
-	.fixed .container { width: $site-width; /* Manages width in a single place */ }
+	.fixed & { width: $site-width; /* Manages width in a single place */ }
 }
 
 /*

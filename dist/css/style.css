@@ -828,8 +828,7 @@ abbr {
   /* Manages width in a single place */
   width: 95%;
 }
-.container.fixed,
-.container .fixed .container {
+.container.fixed, .fixed .container {
   width: 1140px;
   /* Manages width in a single place */
 }
@@ -3785,6 +3784,3 @@ pre code {
     width: auto;
   }
 }
-/* ---------------------------------------------------------------------- */
-/*	Content
-/* ---------------------------------------------------------------------- */
