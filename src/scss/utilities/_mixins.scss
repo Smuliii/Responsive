@@ -4,19 +4,19 @@
 
 @mixin bp($point) {
 	@if $point == xs {
-		@media (max-width: 47.99em) {
+		@media (max-width: $grid-breakpoint-xs-max) {
 			@content;
 		}
 	} @else if $point == s {
-		@media (min-width: 48em) and (max-width: 61.99em) {
+		@media (min-width: $grid-breakpoint-s-min) and (max-width: $grid-breakpoint-s-max) {
 			@content;
 		}
 	} @else if $point == m {
-		@media (min-width: 62em) and (max-width: 74.99em) {
+		@media (min-width: $grid-breakpoint-m-min) and (max-width: $grid-breakpoint-m-max) {
 			@content;
 		}
 	} @else if $point == l {
-		@media (min-width: 75em) {
+		@media (min-width: $grid-breakpoint-l-max) {
 			@content;
 		}
 	}
@@ -24,15 +24,15 @@
 
 @mixin bp-min($point) {
 	@if $point == s {
-		@media (min-width: 48em) {
+		@media (min-width: $grid-breakpoint-s-min) {
 			@content;
 		}
 	} @else if $point == m {
-		@media (min-width: 62em) {
+		@media (min-width: $grid-breakpoint-m-min) {
 			@content;
 		}
 	} @else if $point == l {
-		@media (min-width: 75em) {
+		@media (min-width: $grid-breakpoint-l-max) {
 			@content;
 		}
 	}
@@ -40,22 +40,22 @@
 
 @mixin bp-max($point) {
 	@if $point == xs {
-		@media (max-width: 47.99em) {
+		@media (max-width: $grid-breakpoint-xs-max) {
 			@content;
 		}
 	} @else if $point == s {
-		@media (max-width: 61.99em) {
+		@media (max-width: $grid-breakpoint-s-max) {
 			@content;
 		}
 	} @else if $point == m {
-		@media (max-width: 74.99em) {
+		@media (max-width: $grid-breakpoint-m-max) {
 			@content;
 		}
 	}
 }
 
 /* ---------------------------------------------------------------------- */
-/*	Grid System - Base
+/*	Grid System
 /* ---------------------------------------------------------------------- */
 
 @mixin grid-base($bp) {
@@ -88,25 +88,21 @@
 	}
 }
 
-/* ---------------------------------------------------------------------- */
-/*	Grid System - Columns
-/* ---------------------------------------------------------------------- */
-
 @mixin grid-columns($bp) {
-	$column-width: (100% / 12);
-	$column-width-with-margin: (100% - ($grid-column-margin * 11)) / 12;
+	$column-width: (100% / $grid-column-count);
+	$column-width-with-margin: (100% - ($grid-column-margin * ($grid-column-count - 1))) / $grid-column-count;
 
-	@for $i from 1 to 13 {
+	@for $i from 1 to ($grid-column-count + 1) {
 		$temp-width: $column-width-with-margin * $i + ($grid-column-margin * $i);
 
 		.col-#{$bp}-#{$i} { width: $temp-width - $grid-column-margin; }
 
-		@if $i != 12 {
+		@if $i != $grid-column-count {
 			.offset-#{$bp}-#{$i} { margin-left: $temp-width; }
 
 			[class*=col-] + .offset-#{$bp}-#{$i} { margin-left: $temp-width + $grid-column-margin; }
 
-			.push-#{$bp}-#{$i} { left: $temp-width }
+			.push-#{$bp}-#{$i} { left: $temp-width; }
 
 			.pull-#{$bp}-#{$i} { right: $temp-width; }
 		} @else {
@@ -116,7 +112,7 @@
 	}
 
 	.no-gutter > {
-		@for $i from 1 to 12 {
+		@for $i from 1 to $grid-column-count {
 			$temp-width: $column-width * $i;
 
 			.col-#{$bp}-#{$i} { width: $temp-width; }

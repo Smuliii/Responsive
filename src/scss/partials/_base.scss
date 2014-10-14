@@ -109,19 +109,19 @@ p { margin: $paragraph-margin; }
 a {
 	color: $link-color;
 	text-decoration: $link-text-decoration;
-}
 
-	a:hover {
+	&:hover {
 		color: $link-color-hover;
 		text-decoration: $link-text-decoration-hover;
 	}
+}
 
 /*
  * A better looking default horizontal rule
  */
 hr {
-	border-top: $horizontal-line-height solid $horizontal-line-color;
 	border: 0;
+	border-top: $horizontal-line-height solid $horizontal-line-color;
 	display: block;
 	height: $horizontal-line-height;
 	margin: 1em 0;

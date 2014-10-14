@@ -1,5 +1,5 @@
-// If JavaScript is enabled, remove a class 'no-js' and replace with a class 'js'
-jQuery('html').removeClass('no-js').addClass('js');
+// If JavaScript is enabled, remove a class `no-js` and replace with a class `js`
+jQuery('html').toggleClass('no-js js');
 
 // Run the code after the DOM has been fully loaded
 jQuery(document).ready(function( $ ) {
@@ -8,45 +8,60 @@ jQuery(document).ready(function( $ ) {
 	/*	Variables & Functions
 	/* ---------------------------------------------------------------------- */
 
-	var $window = $(window),
-		$html   = $('html'),
-		$body   = $('body'),
-		lang    = $html.attr('lang');
+	var $window      = $(window),
+		$html        = $('html'),
+		$body        = $('body'),
+		lang         = $html.attr('lang'),
+		baseFontSize = parseFloat( $html.css('font-size') );
+
+	/**
+	 * Update `isMobileView` variable and trigger `mobileViewChange` event when a screen size change occurs
+	 */
+	var mobileBreakpoint = '(max-width: 47.99em)',
+		isMobileView     = window.matchMedia( mobileBreakpoint ).matches,
+		resizeTimer;
+
+	$window.on('resize', function()  {
+		clearTimeout(resizeTimer);
+
+		resizeTimer = setTimeout(function() {
+			if( isMobileView !== window.matchMedia( mobileBreakpoint ).matches ) {
+				isMobileView = window.matchMedia( mobileBreakpoint ).matches;
+				$body.trigger('mobileViewChange', isMobileView);
+			}
+		}, 250);
+	}).trigger('resize');
 
 	/**
 	 * Convert pixels to ems
 	 *
 	 * @param {Number|String} value
 	 * @param {Boolean} [withUnit]
-	 * @return {String}
+	 * @return {Number|String}
 	 */
 	function convertPxToEm( value, withUnit ) {
 
-		var baseFontSize = parseFloat( $html.css('font-size') );
-
 		if( typeof value !== 'undefined' && value )
-			return parseFloat( value ) / baseFontSize + (typeof withUnit === 'undefined' || withUnit ? 'em' : '');
+			return parseFloat( value ) / baseFontSize + (typeof withUnit === 'undefined' || withUnit ? 'em' : null);
 
 	}
 
 	/**
-	 * Visually inform user that browser is doing something (e.g. an AJAX call)
+	 * Convert ems to pixels
 	 *
-	 * @param {jQuery} $elem
-	 * @param {Boolean} [status]
+	 * @param {Number|String} value
+	 * @param {Boolean} [withUnit]
+	 * @return {Number|String}
 	 */
-	function setLoader( $elem, status ) {
+	function convertEmToPx( value, withUnit ) {
 
-		if( typeof $elem === 'undefined' )
-			return;
-
-		if( typeof status === 'undefined' || status )
-			$elem.addClass('loading');
-		else
-			$elem.removeClass('loading');
+		if( typeof value !== 'undefined' && value )
+			return parseFloat( value ) * baseFontSize + (typeof withUnit === 'undefined' || withUnit ? 'px' : null);
 
 	}
 
-	/* end Variables & Functions */
+	/* ---------------------------------------------------------------------- */
+	/*  Custom Functions
+	/* ---------------------------------------------------------------------- */
 
 });

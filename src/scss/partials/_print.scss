@@ -1,5 +1,4 @@
 @media print {
-
 	body:not(.prince-pdf) {
 		&,
 		* {
@@ -56,9 +55,8 @@
 	}
 
 	[class*=col-] {
-		min-height: 0;
 		float: none;
+		min-height: 0;
 		width: auto;
 	}
-
 }
