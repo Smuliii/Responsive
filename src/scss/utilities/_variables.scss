@@ -73,15 +73,15 @@ $h6-text-transform:/*  null !default */;
 /*	Grid System
 /* ---------------------------------------------------------------------- */
 
-$grid-column-count: 12 !default;
-$grid-column-margin: 2% !default;
-
 $grid-breakpoint-xs-max: 47.99em;
 $grid-breakpoint-s-min: 48em;
 $grid-breakpoint-s-max: 61.99em;
 $grid-breakpoint-m-min: 62em;
 $grid-breakpoint-m-max: 74.99em;
 $grid-breakpoint-l-max: 75em;
+
+$grid-column-count: 12 !default;
+$grid-column-margin: 2% !default;
 
 /* ---------------------------------------------------------------------- */
 /*	Basic Elements
@@ -95,7 +95,8 @@ $link-text-decoration: none !default;
 $link-color-hover: #000 !default;
 $link-text-decoration-hover: underline !default;
 
-/* Horizontal Rule
+/**
+ * Horizontal Rule
  */
 $horizontal-line-color: #c0c0c0 !default;
 $horizontal-line-height: 1px !default;
