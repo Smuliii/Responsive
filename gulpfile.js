@@ -1,4 +1,4 @@
-// Define paths
+// Define paths!
 var basePath = {
 		src  : './src/',
 		dest : './dist/'
