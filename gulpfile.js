@@ -34,14 +34,22 @@ var basePath = {
 var gulp       = require('gulp'),
 	$          = require('gulp-load-plugins')(),
 	es         = require('event-stream'),
+	del        = require('del'),
 	bowerFiles = require('main-bower-files');
 
 // Copy minified Bower main files
 gulp.task('bower', function() {
 
-	return gulp.src(bowerFiles())
-			   .pipe($.changed(path.js.dest))
-			   .pipe(gulp.dest(path.js.dest));
+	return $.run('bower install').exec(function() {
+
+		return gulp.src(bowerFiles())
+				   .pipe($.changed(path.js.dest))
+				   .pipe($.size({
+					   title : 'Bower'
+				   }))
+				   .pipe(gulp.dest(path.js.dest));
+
+	});
 
 });
 
@@ -50,19 +58,24 @@ gulp.task('css', function() {
 
 	return gulp.src(path.css.src + 'style.scss')
 			   .pipe($.plumber())
+			   .pipe($.sourcemaps.init())
 			   .pipe($.sass({
-				   imagePath      : '../img',
 				   outputStyle    : 'nested',
 				   precision      : 4,
 				   sourceComments : 'normal'
 			   }))
 			   .pipe($.autoprefixer({
-				   browsers : ['last 2 version', '> 1%', 'ie 8'],
+				   browsers : ['last 2 version', '> 5%', 'ie >= 9'],
 				   cascade  : true
 			   }))
+			   .pipe($.sourcemaps.write('/'))
 			   .pipe(gulp.dest(path.css.dest))
+			   .pipe($.filter('**/*.css'))
 			   .pipe($.rename({ suffix : '.min' }))
 			   .pipe($.minifyCss())
+			   .pipe($.size({
+				   title : 'CSS'
+			   }))
 			   .pipe(gulp.dest(path.css.dest));
 
 });
@@ -72,6 +85,9 @@ gulp.task('fonts', function() {
 
 	return gulp.src(path.fonts.src + '**/*')
 			   .pipe($.changed(path.fonts.dest))
+			   .pipe($.size({
+				   title : 'Fonts'
+			   }))
 			   .pipe(gulp.dest(path.fonts.dest));
 
 });
@@ -84,7 +100,10 @@ gulp.task('html', function() {
 			   .pipe($.fileInclude({
 				   basepath : path.html.src + 'partials/'
 			   }))
-	           .pipe(gulp.dest(path.html.dest));
+			   .pipe($.size({
+				   title : 'HTML'
+			   }))
+			   .pipe(gulp.dest(path.html.dest));
 
 });
 
@@ -98,6 +117,9 @@ gulp.task('img', function() {
 				   	interlaced : true,
 				   	optimizationLevel : 3,
 				   	progressive : true
+			   }))
+			   .pipe($.size({
+				   title : 'Images'
 			   }))
 			   .pipe(gulp.dest(path.img.dest));
 
@@ -122,48 +144,57 @@ gulp.task('icons', function() {
 					   }))
 				 	  .pipe(gulp.dest(path.css.src + 'partials/components/'));
 			   })
+			   .pipe($.size({
+				   title : 'Icons'
+			   }))
 			   .pipe(gulp.dest(path.icons.dest));
 
 });
 
 // Concat and minify JS files
-gulp.task('js', function() {
+gulp.task('js:plugins', function() {
 
-	return es.concat(
-		gulp.src(path.js.src + 'ie10mobilefix.js')
-			.pipe($.plumber())
-			.pipe($.changed(path.js.dest))
-			.pipe($.jshint())
-			.pipe($.jshint.reporter('default'))
-			.pipe(gulp.dest(path.js.dest))
-			.pipe($.rename({ suffix : '.min' }))
-			.pipe($.uglify({ preserveComments : 'some' }))
-			.pipe(gulp.dest(path.js.dest)),
-
-		gulp.src(path.js.src + 'plugins.js')
-			.pipe($.plumber())
-			.pipe($.changed(path.js.dest))
-			.pipe($.include())
-			.pipe($.jshint())
-			.pipe($.jshint.reporter('default'))
-			.pipe(gulp.dest(path.js.dest))
-			.pipe($.rename({ suffix : '.min' }))
-			.pipe($.uglify({ preserveComments : 'some' }))
-			.pipe(gulp.dest(path.js.dest)),
-
-		gulp.src(path.js.src + 'script.js')
-			.pipe($.plumber())
-			.pipe($.changed(path.js.dest))
-			.pipe($.include())
-			.pipe($.jshint())
-			.pipe($.jshint.reporter('default'))
-			.pipe(gulp.dest(path.js.dest))
-			.pipe($.rename({ suffix : '.min' }))
-			.pipe($.uglify({ preserveComments : 'some' }))
-			.pipe(gulp.dest(path.js.dest))
-	);
+	return gulp.src(path.js.src + 'plugins.js')
+			   .pipe($.plumber())
+			   .pipe($.changed(path.js.dest))
+			   .pipe($.include())
+			   .pipe($.sourcemaps.init())
+			   .pipe($.jshint())
+			   .pipe($.jshint.reporter('jshint-stylish'))
+			   .pipe($.sourcemaps.write('/'))
+			   .pipe(gulp.dest(path.js.dest))
+			   .pipe($.filter('**/*.js'))
+			   .pipe($.rename({ suffix : '.min' }))
+			   .pipe($.uglify({ preserveComments : 'some' }))
+			   .pipe($.size({
+				   title : 'Plugins'
+			   }))
+			   .pipe(gulp.dest(path.js.dest));
 
 });
+
+gulp.task('js:script', function() {
+
+	return gulp.src(path.js.src + 'script.js')
+			   .pipe($.plumber())
+			   .pipe($.changed(path.js.dest))
+			   .pipe($.include())
+			   .pipe($.sourcemaps.init())
+			   .pipe($.jshint())
+			   .pipe($.jshint.reporter('jshint-stylish'))
+			   .pipe($.sourcemaps.write('/'))
+			   .pipe(gulp.dest(path.js.dest))
+			   .pipe($.filter('**/*.js'))
+			   .pipe($.rename({ suffix : '.min' }))
+			   .pipe($.uglify({ preserveComments : 'some' }))
+			   .pipe($.size({
+				   title : 'Scripts'
+			   }))
+			   .pipe(gulp.dest(path.js.dest));
+
+});
+
+gulp.task('js', gulp.parallel('js:plugins', 'js:script'));
 
 // Pull changes from Studio
 gulp.task('pull', function() {
@@ -195,40 +226,36 @@ gulp.task('server', function() {
 });
 
 // Remove all the files which are created by gulp
-gulp.task('clean', function() {
+gulp.task('clean', function( cb ) {
 
-	return gulp.src(basePath.dest, { read : false })
-			   .pipe($.plumber())
-			   .pipe($.clean());
+	return del([basePath.dest], cb);
+
+});
+
+// Watch source files
+gulp.task('watch:src', function() {
+
+	gulp.watch(path.html.src  + '**/*', 'html');
+	gulp.watch(path.icons.src + '**/*', 'icons');
+	gulp.watch(path.css.src   + '**/*', 'css');
+	gulp.watch(path.fonts.src + '**/*', 'fonts');
+	gulp.watch(path.js.src    + '**/*', 'js');
+	gulp.watch(path.img.src   + '**/*', 'img');
+
+});
+
+// Watch build files
+gulp.task('watch:push', function() {
+
+	gulp.watch([path.css.dest + '**/*.css', path.js.dest + '**/*.js', path.img.dest + '**/*'], 'push');
 
 });
 
 // Watch files
-gulp.task('watch', ['server'], function() {
-
-	// Watch source files
-	gulp.watch(path.html.src + '**/*.html', ['html']);
-	gulp.watch(path.icons.src + '**/*.svg', ['icons']);
-	gulp.watch(path.css.src + '**/*.scss', ['css']);
-	gulp.watch(path.fonts.src + '**/*', ['fonts']);
-	gulp.watch(path.js.src + '**/*.js', ['js']);
-	gulp.watch(path.img.src + '**/*', ['img']);
-
-	// Watch build files
-	gulp.watch([path.css.dest + '**/*.css', path.js.dest + '**/*.js', path.img.dest + '**/*'], ['push']);
-
-});
+gulp.task('watch', gulp.parallel('server', 'watch:src', 'watch:push'));
 
 // Build everything
-gulp.task('build', ['icons'], function () {
-
-	gulp.start('html', 'css', 'fonts', 'js', 'img', 'bower');
-
-});
+gulp.task('build', gulp.series('icons', 'fonts', 'css', 'js', 'html', 'img', 'bower'));
 
 // Before build, get rid of all the current files
-gulp.task('default', ['clean'], function () {
-
-	gulp.start('build');
-
-});
+gulp.task('default', gulp.series('clean', 'build'));
