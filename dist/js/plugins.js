@@ -382,8 +382,7 @@
 	};
 
 }(jQuery, window, document));
-
-/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
 window.matchMedia || (window.matchMedia = function() {
 	"use strict";
 
@@ -428,8 +427,7 @@ window.matchMedia || (window.matchMedia = function() {
 		};
 	};
 }());
-
-/*! matchMedia() polyfill addListener/removeListener extension. Author & copyright (c) 2012: Scott Jehl. Dual MIT/BSD license */
+/*! matchMedia() polyfill addListener/removeListener extension. Author & copyright (c) 2012: Scott Jehl. Dual MIT/BSD license */
 (function(){
     // Bail out for browsers that have addListener support
     if (window.matchMedia && window.matchMedia('all').addListener) {
@@ -505,8 +503,7 @@ window.matchMedia || (window.matchMedia = function() {
     };
 }());
 
-
-/*
+/*
 	By Osvaldas Valutis, www.osvaldas.info
 	Available for use under the MIT License
 */
@@ -549,3 +546,5 @@ window.matchMedia || (window.matchMedia = function() {
 		return this;
 	};
 })( jQuery, window, document );
+
+//# sourceMappingURL=/plugins.js.map

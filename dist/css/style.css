@@ -1,26 +1,8 @@
-/* ---------------------------------------------------------------------- */
-/*	Utilities
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Colors
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	General Styles
-/* ---------------------------------------------------------------------- */
-/* used for calculations */
-/* ---------------------------------------------------------------------- */
-/*	Typography
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Grid System
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Basic Elements
-/* ---------------------------------------------------------------------- */
 /**
  * Links
  */
-/* Horizontal Rule
+/**
+ * Horizontal Rule
  */
 /**
  * Blockquote
@@ -28,9 +10,6 @@
 /**
  * Tables
  */
-/* ---------------------------------------------------------------------- */
-/*	CSS Components
-/* ---------------------------------------------------------------------- */
 /**
  * Forms
  */
@@ -43,9 +22,6 @@
 /**
  * Alerts
  */
-/* ---------------------------------------------------------------------- */
-/*	JS Plugins
-/* ---------------------------------------------------------------------- */
 /**
  * Lightbox
  */
@@ -67,18 +43,6 @@
 /* ---------------------------------------------------------------------- */
 /*	PX to REM + Fallback for IE8
 /* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Media Queries
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Grid System - Base
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Grid System - Columns
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------- */
-/*	Base Styles
-/* ---------------------------------------------------------------------- */
 /*  ==|== Responsive =============================================================
 	Author: James South
 	twitter : http://twitter.com/James_M_South
@@ -93,7 +57,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 9, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 9, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -105,7 +69,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 18, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 18, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 body {
   margin: 0; }
 
@@ -114,7 +78,7 @@ body {
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 37, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 37, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -122,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 46, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 46, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 audio, canvas, progress, video {
   display: inline-block;
   /* 1 */
@@ -133,7 +97,7 @@ audio, canvas, progress, video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 55, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 55, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -142,7 +106,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 65, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 65, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 [hidden], template {
   display: none; }
 
@@ -151,13 +115,13 @@ audio:not([controls]) {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 73, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 73, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 a {
   background: transparent;
   /**
 	 * Improve readability when focused and also mouse hovered in all browsers.
 	 */ }
-  /* line 80, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+  /* line 80, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
   a:active, a:hover {
     outline: 0; }
 
@@ -166,21 +130,21 @@ a {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 89, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 89, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 95, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 95, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 b, strong {
   font-weight: bold; }
 
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 100, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 100, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -188,7 +152,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 106, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 106, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -196,7 +160,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 114, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 114, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -204,25 +168,25 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 122, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 122, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 128, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 128, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
-/* line 135, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 135, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 137, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 137, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -231,14 +195,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 145, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 145, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 150, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 150, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -247,31 +211,29 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 158, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 158, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 163, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 163, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
 /**
  * Contain overflow in all browsers.
  */
-/* line 171, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 171, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 179, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 179, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em; }
@@ -288,7 +250,7 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 202, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 202, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button, input, optgroup, select, textarea {
   color: inherit;
   /* 1 */
@@ -300,7 +262,7 @@ button, input, optgroup, select, textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10.
  */
-/* line 211, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 211, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -310,7 +272,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8+, and Opera
  * Correct `select` style inheritance in Firefox.
  */
-/* line 220, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 220, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button, select {
   text-transform: none; }
 
@@ -321,7 +283,7 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *	`input` and others.
  */
-/* line 232, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 232, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   /* 2 */
@@ -331,14 +293,14 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 241, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 241, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button[disabled], html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 249, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 249, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -347,7 +309,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 258, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 258, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 input {
   line-height: normal;
   /**
@@ -367,23 +329,19 @@ input {
 	 * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
 	 *	(include `-moz` to future-proof).
 	 */ }
-  /* line 269, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+  /* line 269, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
   input[type=checkbox], input[type=radio] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     padding: 0;
     /* 2 */ }
-  /* line 281, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+  /* line 281, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
   input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     height: auto; }
-  /* line 289, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+  /* line 289, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
   input[type=search] {
     -webkit-appearance: textfield;
     /* 1 */
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     /* 2 */
     /**
@@ -391,14 +349,14 @@ input {
 		 * Safari (but not Chrome) clips the cancel button when the search input has
 		 * padding (and `textfield` appearance).
 		 */ }
-    /* line 299, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+    /* line 299, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
     input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
       -webkit-appearance: none; }
 
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 306, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 306, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -408,7 +366,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 316, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 316, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -418,7 +376,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9.
  */
-/* line 324, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 324, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -426,7 +384,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 330, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 330, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -435,12 +393,12 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 338, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 338, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 344, C:/Users/samuli/git/_new-Responsive/src/scss/partials/normalize */
+/* line 344, C:/Users/samuli/git/Responsive/src/scss/partials/_normalize.scss */
 td, th {
   padding: 0; }
 
@@ -448,10 +406,8 @@ td, th {
  * Fix the box model
  * Overwrite Normalize rather than edit it.
  */
-/* line 9, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 9, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 *, *:before, *:after, hr, input[type=search] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*
@@ -465,7 +421,7 @@ td, th {
 /*
  * 1. Use the iOS devices hardware accelerator to provide native scrolling.
  */
-/* line 21, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 21, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 html {
   background: #fff;
   color: #222;
@@ -481,48 +437,36 @@ html {
  * 1: Improve rendering of screen fonts.
  * 2: Prevent page breaking.
  */
-/* line 41, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 41, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   page-break-after: avoid;
   /* 2 */
   text-rendering: optimizeLegibility;
   /* 1 */ }
 
-/* line 47, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 47, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 h1 {
   text-transform: uppercase; }
 
-/* line 56, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 56, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 h2 {
   text-transform: uppercase; }
 
-/* line 65, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 65, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 h3 {
   text-transform: uppercase; }
-
-/* line 74, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
-h4 { }
-
-/* line 83, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
-h5 { }
-
-/* line 92, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
-h6 { }
 
 /*
  * Default margin for paragraph
  */
-/* line 104, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
-p { }
-
 /*
  * Basic styles for links
  */
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 109, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 a {
   color: #0000ee;
   text-decoration: none; }
-  /* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+  /* line 113, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
   a:hover {
     color: #000;
     text-decoration: underline; }
@@ -530,7 +474,7 @@ a {
 /*
  * A better looking default horizontal rule
  */
-/* line 122, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 122, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 hr {
   border: 0;
   border-top: 1px solid #c0c0c0;
@@ -542,7 +486,7 @@ hr {
 /*
  * A better looking default blockquote
  */
-/* line 134, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 134, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 blockquote {
   border-left: 5px solid #c0c0c0;
   padding: 1em 1em 1em 1.5em; }
@@ -550,7 +494,7 @@ blockquote {
 /*
  * Add query indicator to abbr
  */
-/* line 143, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 143, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 abbr {
   cursor: help; }
 
@@ -559,13 +503,13 @@ abbr {
  * These selection rule sets have to be separate.
  * Customize the background colour to match your design.
  */
-/* line 150, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 150, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 ::-moz-selection {
   background: #b3d4fc;
   color: #fff;
   text-shadow: none; }
 
-/* line 156, C:/Users/samuli/git/_new-Responsive/src/scss/partials/base */
+/* line 156, C:/Users/samuli/git/Responsive/src/scss/partials/_base.scss */
 ::-moz-selection {
   background: #b3d4fc;
   color: #fff;
@@ -575,16 +519,13 @@ abbr {
   color: #fff;
   text-shadow: none; }
 
-/* ---------------------------------------------------------------------- */
-/*	Grid System
-/* ---------------------------------------------------------------------- */
-/* line 1, C:/Users/samuli/git/_new-Responsive/src/scss/partials/grid */
+/* line 1, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 .container {
   margin: 0 auto;
   max-width: 1140px;
   /* Manages width in a single place */
   width: 95%; }
-  /* line 8, C:/Users/samuli/git/_new-Responsive/src/scss/partials/grid */
+  /* line 8, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
   .container.fixed, .fixed .container {
     width: 1140px;
     /* Manages width in a single place */ }
@@ -593,7 +534,7 @@ abbr {
  * Clearfix: contain floats
  */
 /* Columns */
-/* line 17, C:/Users/samuli/git/_new-Responsive/src/scss/partials/grid */
+/* line 17, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 [class*=col-] {
   display: block;
   float: left;
@@ -601,396 +542,396 @@ abbr {
   position: relative;
   width: 100%; }
 
-/* line 25, C:/Users/samuli/git/_new-Responsive/src/scss/partials/grid */
+/* line 25, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 .no-gutter.pad-gutter > [class*=col-] {
   padding: 0 1%; }
 
 /*
  * Extra small (phones)
  */
-/* line 62, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 62, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-xs] + [class*=col-xs] {
   margin-left: 2%; }
 
-/* line 64, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 64, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > [class*=col-xs] {
   margin-left: 0; }
 
-/* line 67, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 67, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-].reset-xs {
   clear: both;
   margin-left: 0 !important; }
-/* line 72, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 72, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-][class*=push-xs-right] {
   float: right; }
 
 @media (max-width: 47.99em) {
-  /* line 79, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 79, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-].reset-xs-only {
     clear: both;
     margin-left: 0 !important; }
-  /* line 84, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 84, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-][class*=push-xs-right-only] {
     float: right; } }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-1 {
   width: 6.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-1 {
   margin-left: 8.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-1 {
   margin-left: 10.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-1 {
   left: 8.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-1 {
   right: 8.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-2 {
   width: 15%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-2 {
   margin-left: 17%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-2 {
   margin-left: 19%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-2 {
   left: 17%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-2 {
   right: 17%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-3 {
   width: 23.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-3 {
   margin-left: 25.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-3 {
   margin-left: 27.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-3 {
   left: 25.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-3 {
   right: 25.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-4 {
   width: 32%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-4 {
   margin-left: 34%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-4 {
   margin-left: 36%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-4 {
   left: 34%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-4 {
   right: 34%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-5 {
   width: 40.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-5 {
   margin-left: 42.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-5 {
   margin-left: 44.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-5 {
   left: 42.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-5 {
   right: 42.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-6 {
   width: 49%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-6 {
   margin-left: 51%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-6 {
   margin-left: 53%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-6 {
   left: 51%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-6 {
   right: 51%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-7 {
   width: 57.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-7 {
   margin-left: 59.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-7 {
   margin-left: 61.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-7 {
   left: 59.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-7 {
   right: 59.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-8 {
   width: 66%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-8 {
   margin-left: 68%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-8 {
   margin-left: 70%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-8 {
   left: 68%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-8 {
   right: 68%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-9 {
   width: 74.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-9 {
   margin-left: 76.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-9 {
   margin-left: 78.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-9 {
   left: 76.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-9 {
   right: 76.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-10 {
   width: 83%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-10 {
   margin-left: 85%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-10 {
   margin-left: 87%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-10 {
   left: 85%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-10 {
   right: 85%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-11 {
   width: 91.5%; }
 
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .offset-xs-11 {
   margin-left: 93.5%; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 [class*=col-] + .offset-xs-11 {
   margin-left: 95.5%; }
 
-/* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .push-xs-11 {
   left: 93.5%; }
 
-/* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .pull-xs-11 {
   right: 93.5%; }
 
-/* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-12 {
   width: 100%; }
 
-/* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 109, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .col-xs-12, [class*=col-] + [class*=col-xs-12] {
   margin-left: 0; }
 
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-1 {
   width: 8.3333%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-1 {
   margin-left: 8.3333%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-1 {
   left: 8.3333%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-1 {
   right: 8.3333%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-2 {
   width: 16.6667%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-2 {
   margin-left: 16.6667%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-2 {
   left: 16.6667%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-2 {
   right: 16.6667%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-3 {
   width: 25%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-3 {
   margin-left: 25%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-3 {
   left: 25%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-3 {
   right: 25%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-4 {
   width: 33.3333%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-4 {
   margin-left: 33.3333%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-4 {
   left: 33.3333%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-4 {
   right: 33.3333%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-5 {
   width: 41.6667%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-5 {
   margin-left: 41.6667%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-5 {
   left: 41.6667%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-5 {
   right: 41.6667%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-6 {
   width: 50%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-6 {
   margin-left: 50%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-6 {
   left: 50%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-6 {
   right: 50%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-7 {
   width: 58.3333%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-7 {
   margin-left: 58.3333%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-7 {
   left: 58.3333%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-7 {
   right: 58.3333%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-8 {
   width: 66.6667%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-8 {
   margin-left: 66.6667%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-8 {
   left: 66.6667%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-8 {
   right: 66.6667%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-9 {
   width: 75%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-9 {
   margin-left: 75%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-9 {
   left: 75%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-9 {
   right: 75%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-10 {
   width: 83.3333%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-10 {
   margin-left: 83.3333%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-10 {
   left: 83.3333%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-10 {
   right: 83.3333%; }
-/* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .col-xs-11 {
   width: 91.6667%; }
-/* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .offset-xs-11 {
   margin-left: 91.6667%; }
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .push-xs-11 {
   left: 91.6667%; }
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+/* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
 .no-gutter > .pull-xs-11 {
   right: 91.6667%; }
 
@@ -998,328 +939,328 @@ abbr {
  * Small (tablets)
  */
 @media (min-width: 48em) {
-  /* line 62, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 62, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-s] + [class*=col-s] {
     margin-left: 2%; }
-  /* line 64, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 64, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > [class*=col-s] {
     margin-left: 0; }
-  /* line 67, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 67, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-].reset-s {
     clear: both;
     margin-left: 0 !important; }
-  /* line 72, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 72, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-][class*=push-s-right] {
     float: right; }
   @media (max-width: 61.99em) {
-    /* line 79, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+    /* line 79, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
     [class*=col-].reset-s-only {
       clear: both;
       margin-left: 0 !important; }
-    /* line 84, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+    /* line 84, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
     [class*=col-][class*=push-s-right-only] {
       float: right; } }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-1 {
     width: 6.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-1 {
     margin-left: 8.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-1 {
     margin-left: 10.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-1 {
     left: 8.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-1 {
     right: 8.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-2 {
     width: 15%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-2 {
     margin-left: 17%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-2 {
     margin-left: 19%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-2 {
     left: 17%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-2 {
     right: 17%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-3 {
     width: 23.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-3 {
     margin-left: 25.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-3 {
     margin-left: 27.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-3 {
     left: 25.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-3 {
     right: 25.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-4 {
     width: 32%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-4 {
     margin-left: 34%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-4 {
     margin-left: 36%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-4 {
     left: 34%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-4 {
     right: 34%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-5 {
     width: 40.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-5 {
     margin-left: 42.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-5 {
     margin-left: 44.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-5 {
     left: 42.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-5 {
     right: 42.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-6 {
     width: 49%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-6 {
     margin-left: 51%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-6 {
     margin-left: 53%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-6 {
     left: 51%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-6 {
     right: 51%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-7 {
     width: 57.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-7 {
     margin-left: 59.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-7 {
     margin-left: 61.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-7 {
     left: 59.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-7 {
     right: 59.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-8 {
     width: 66%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-8 {
     margin-left: 68%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-8 {
     margin-left: 70%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-8 {
     left: 68%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-8 {
     right: 68%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-9 {
     width: 74.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-9 {
     margin-left: 76.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-9 {
     margin-left: 78.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-9 {
     left: 76.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-9 {
     right: 76.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-10 {
     width: 83%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-10 {
     margin-left: 85%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-10 {
     margin-left: 87%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-10 {
     left: 85%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-10 {
     right: 85%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-11 {
     width: 91.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-s-11 {
     margin-left: 93.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-s-11 {
     margin-left: 95.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-s-11 {
     left: 93.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-s-11 {
     right: 93.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-12 {
     width: 100%; }
-  /* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 109, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-s-12, [class*=col-] + [class*=col-s-12] {
     margin-left: 0; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-1 {
     width: 8.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-1 {
     margin-left: 8.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-1 {
     left: 8.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-1 {
     right: 8.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-2 {
     width: 16.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-2 {
     margin-left: 16.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-2 {
     left: 16.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-2 {
     right: 16.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-3 {
     width: 25%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-3 {
     margin-left: 25%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-3 {
     left: 25%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-3 {
     right: 25%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-4 {
     width: 33.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-4 {
     margin-left: 33.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-4 {
     left: 33.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-4 {
     right: 33.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-5 {
     width: 41.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-5 {
     margin-left: 41.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-5 {
     left: 41.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-5 {
     right: 41.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-6 {
     width: 50%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-6 {
     margin-left: 50%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-6 {
     left: 50%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-6 {
     right: 50%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-7 {
     width: 58.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-7 {
     margin-left: 58.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-7 {
     left: 58.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-7 {
     right: 58.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-8 {
     width: 66.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-8 {
     margin-left: 66.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-8 {
     left: 66.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-8 {
     right: 66.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-9 {
     width: 75%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-9 {
     margin-left: 75%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-9 {
     left: 75%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-9 {
     right: 75%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-10 {
     width: 83.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-10 {
     margin-left: 83.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-10 {
     left: 83.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-10 {
     right: 83.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-s-11 {
     width: 91.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-s-11 {
     margin-left: 91.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-s-11 {
     left: 91.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-s-11 {
     right: 91.6667%; } }
 
@@ -1327,328 +1268,328 @@ abbr {
  * Medium (desktop)
  */
 @media (min-width: 62em) {
-  /* line 62, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 62, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-m] + [class*=col-m] {
     margin-left: 2%; }
-  /* line 64, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 64, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > [class*=col-m] {
     margin-left: 0; }
-  /* line 67, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 67, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-].reset-m {
     clear: both;
     margin-left: 0 !important; }
-  /* line 72, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 72, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-][class*=push-m-right] {
     float: right; }
   @media (max-width: 74.99em) {
-    /* line 79, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+    /* line 79, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
     [class*=col-].reset-m-only {
       clear: both;
       margin-left: 0 !important; }
-    /* line 84, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+    /* line 84, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
     [class*=col-][class*=push-m-right-only] {
       float: right; } }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-1 {
     width: 6.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-1 {
     margin-left: 8.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-1 {
     margin-left: 10.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-1 {
     left: 8.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-1 {
     right: 8.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-2 {
     width: 15%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-2 {
     margin-left: 17%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-2 {
     margin-left: 19%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-2 {
     left: 17%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-2 {
     right: 17%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-3 {
     width: 23.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-3 {
     margin-left: 25.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-3 {
     margin-left: 27.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-3 {
     left: 25.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-3 {
     right: 25.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-4 {
     width: 32%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-4 {
     margin-left: 34%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-4 {
     margin-left: 36%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-4 {
     left: 34%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-4 {
     right: 34%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-5 {
     width: 40.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-5 {
     margin-left: 42.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-5 {
     margin-left: 44.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-5 {
     left: 42.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-5 {
     right: 42.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-6 {
     width: 49%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-6 {
     margin-left: 51%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-6 {
     margin-left: 53%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-6 {
     left: 51%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-6 {
     right: 51%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-7 {
     width: 57.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-7 {
     margin-left: 59.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-7 {
     margin-left: 61.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-7 {
     left: 59.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-7 {
     right: 59.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-8 {
     width: 66%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-8 {
     margin-left: 68%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-8 {
     margin-left: 70%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-8 {
     left: 68%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-8 {
     right: 68%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-9 {
     width: 74.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-9 {
     margin-left: 76.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-9 {
     margin-left: 78.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-9 {
     left: 76.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-9 {
     right: 76.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-10 {
     width: 83%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-10 {
     margin-left: 85%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-10 {
     margin-left: 87%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-10 {
     left: 85%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-10 {
     right: 85%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-11 {
     width: 91.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-m-11 {
     margin-left: 93.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-m-11 {
     margin-left: 95.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-m-11 {
     left: 93.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-m-11 {
     right: 93.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-12 {
     width: 100%; }
-  /* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 109, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-m-12, [class*=col-] + [class*=col-m-12] {
     margin-left: 0; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-1 {
     width: 8.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-1 {
     margin-left: 8.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-1 {
     left: 8.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-1 {
     right: 8.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-2 {
     width: 16.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-2 {
     margin-left: 16.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-2 {
     left: 16.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-2 {
     right: 16.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-3 {
     width: 25%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-3 {
     margin-left: 25%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-3 {
     left: 25%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-3 {
     right: 25%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-4 {
     width: 33.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-4 {
     margin-left: 33.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-4 {
     left: 33.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-4 {
     right: 33.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-5 {
     width: 41.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-5 {
     margin-left: 41.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-5 {
     left: 41.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-5 {
     right: 41.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-6 {
     width: 50%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-6 {
     margin-left: 50%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-6 {
     left: 50%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-6 {
     right: 50%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-7 {
     width: 58.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-7 {
     margin-left: 58.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-7 {
     left: 58.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-7 {
     right: 58.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-8 {
     width: 66.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-8 {
     margin-left: 66.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-8 {
     left: 66.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-8 {
     right: 66.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-9 {
     width: 75%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-9 {
     margin-left: 75%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-9 {
     left: 75%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-9 {
     right: 75%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-10 {
     width: 83.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-10 {
     margin-left: 83.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-10 {
     left: 83.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-10 {
     right: 83.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-m-11 {
     width: 91.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-m-11 {
     margin-left: 91.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-m-11 {
     left: 91.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-m-11 {
     right: 91.6667%; } }
 
@@ -1656,358 +1597,355 @@ abbr {
  * Large (desktop)
  */
 @media (min-width: 75em) {
-  /* line 62, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 62, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-l] + [class*=col-l] {
     margin-left: 2%; }
-  /* line 64, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 64, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > [class*=col-l] {
     margin-left: 0; }
-  /* line 67, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 67, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-].reset-l {
     clear: both;
     margin-left: 0 !important; }
-  /* line 72, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 72, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-][class*=push-l-right] {
     float: right; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-1 {
     width: 6.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-1 {
     margin-left: 8.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-1 {
     margin-left: 10.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-1 {
     left: 8.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-1 {
     right: 8.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-2 {
     width: 15%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-2 {
     margin-left: 17%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-2 {
     margin-left: 19%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-2 {
     left: 17%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-2 {
     right: 17%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-3 {
     width: 23.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-3 {
     margin-left: 25.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-3 {
     margin-left: 27.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-3 {
     left: 25.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-3 {
     right: 25.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-4 {
     width: 32%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-4 {
     margin-left: 34%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-4 {
     margin-left: 36%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-4 {
     left: 34%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-4 {
     right: 34%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-5 {
     width: 40.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-5 {
     margin-left: 42.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-5 {
     margin-left: 44.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-5 {
     left: 42.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-5 {
     right: 42.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-6 {
     width: 49%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-6 {
     margin-left: 51%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-6 {
     margin-left: 53%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-6 {
     left: 51%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-6 {
     right: 51%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-7 {
     width: 57.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-7 {
     margin-left: 59.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-7 {
     margin-left: 61.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-7 {
     left: 59.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-7 {
     right: 59.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-8 {
     width: 66%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-8 {
     margin-left: 68%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-8 {
     margin-left: 70%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-8 {
     left: 68%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-8 {
     right: 68%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-9 {
     width: 74.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-9 {
     margin-left: 76.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-9 {
     margin-left: 78.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-9 {
     left: 76.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-9 {
     right: 76.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-10 {
     width: 83%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-10 {
     margin-left: 85%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-10 {
     margin-left: 87%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-10 {
     left: 85%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-10 {
     right: 85%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-11 {
     width: 91.5%; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .offset-l-11 {
     margin-left: 93.5%; }
-  /* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   [class*=col-] + .offset-l-11 {
     margin-left: 95.5%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .push-l-11 {
     left: 93.5%; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 107, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .pull-l-11 {
     right: 93.5%; }
-  /* line 102, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-12 {
     width: 100%; }
-  /* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 109, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .col-l-12, [class*=col-] + [class*=col-l-12] {
     margin-left: 0; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-1 {
     width: 8.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-1 {
     margin-left: 8.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-1 {
     left: 8.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-1 {
     right: 8.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-2 {
     width: 16.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-2 {
     margin-left: 16.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-2 {
     left: 16.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-2 {
     right: 16.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-3 {
     width: 25%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-3 {
     margin-left: 25%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-3 {
     left: 25%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-3 {
     right: 25%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-4 {
     width: 33.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-4 {
     margin-left: 33.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-4 {
     left: 33.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-4 {
     right: 33.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-5 {
     width: 41.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-5 {
     margin-left: 41.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-5 {
     left: 41.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-5 {
     right: 41.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-6 {
     width: 50%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-6 {
     margin-left: 50%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-6 {
     left: 50%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-6 {
     right: 50%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-7 {
     width: 58.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-7 {
     margin-left: 58.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-7 {
     left: 58.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-7 {
     right: 58.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-8 {
     width: 66.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-8 {
     margin-left: 66.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-8 {
     left: 66.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-8 {
     right: 66.6667%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-9 {
     width: 75%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-9 {
     margin-left: 75%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-9 {
     left: 75%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-9 {
     right: 75%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-10 {
     width: 83.3333%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-10 {
     margin-left: 83.3333%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-10 {
     left: 83.3333%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-10 {
     right: 83.3333%; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 117, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .col-l-11 {
     width: 91.6667%; }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 119, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .offset-l-11 {
     margin-left: 91.6667%; }
-  /* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .push-l-11 {
     left: 91.6667%; }
-  /* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/utilities/mixins */
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/utilities/_mixins.scss */
   .no-gutter > .pull-l-11 {
     right: 91.6667%; } }
 
-/* ---------------------------------------------------------------------- */
-/*	CSS Components
-/* ---------------------------------------------------------------------- */
 /* Normalize  */
-/* line 2, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 2, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 .form {
   margin: 1em 0; }
 
-/* line 4, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 4, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
-/* line 10, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 10, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 legend {
   display: block;
   font-size: 1.17em;
   margin-bottom: 1em;
   width: 100%; }
 
-/* line 19, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 19, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 label, label .input-group {
   display: block;
   margin-bottom: 1em; }
-/* line 24, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 24, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 label[for] {
   cursor: pointer; }
-/* line 29, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 29, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 label > input, label > input[type=checkbox], label > input[type=radio], label > select {
   display: inline-block;
   margin: 0 1em 0 0;
   vertical-align: text-top; }
 
-/* line 39, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 39, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 select, textarea, input, .no-edit {
   background: #fff;
   border: 1px solid #c0c0c0;
@@ -2026,11 +1964,11 @@ select, textarea, input, .no-edit {
 	 * 1. Override the value set in normalize.css
 	 * 2. Fix IOS 6/7 opacity issue
 	 */ }
-  /* line 53, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 53, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   select:focus, textarea:focus, input:focus, .no-edit:focus {
     border-color: #00a9ec;
     outline: 0; }
-  /* line 65, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 65, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   select[disabled], textarea[disabled], input[disabled], .no-edit[disabled] {
     background: #ebebeb;
     border-color: #c0c0c0;
@@ -2040,7 +1978,7 @@ select, textarea, input, .no-edit {
     opacity: 1;
     outline: 0 !important; }
 
-/* line 75, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 75, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 input {
   /*
 	 * Declared separately to reduce selector duplication
@@ -2052,10 +1990,10 @@ input {
   /*
 	 * Inline
 	 */ }
-  /* line 76, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 76, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=color] {
     max-width: 105px; }
-  /* line 83, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 83, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=radio], input[type=checkbox] {
     display: block;
     line-height: inherit;
@@ -2064,34 +2002,34 @@ input {
     min-width: 1em;
     padding: 0;
     width: auto; }
-  /* line 93, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 93, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=radio] {
     border-color: transparent \9;
     border-radius: 1em; }
-  /* line 101, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 101, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=range] {
     background-color: #fff \9;
     border: 1px solid #c0c0c0 \9;
     border: 1px solid transparent;
     padding: 0.25em 0;
     padding: 0.25em \9; }
-  /* line 112, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 112, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=range]:focus, input[type=checkbox]:focus, input[type=radio]:focus, input[type=checkbox]:checked {
     border-color: transparent;
     outline: 1px solid #c0c0c0;
     outline-color: #00a9ec;
     outline-offset: -1px; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=checkbox]:focus, input[type=checkbox]:checked {
     border-color: #c0c0c0; }
-  /* line 128, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 128, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input.inline-block, input select.inline-block {
     width: auto; }
 
 /*
  * 1. Remove borders and padding on range controls in IE10+
  */
-/* line 135, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 135, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 x::-ms-reveal, input[type=range] {
   /* 1 */
   border: 1px solid transparent;
@@ -2101,12 +2039,12 @@ x::-ms-reveal, input[type=range] {
  * Fix field styling on iPhone and iPad.
  * 1. Strip OS styling on IOS
  */
-/* line 159, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 159, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 select, textarea, input[type=text], input[type=search], input[type=datetime], input[type=datetime-local], input[type=date], input[type=week], input[type=month], input[type=time], input[type=number], input[type=password], input[type=tel], input[type=email], input[type=url], input[type=color] {
   -webkit-appearance: none;
   /* 1 */ }
 
-/* line 161, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 161, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 select option {
   height: 100%; }
 
@@ -2116,20 +2054,20 @@ select option {
  * 2: Vertical
  * 3: None
  */
-/* line 169, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 169, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 textarea {
   height: auto;
   min-height: 5.25em;
   resize: both; }
-  /* line 174, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 174, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   textarea.horizontal {
     resize: horizontal;
     /* 1 */ }
-  /* line 176, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 176, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   textarea.vertical {
     resize: vertical;
     /* 2 */ }
-  /* line 178, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 178, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   textarea.no-resize {
     resize: none;
     /* 3 */ }
@@ -2137,7 +2075,7 @@ textarea {
 /*
  * Read only
  */
-/* line 185, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 185, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 .no-edit, [readonly] {
   border-color: #ebebeb;
   cursor: not-allowed; }
@@ -2149,22 +2087,22 @@ textarea {
  * 3. Firefox 19+
  * 4. IE10+
  */
-/* line 199, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 199, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 ::-webkit-input-placeholder {
   color: #c0c0c0;
   /* 1 */ }
 
-/* line 200, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 200, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 :-moz-placeholder {
   color: #c0c0c0;
   /* 2 */ }
 
-/* line 201, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 201, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 ::-moz-placeholder {
   color: #c0c0c0;
   /* 3 */ }
 
-/* line 202, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 202, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 :-ms-input-placeholder {
   color: #c0c0c0;
   /* 4 */ }
@@ -2172,7 +2110,7 @@ textarea {
 /*
  * Full Width
  */
-/* line 207, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 207, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 .full-width {
   max-width: 100% !important;
   width: 100% !important; }
@@ -2180,7 +2118,7 @@ textarea {
 /*
  * Actions - Contains buttons
  */
-/* line 215, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+/* line 215, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
 .form-actions {
   margin: 1em 0;
   padding: 1em 0; }
@@ -2189,17 +2127,13 @@ textarea {
   /*
 	 * Remove excess padding in Firefox
 	 */
-  /* line 225, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 225, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input[type=color] {
     min-height: 1.8em;
     padding: 0; } }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-  /*
-	 * Fix field styling on iPhone and iPad.
-	 * 1. Add a select indicator
-	 */
-  /* line 234, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /* line 234, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   input {
     /*
 		 * Fix changing height issues on iOS7.
@@ -2207,20 +2141,24 @@ textarea {
     /*
 		 * Remove excess padding in Webkit
 		 */ }
-    /* line 243, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+    /* line 243, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
     input[type=datetime-local], input[type=date], input[type=week], input[type=month], input[type=time], input[type=number] {
       min-height: 2em; }
-    /* line 248, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+    /* line 248, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
     input[type=color] {
       min-height: 1.8em;
       padding: 0; }
-      /* line 252, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+      /* line 252, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
       input[type=color]::-webkit-color-swatch-wrapper {
         padding: 0; }
-      /* line 254, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+      /* line 254, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
       input[type=color]::-webkit-color-swatch {
         border: 0; }
-  /* line 262, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/forms */
+  /*
+	 * Fix field styling on iPhone and iPad.
+	 * 1. Add a select indicator
+	 */
+  /* line 262, C:/Users/samuli/git/Responsive/src/scss/partials/components/_forms.scss */
   select {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4wMzEiIGhlaWdodD0iMTAuNSI+PHBvbHlnb24gZmlsbD0iIzIyMiIgcG9pbnRzPSIxMSwwIDUuNSw5IDAsMCIvPjwvc3ZnPg==');
     /* 1 */
@@ -2233,7 +2171,7 @@ textarea {
  * 1: Remove rounded corners on iPhone.
  * 2: Remove 300ms touch delay.
  */
-/* line 11, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 11, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 button, input[type=submit], input[type=button], input[type=reset], [role=button], .button {
   -webkit-appearance: none;
   /* 1 */
@@ -2250,7 +2188,7 @@ button, input[type=submit], input[type=button], input[type=reset], [role=button]
   outline-offset: -1px;
   padding: 0.5em 1em;
   -ms-touch-action: none;
-  touch-action: none;
+      touch-action: none;
   /* 2 */
   /*
 	 * Button states.
@@ -2260,29 +2198,29 @@ button, input[type=submit], input[type=button], input[type=reset], [role=button]
 	 * 1. Fix inline-block margin.
 	 * 2. Pad buttons.
 	 */ }
-  /* line 29, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 29, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   button:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover, [role=button]:hover, .button:hover {
     background-color: #cdcdcd; }
-  /* line 35, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 35, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   button:focus, input[type=submit]:focus, input[type=button]:focus, input[type=reset]:focus, [role=button]:focus, .button:focus {
     background-color: #cdcdcd;
     outline-color: #00a9ec; }
-  /* line 41, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 41, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   button:active, input[type=submit]:active, input[type=button]:active, input[type=reset]:active, [role=button]:active, .button:active {
     background-color: #e7e7e7;
     outline-color: transparent; }
-  /* line 52, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 52, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   button.btn-inline, input[type=submit].btn-inline, input[type=button].btn-inline, input[type=reset].btn-inline, [role=button].btn-inline, .button.btn-inline {
     margin-left: -0.27em;
     /* 1 */
     padding: 0.25em 1em;
     /* 2 */ }
 
-/* line 62, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 62, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 [role=button]:hover, [role=button]:focus, [role=button]:active, .button:hover, .button:focus, .button:active {
   text-decoration: none; }
 
-/* line 65, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 65, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 .btn-reset {
   border: 0;
   border-radius: 0;
@@ -2290,7 +2228,7 @@ button, input[type=submit], input[type=button], input[type=reset], [role=button]
   margin: 0;
   padding: 0;
   text-transform: none; }
-  /* line 76, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 76, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   .btn-reset, .btn-reset:hover, .btn-reset:focus, .btn-reset:active {
     background: none;
     color: #0000ee;
@@ -2299,7 +2237,7 @@ button, input[type=submit], input[type=button], input[type=reset], [role=button]
 /*
  * 1. Fix IOS 6/7 opacity issue
  */
-/* line 91, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 91, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 button[disabled], input[type=submit][disabled], input[type=button][disabled], input[type=reset][disabled], [role=button].disabled, .button.disabled {
   background-color: #e7e7e7;
   border-color: #c0c0c0;
@@ -2311,7 +2249,7 @@ button[disabled], input[type=submit][disabled], input[type=button][disabled], in
 /*
  * Reset width for inputs
  */
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 input[type=submit], input[type=reset], input[type=button] {
   max-width: none;
   width: auto; }
@@ -2319,13 +2257,13 @@ input[type=submit], input[type=reset], input[type=button] {
 /*
  * Grouped buttons.
  */
-/* line 114, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+/* line 114, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
 .btn-group {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   white-space: nowrap; }
-  /* line 121, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/buttons */
+  /* line 121, C:/Users/samuli/git/Responsive/src/scss/partials/components/_buttons.scss */
   .btn-group > * {
     float: left; }
 
@@ -2333,14 +2271,14 @@ input[type=submit], input[type=reset], input[type=button] {
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-/* line 8, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+/* line 8, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
 audio, canvas, img, video {
   vertical-align: middle; }
 
 /*
  * Make the image responsive.
  */
-/* line 13, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+/* line 13, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
 img {
   height: auto;
   max-width: 100%; }
@@ -2348,14 +2286,14 @@ img {
 /*
  * Remove the border around images in anchors.
  */
-/* line 21, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+/* line 21, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
 a img {
   border: 0; }
 
 /*
  * Properly scale your video on any device based on YouTube/Dailymotion ratio.
  */
-/* line 26, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+/* line 26, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
 .media {
   height: auto;
   margin-bottom: 1em;
@@ -2388,30 +2326,30 @@ a img {
 	 * Why such a large number? Firefox seems to have issue when using larger images even
 	 * at 100%.
 	 */ }
-  /* line 38, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 38, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.widescreen {
     padding-bottom: 45%; }
-  /* line 43, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 43, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.vimeo {
     padding-top: 0; }
-  /* line 48, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 48, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.instagram {
     height: auto;
     max-width: none;
     padding-bottom: 120%; }
-  /* line 57, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 57, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.vine {
     height: auto;
     max-width: none;
     padding-bottom: 100%; }
-  /* line 66, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 66, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.getty {
     height: auto;
     padding-bottom: 79.9663%; }
-  /* line 71, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 71, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media.video {
     padding-top: 0; }
-  /* line 79, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 79, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media iframe, .media object, .media embed, .media video {
     background-color: transparent;
     border: 0;
@@ -2423,7 +2361,7 @@ a img {
     position: absolute;
     top: 0;
     width: 100%; }
-  /* line 98, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
   .media img {
     bottom: -1000000%;
     left: -1000000%;
@@ -2436,7 +2374,7 @@ a img {
 /*
  *  Scrollable media
  */
-/* line 112, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/media */
+/* line 112, C:/Users/samuli/git/Responsive/src/scss/partials/components/_media.scss */
 .media-scroll {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto; }
@@ -2445,33 +2383,33 @@ a img {
  * Unordered and ordered lists
  * Scale the padding/margin with the base font.
  */
-/* line 6, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 6, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul, ol {
   margin: 1em 0;
   padding-left: 2.5em; }
 
-/* line 12, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 12, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul ul, ol ol {
   margin: 0; }
 
 /*
  * No bullets on first level.
  */
-/* line 17, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 17, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul.no-bullets, ol.no-bullets {
   padding-left: 0; }
-  /* line 20, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+  /* line 20, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   ul.no-bullets > li, ol.no-bullets > li {
     list-style: none; }
 
 /*
  * Coloured lists.
  */
-/* line 30, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 30, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul.colored, ol.colored {
   padding-left: 40px; }
 
-/* line 33, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 33, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul.colored > li, ol.colored > li {
   list-style-type: none;
   position: relative; }
@@ -2481,7 +2419,7 @@ ul.colored > li, ol.colored > li {
  * 2. Edit this property to change all colored class lists.
  * 3. Normalize funky webkit margin
  */
-/* line 44, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 44, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ul.colored > li:before, ol.colored > li:before {
   color: #00a9ec;
   /* 2 */
@@ -2500,10 +2438,10 @@ ul.colored > li:before, ol.colored > li:before {
 /*
  * Counter increment to replace standard numbers.
  */
-/* line 60, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 60, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 ol.colored {
   counter-reset: foo; }
-  /* line 63, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+  /* line 63, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   ol.colored > li {
     counter-increment: foo;
     /*
@@ -2511,7 +2449,7 @@ ol.colored {
 		 * 1. The counter value.
 		 * 2. Normalize funky webkit margin
 		 */ }
-    /* line 71, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+    /* line 71, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
     ol.colored > li:before {
       content: counter(foo) '.';
       /* 1 */
@@ -2525,7 +2463,7 @@ ol.colored {
 /*
  * Prevent dt and dd collapse.
  */
-/* line 86, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+/* line 86, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 dt, dd {
   min-height: 1.4em; }
 
@@ -2533,7 +2471,7 @@ dt, dd {
   /*
 	 * Horizontally styled definition list
 	 */
-  /* line 94, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+  /* line 94, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   .dl-horizontal > dt {
     clear: left;
     float: left;
@@ -2542,19 +2480,19 @@ dt, dd {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 150px; }
-  /* line 104, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/lists */
+  /* line 104, C:/Users/samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   .dl-horizontal > dd {
     margin-left: 166px; } }
 
 /*
  *  Make it responsive
  */
-/* line 4, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+/* line 4, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
 table {
   margin: 1em 0;
   max-width: 100%;
   width: 100%; }
-  /* line 10, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+  /* line 10, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
   table th, table td {
     padding: 0.5em;
     text-align: left;
@@ -2563,47 +2501,47 @@ table {
 /*
  *  Bordered tables
  */
-/* line 20, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+/* line 20, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
 .table-bordered {
   border: 1px solid #c0c0c0;
   border-collapse: separate;
   border-left-width: 0; }
-  /* line 26, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+  /* line 26, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
   .table-bordered th, .table-bordered td {
     border-left: 1px solid #c0c0c0;
     border-top: 1px solid #c0c0c0; }
-  /* line 32, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+  /* line 32, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
   .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
     border-top-width: 0; }
 
 /*
  *  Striped tables
  */
-/* line 41, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+/* line 41, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
 .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th, .table-row-alt > td, .table-row-alt > th {
   background-color: #e7e7e7; }
 
 /*
  * Overflow helpers
  */
-/* line 47, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+/* line 47, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
 .table-scrollable {
   margin: 1em 0;
   overflow: auto;
   overflow-y: hidden;
   width: 100%; }
-  /* line 53, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/tables */
+  /* line 53, C:/Users/samuli/git/Responsive/src/scss/partials/components/_tables.scss */
   .table-scrollable table {
     margin: 0; }
 
-/* line 1, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/alerts */
+/* line 1, C:/Users/samuli/git/Responsive/src/scss/partials/components/_alerts.scss */
 .alert {
   background-color: #fcf8e3;
   border: 1px solid #f2e187;
-  color: #9c8511;
+  color: #9c8611;
   margin: 1em 0;
   padding: 0 2.17em 0 1em; }
-  /* line 9, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/alerts */
+  /* line 9, C:/Users/samuli/git/Responsive/src/scss/partials/components/_alerts.scss */
   .alert .close {
     color: inherit;
     float: right;
@@ -2614,18 +2552,18 @@ table {
     right: -1.17em;
     text-decoration: none;
     top: 0.33em; }
-    /* line 20, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/alerts */
+    /* line 20, C:/Users/samuli/git/Responsive/src/scss/partials/components/_alerts.scss */
     .alert .close:hover {
       text-decoration: underline; }
 
-/* line 24, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/alerts */
+/* line 24, C:/Users/samuli/git/Responsive/src/scss/partials/components/_alerts.scss */
 .alert-heading {
   color: inherit; }
 
 /*
  * Colors and padding.
  */
-/* line 7, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+/* line 7, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
 pre, code, samp, kbd {
   background-color: #f7f7f9;
   border: 1px solid #c0c0c0;
@@ -2635,31 +2573,31 @@ pre, code, samp, kbd {
 /*
  * Prevent overlap on concurrent lines.
  */
-/* line 19, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+/* line 19, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
 code, samp, kbd {
   padding: 0.067em 0.25em; }
 
 /*
  * Prevent wrapping.
  */
-/* line 24, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+/* line 24, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
 kbd {
   white-space: nowrap; }
 
 /*
  * Reassert no wrapping.
  */
-/* line 29, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+/* line 29, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
 pre {
   overflow-x: auto;
   /*
 	 * Remove borders etc in pre.
 	 */ }
-  /* line 36, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+  /* line 36, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
   pre code, pre samp {
     border: 0;
     padding: 0; }
-  /* line 41, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+  /* line 41, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
   pre code {
     white-space: pre;
     word-wrap: normal; }
@@ -2667,20 +2605,17 @@ pre {
 /*
  * Fixed height with overflow.
  */
-/* line 50, C:/Users/samuli/git/_new-Responsive/src/scss/partials/components/code */
+/* line 50, C:/Users/samuli/git/Responsive/src/scss/partials/components/_code.scss */
 .pre-scrollable {
   max-height: 20em;
   overflow-y: scroll; }
 
-/* ---------------------------------------------------------------------- */
-/*	JS Plugins
-/* ---------------------------------------------------------------------- */
-/* line 2, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 2, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-on, .lightbox-lock > body {
   height: 100%;
   overflow: hidden;
   -ms-touch-action: none;
-  touch-action: none; }
+      touch-action: none; }
 
 /*
  * 1: Average browser max z-index.
@@ -2688,7 +2623,7 @@ pre {
  * 3. Use the iOS devices hardware accelerator to provide native scrolling.
  * 4. Prevent font rendering issues on Webkit.
  */
-/* line 14, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 14, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-overlay {
   -webkit-backface-visibility: hidden;
   /* 4 */
@@ -2710,7 +2645,7 @@ pre {
   /*
 	 * 1: Embedded animated gif.
 	 */ }
-  /* line 30, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 30, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox-overlay:before {
     content: '';
     display: inline-block;
@@ -2719,7 +2654,7 @@ pre {
     margin-right: -1px;
     vertical-align: middle;
     width: 1px; }
-  /* line 43, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 43, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox-overlay.lightbox-loader:after {
     background-image: url('data:image/gif;base64,R0lGODlhHAAcAPMAAEpKSldXV2VlZXl5eYmJiZiYmKamprW1tcjIyNnZ2enp6fj4+AAAAAAAAAAAAAAAACH5BAAFAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAHAAcAAAE5hDISau9OGttUKFGcmxWgJxUogZkdZyDNKhIWxHnB4SJrgkHwkRwqgFUCcEkFHOdDCzACzGYJYxEhSJhKRQPMZyH9yFotSPLYOoBGgRABPCsEGLiMItZmyR5D1EUAQkKBjYAAoEVAk0XBQeQkT4XCQuWl1xSkZsal54LEo+bB5MWlZ+ZF4kYAYobBAYFrjIDShsBBQa6toJVVbMTA7q6BLjFAQPFjL68FLDDSgMFBVUEBErIzF26shIE04nWdgC+jUPUE7jT3taBjMAV0ujk1s023wW2AeKHEuqT/PqRmyeDgDmB/SIAACH5BAAFAAAALAAAAAAcABwAg0pKSlhYWGdnZ3Z2doaGhpWVlaenp7i4uMjIyNbW1uPj4/X19QAAAAAAAAAAAAAAAATsEMhJq704a21QoUZibFaAnFSiBmR1nIM0qEdbEecHhImuCQfCxIQCIFSCSSERcx0OBhbghRDMEjWASaFIWArPZwznWfYAhARXka0MwocC0CAAVg1rhRAjMISbFARrVSRgB1IUAWojNgKIFQFJGAUGlZY+FwgLm5wIEpagjBicpAsSlKGYFpqlnnyPFFY2aAYFsFqbbRkBqHRfnAqSFwO9AwEEBAEBA8kHpKoSBJdJxAUDAshJBKSuFKjJ0QW2xwRNAgmbChYC1kPiOsjgnwqAGeztAMwEwrME4pLk6rXgJS4QslkTiNXDJhAhwggAIfkEAAUAAAAsAAAAABwAHACDSkpKWFhYaGhoenp6iYmJl5eXp6entbW1yMjI2tra6urq+Pj4AAAAAAAAAAAAAAAABOgQyEmrvThrXVChnbFZAYIclIkEY2WYgjSYaEsR5ge8CDEKBp+kdJKoWJJCIuY6HAzIA2xWBJQSCYSl4HTGcL1ODzDAYkWWQfdAEDwFwAPQnBBeAoYu82ZG7DMET0gUV2gtAoMVAX8VBQaPkDoYCAqVllo7kJoalp0KSZqPkheUnph3iRQCAzZkBaMTAQoLNRoBr6+MAAQLvUsZArgFAwEExIvEB729sBIEwjECBG2rA1+zvacTuARI090BA+ISAgm9n4rDsd8y4oMGCqwb0sbk4roj30jh461W7BPEyfM3oI0qa/4SUogAACH5BAAFAAAALAAAAAAcABwAg0pKSllZWWhoaHZ2doeHh5SUlKWlpbi4uMfHx9bW1uPj4/f39wAAAAAAAAAAAAAAAATsEMhJq704a11OoQVibFZwnBSiBmRlnII0qEdbEecHhAhBCgafxIQCqBAsSSjmMhgKyddBMEPUAKZEAmEhOJ0x3IHA8820iZFl8A0GngHg4Y1OCC/v76CLRjA1XgZJFAEIaTYAAoMVcRkFbU53FwgKlZZcAJBfGpadChKBbZIWlJ6YeIsUVIgDBaNDCgtXGgFkBQV/EwQLvAm5FQK3twMBA8QDCQsCB7y8OhWtwjECBATLvCMEsbyzurcESQPVtbyfWAi9JQR7Q9VCzX8GCuwa1OsS6AtqiADi4KDl+GFxNyFAs1QkxOVidkqgwAgAIfkEAAUAAAAsAAAAABwAHACDSkpKWFhYZ2dnenp6h4eHmJiYpqamtra2x8fH29vb6enp9/f3AAAAAAAAAAAAAAAABOcQyEmrvThrXQ6hBVJsVnCc1IEgAVkZpyANq+FWw/kBIbJrAsNgYkIBVKxJSFYpGAyFFgB2EAhqEtMKYSE8nzKCrvehbW2WwddACEADwUOgt/qVnOD0tkryRksrIzcCUiVMFwQFiot2FgcJkJEHEouVghiRmQkSiZaNFY+akxgBhRUCQzcDBJ8AAQkKoxoBrKyHEwQKugm3p7UEAwEDhFcKQbq6lxSrtTKowwYLCza5yLK4rMEzA8ED0puuCLslBIfC3BIK0ocFCalA3EwH0sqq3FIE3zdE3O8B0gtMuUB1a961fQglRAAAIfkEAAUAAAAsAAAAABwAHACDSkpKWFhYZ2dnd3d3hISElZWVp6enuLi41tbWyMjI5OTk9/f3AAAAAAAAAAAAAAAABO4QyEmrvThrXQyhxVFsVmCc1KEGZNUZgjSoRlsN5weEh64JhcHEhAKoDixJKOY6FZInmIAmCRwSiYOFEC3EuB7eZ4DFjiyDl8f0BBoChXLCV1IzKWTs4Z7hnitWCX8kAUklfBUEBYuMdBYHCJGSWjuMlhqSmQgSipYFjhWQmpQXhRgCQjYDBKAAAQgKNRsBq6yIAAQKugm3EwKstgILvAIJCgIGurqDE7WsLAYLCyfSNQSwuqTNrANJCtIDA9KbrsYK5BQBBHfC0hLfC3cFCL0V0QuUB9LMLfA6BONs+JK2gAI8QzYS4EuxUKDDChEAACH5BAAFAAAALAAAAAAcABwAg0pKSlhYWGdnZ3x8fIqKipeXl6amprS0tMnJydra2unp6ff39wAAAAAAAAAAAAAAAATpEMhJq704a00MocRRbFZgnNShBmRVnIIkqEZbDecHhMdACgWfxIQCqA4sSSjmKhQIyZdBMDvUACYE4mAhOJ0xnGHA+wwOWsTIAvwOAs8A3ABPI4SXgBdsGaQPTBoDTnloay1yGAGBfQSOj3gXaHZbSo+XGpRpEmSXBJEWk3ZciklsjBsCA6BDCQlXGgGrq6YTBK4JCKgUqrNUCroCCAkCBrgJOhW9tAAGCwsnCgojA8ekFLN4Cc+r0ghDB67fFbKBAs8KEtIKgQW6JM4LpAfShzYA2wtCA973MugU1tVqgUBeCgXX/CkEEAEAIfkEAAUAAAAsAAAAABwAHACDSkpKWFhYZ2dneXl5hoaGlZWVp6enuLi4yMjI1tbW5eXl9/f3AAAAAAAAAAAAAAAABOsQyEmrvThrTcqghFFsVmCI1GkEZFWcgiScY0sNJyGFxrcFnokJBVCxdodYpVMgHF8GwYxoOhwMlkFhW4jherzPwGqtVQRcD9AJXBXIB98lwOxmySuSVlcq2wABRyVKFwMEh4hyFwYIjY5YAIiSfBiOlggShpOKFoyXkIWEZ6IaAQcLC4JCCAmgGQIKqAtmEwQJtwikFAWyC0kKuQIHCTO3t5QUCL06BqgnCgojA6y3rhKxCwlHCagDA9CYgMMJ4TcLoAKoChIJ0IQFuSTNvhIG0LQ23As+38B/EgHUUYCmQFWLU67sHfjHkEIEACH5BAAFAAAALAAAAAAcABwAg0pKSlhYWGZmZnp6eoiIiJiYmKamprW1tcbGxtra2ujo6Pj4+AAAAAAAAAAAAAAAAATrEMhJq704a03KoIRBbFZQnJShBmTVFYIkqEVbDecHhIauBYSYxIQCqAwsSUgIIhAGyZdgZqgBTIeDwTJwOmM4D+8zyGZHFoH3CSQEgAWg+eArrZmTchZJ6qIrAQYHfyRvGAF4NwOLjHUWBgiRklsAjY0akpkIEpaMGpCalBcDiROINgEHCwpJFAGRVhoCCgu1hJySB6UTBbW1ugkIUwfCBZm3Egi+CiMFCgpVCQk1A5miE7QLCEkJz4vSm1fECAdc0BOzzxLSCUwEwiTOCuVG0sgk3Qo6A+A2ps8KKLBrZePAuQkGElzzx1BCBAAh+QQABQAAACwAAAAAHAAcAINKSkpXV1dmZmZ3d3eGhoaVlZWlpaW5ubnX19fIyMjj4+P5+fkAAAAAAAAAAAAAAAAE5xDISau9OGs9yqBEQWxWUJxUYRgBWYWFIAlr4VbC+QHEumsBgkxiQgFUrElvSBkQCIMW7ySgGWwA08pgcT6FgI5n4ANYVyOL4CsMRoOF4NbwK3nBFXJNqlnXJwFoN1l8FQFMFggLi4wIGgYHkZJcAIyWCxqSmgcSipeOGZCblBcDiBSHNwEHCwqFRAcJWH2eC2lNCbkHpymWuwi7ArE5ubm3FAmMCiMFCgpXCAg2A8UJpBOeCVIJzgMD0QlEBrpdzxMCzqDRCEwFuyTN5gAG0bOD3Ao738CDROkU616ROCBPAr1r/RJGAAAh+QQABQAAACwAAAAAHAAcAINKSkpXV1dmZmZ5eXmIiIiZmZmmpqa1tbXIyMjZ2dnp6en4+PgAAAAAAAAAAAAAAAAE4BDISau9OGs9yKBDQWxWQJxUoQZkdRIsIKhjSwnnB4SFrgUDwcSEAqgKsZ1BWBk4fa/ATCQJFAyGgkXwHLBwBK7qI8BiaxXuU2DyEk1mg6/UTU4GZiRJfQmcbQB2FVIZCQuHiAkaBQeNjloAiJILGo6WBxKGkwiLlweQF0EYhDYHCgmCgQcIoBkCCQqxaHcItQdMFwWxsUsIt2UIM7W1sxOmux8FCQkqxDurta2ZsQgxCMtOtlUG2k3ME6/LEsNJBLckygkGEtwIxS3XCToD3YABy4oT5IDs6ikI6/gJnBABACH5BAAFAAAALAAAAAAcABwAg0pKSldXV2ZmZnd3d4WFhZWVlaioqLi4uMjIyNbW1uTk5PX19QAAAAAAAAAAAAAAAATqEMhJq704az2IoEMxbFZAnFShBmTVESwgqERbCecIhMW3DQvDxIQCqAqxXc+yaCZ8r8CsUAMECgZDwYJoNms4D+8zyxqqlYJ3cQgMBgE3jGAWZQQK7/ZWT2ICB01+ElcGOi0DPiWDFF1rCwgaWGZZe49eGpSUEo5rkRmTlHsXiX+KGwEGCgmMgAejdwgKs2gTAwe4Bqdps7O6CAcCAgbBBbi4hxQHvQkjBQkJKggINbfHsBIJswgxCNBv0weExAdCLtETAtCf09wTBMEkzwnmBdO1Nt7NEgPhNkPrGk1jtMEAugn2sP1bCCACACH5BAAFAAAALAAAAAAcABwAg0pKSldXV2ZmZnh4eImJiZaWlqenp7a2tsjIyNra2urq6vj4+AAAAAAAAAAAAAAAAATrEMhJq704ay2GoAMxbNdgUkRKWuYQSEI6rlTnSSHxbYNiTIGWJEV44QpGimKxSOxagZgKECAUrhYEc6EgAGyd1Edwvc4qhe3iEHQFi4NyYXcRJLbeCvlaJB24SRRmNAA3FwGBFQgKjI0IGgUGkpMFEo2XChqTmz8Ai5iPGZGclRiGFlGEBgkIiVQGB3kcCAm1shMDB7oGrhMEtbUGAgjCArAxurpnFAfACSMFCAhX0l4DsLqlFLQJbBIH0ibSnQEFuyzTE8PS39JJBMIkBNKl0Qi3NOAIMwPjhBIBpIVq1+ofAAPpJkTTZtBgBAAh+QQABQAAACwAAAAAHAAcAINKSkpWVlZnZ2d2dnaHh4eUlJSlpaW4uLjHx8fW1tbj4+P39/cAAAAAAAAAAAAAAAAE6RDISau9OGuN1qECMWyWsJwUoZKWchJSoI4sZZwfMKgCOSiGiQkFUBECkx2y4logeoDmcRYjFAqwyuG0UMBuC0OI0BNcr7RKoekRKJ6BwSB+LkAvggQ3CzofSVsKSxVWaT53FQGDFggKjo8IGgUGlJUFEo+ZChqVnUEAjZqRGQSeBnwWcxgBiBsGCQiLMZSoGAIICbmGEgOdsim5uWIHYmYHMp27Eq+5CCMFCAhYBwcwAp21oLnHEgfRAgLUnwGTlCXSQtGj1NwSpa0XBNGXAAXU2YDRNOHENRMB6iiw++UK3QR79PwppBABACH5BAAFAAAALAAAAAAcABwAg0pKSlZWVmdnZ3p6eoiIiJeXl6WlpbW1tcfHx9zc3Onp6ff39wAAAAAAAAAAAAAAAATnEMhJq704a43WocIgbFawLAo1rKSVnIQUrENbGecHhCI5JIaJ4JQC0AJCArKSUCgQI8BrMZixADOC1nJwOmO4hYE3Emi1NUvBqzgInoJAKHuOXgTNr8V8Xmq6CX4UaDZGdhUBghUHCY2OOhgEBZOUMVKOmBqUmwUSjJgJkBeSnJZ3ihNyhQYICKgBBgamGQIHrQhpILEGBagTBLcIBbVjAgUGAQS7BrkUrLc1wAhaBwcxAsuzErcHS7ZQtQdBWMe8e8JCrTrV3RMDwyTSnQAF1c0231Hh44UB6hTsfGlC9+vAvEIIKUQAACH5BAAFAAAALAAAAAAcABwAg0pKSldXV2dnZ3d3d4WFhZWVlaampri4uMfHx9fX1+Tk5Pf39wAAAAAAAAAAAAAAAATvEMhJq704a33WoR2yWcGyKJS5BGOVmINEmElbFeYHIKYxDonCRGBCAVSCIYHlUigQzNdiMDtJAlQCwXJwKhJbQ6+z8Am02pil4FUYBAmEQIBQCLLaJIbu3VbOaUwaBl+CFHk2AAOGFAGMIAmRkjoYBAWXmH6SmzUZmJ9CAAecCZQXlqB+FwKPV3otBQgHjwEFBqoZAgcIvGoUAgbBBa0yvLzDBwWstgEEwQYFvhQGxggxBAcHWsExArbBuBK7CAZMBtlzwlffob/aEwHZOs+CA8oj2Mky3IkT5wd6gEHrByBetmnBiHnSN8FZOIKJIgAAIfkEAAUAAAAsAAAAABwAHACDSkpKV1dXaGhoe3t7iIiImJiYpqamtbW1ycnJ2dnZ6enp9/f3AAAAAAAAAAAAAAAABOgQyEmrvThrfZShx4JsVqCc1KIGZIWcg0SoSVsV5yGFS0EKCZ9EcFJIVAvBRDBguRKJgzMBG9AkgYE2VjlAoTGch/fJbpUWwjdhAB4Eghd8O0Bf4l9Cie7UGBIIfRRadj+CFAGHIAiMjToZAwSSk1yNliMZk5p6AAeXCI8YkZtcd4pYpxgFoIoBBQWlGQKejLFDrwUEqQAEtAgFAQbAAQTAA7gFhROrjG+8BwcEAwYGMQLInIsIBk4G0HDUQsSv2UvREwHQj9TcE8e7E73nvNS2Ld7OAALhNujqFOzgXSgwT4aBcv0SSogAACH5BAAFAAAALAAAAAAcABwAg0pKSlhYWGdnZ3l5eYaGhpaWlqenp7m5udbW1sjIyOTk5Pf39wAAAAAAAAAAAAAAAATuEMhJq704a32UocdybFagKAilLEtAVsk5SASbvlRxfkC4FCRBAigRnG6rhWBiWMxgCMTBBYgpBgNbEcFSWAzR6EynKDR/gBprkbgQwgiDQCoQIgQ+FvFiF1sKawpLG2AJVBQBLFM4AocVAk8XBgmUlTwYAwSam0+Vnm0Zm6IEEpOflxeZo5EWjRgBjhsFB4t/BawYAga0B7gAAgXBBLEUA7wHBQEGyQEEyQPBwYMVs7xLAwYGBNgGM8DRvrsHBlRmcrrLEs3CrQek6tk85oeZxBbc7wTZviTmg+h7cCjLliObPQ1m3kmAphCHwwoRAAAh+QQABQAAACwAAAAAHAAcAINKSkpXV1dmZmZ6enqJiYmYmJimpqa1tbXHx8fa2trp6en39/cAAAAAAAAAAAAAAAAE6xDISau9OGt9kqGHcmxWkJyUogZkhZyDNKhIWxXnB4RKQQoIn0RwSkhUCsHEoIi5EIgDC/BKDGaKGoC4WCgsBig0hksUmD0AQdFdjCwEcRB4EAg69/ZCeLmLnRQEbQlKGwVQUxQBbFI2AokVAoBgclA6GFeZmRKVYhqamhJhlZcXoJsYjxgBkBsEBwatEgQEk6kGB7m2W7S0shMDubkEAQXEAQQFAQO9BIU3wnUAAwYGVwUFMQLNu7gHyhJnBnbYBBLLvRYCBubn1TrY4EPEJNTsMtjPNgDihQLl+9xVoxDvlwYC94BlC8iQQgQAOw==');
     /* 1 */
@@ -2740,7 +2675,7 @@ pre {
 /*
  * 1: Forces height calculations to work in JavaScript.
  */
-/* line 65, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 65, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-header, .lightbox-footer {
   left: 0;
   margin: -1px 0;
@@ -2754,20 +2689,20 @@ pre {
   width: 100%;
   z-index: 1; }
 
-/* line 77, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 77, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-header {
   background: transparent;
   color: #fff;
   padding-right: 4.555em; }
 
-/* line 83, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 83, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-footer {
   background: transparent;
   bottom: 0;
   color: #fff;
   top: auto; }
 
-/* line 90, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 90, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox {
   display: inline-block;
   margin: 0 auto;
@@ -2775,33 +2710,33 @@ pre {
   max-width: 100%;
   overflow: auto;
   vertical-align: middle; }
-  /* line 98, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 98, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox.lightbox-ajax {
     max-width: 1140px;
     width: 100%; }
-  /* line 103, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 103, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox.lightbox-iframe {
     max-width: 900px;
     overflow: hidden;
     width: 100%; }
-  /* line 109, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 109, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox.lightbox-image {
     overflow: hidden; }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 111, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox > img {
     max-height: 100%;
     max-width: none\9;
     width: auto\9;
     /* IE9 and IE10 still read the \9 hack*/ }
-    /* line 117, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+    /* line 117, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
     .lightbox > img:nth-of-type(1n) {
       max-width: 100% \9; }
-  /* line 120, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 120, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox > .media {
     background-color: #111;
     margin: 0 auto; }
 
-/* line 126, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 126, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-content {
   background-color: #fff;
   max-height: 100%;
@@ -2809,7 +2744,7 @@ pre {
   padding: 1em;
   text-align: left; }
 
-/* line 134, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 134, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-close {
   color: #fff;
   display: inline-block;
@@ -2821,12 +2756,12 @@ pre {
   text-decoration: #fff;
   top: 0;
   z-index: 2; }
-  /* line 146, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+  /* line 146, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
   .lightbox-close:hover {
     color: #fff;
     text-decoration: underline; }
 
-/* line 154, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 154, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-direction, .lightbox-direction:visited {
   color: #fff;
   display: block;
@@ -2840,16 +2775,16 @@ pre {
   top: 49%;
   width: 2em;
   z-index: 2; }
-/* line 169, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 169, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-direction.right {
   left: auto;
   right: 0; }
-/* line 174, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/lightbox */
+/* line 174, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_lightbox.scss */
 .lightbox-direction:hover {
   color: #fff;
   text-decoration: underline; }
 
-/* line 1, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 1, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel {
   -webkit-backface-visibility: hidden;
   margin-bottom: 1em;
@@ -2868,23 +2803,22 @@ pre {
   /*
 	 * 1.  IE10 is picking up on the left positioning :(
 	 */ }
-  /* line 8, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 8, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel.no-transition > figure {
-    -webkit-transition-duration: 0s !important;
     transition-duration: 0s !important; }
-  /* line 13, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 13, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel > figure {
     display: none;
     margin: 0;
     position: relative;
     -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transition: 0.7s ease-in-out -webkit-transform, 0.7s ease-in-out left;
+    transition: 0.7s ease-in-out -webkit-transform, 0.7s ease-in-out left;
     transition: 0.7s ease-in-out transform, 0.7s ease-in-out left; }
-    /* line 21, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+    /* line 21, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
     .carousel > figure > img {
       display: block;
       width: 100%; }
-    /* line 26, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+    /* line 26, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
     .carousel > figure > figcaption {
       background-color: #111;
       bottom: 0;
@@ -2892,7 +2826,7 @@ pre {
       padding: 1px 1em;
       position: absolute;
       width: 100%; }
-  /* line 39, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 39, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel > ol {
     left: 0;
     list-style: none;
@@ -2903,7 +2837,7 @@ pre {
     text-align: center;
     top: 1em;
     z-index: 3; }
-    /* line 50, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+    /* line 50, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
     .carousel > ol li {
       background-color: transparent;
       border: 2px solid #111;
@@ -2913,52 +2847,50 @@ pre {
       margin: 1px;
       text-indent: -9999px;
       width: 1em; }
-      /* line 60, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
-      .carousel > ol li:hover { }
-    /* line 66, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+    /* line 66, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
     .carousel > ol .active {
       background-color: #fff; }
-  /* line 78, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 78, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .carousel-active, .carousel .next, .carousel .prev, .carousel .swipe {
     display: block; }
-  /* line 82, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 82, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .carousel-active, .carousel .next.left, .carousel .prev.right {
     left: 0\9;
     -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  /* line 87, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+  /* line 87, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .carousel-active {
     position: relative !important;
     z-index: 1; }
-    /* line 91, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+    /* line 91, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
     .carousel .carousel-active > figcaption {
       position: static; }
-  /* line 96, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 96, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .next, .carousel .prev, .carousel .swipe {
     height: 100%;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 0; }
-  /* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 105, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .next, .carousel .carousel-active.right {
     left: 100% \9;
     -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%); }
-  /* line 111, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+        -ms-transform: translateX(100%);
+            transform: translateX(100%); }
+  /* line 111, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel .prev, .carousel .carousel-active.left {
     left: -100% \9;
     -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%); }
-  /* line 123, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  /* line 123, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel x::-ms-reveal, .carousel .next, .carousel .prev, .carousel .carousel-active.left, .carousel .carousel-active.right {
     left: 0;
     /* 1 */ }
 
-/* line 128, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 128, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-control, .carousel-control:visited {
   color: #fff;
   display: block;
@@ -2973,11 +2905,11 @@ pre {
   top: 40%;
   width: 2em;
   z-index: 3; }
-/* line 144, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 144, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-control.right {
   left: auto;
   right: 0; }
-/* line 149, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 149, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-control:hover {
   color: #fff;
   text-decoration: underline; }
@@ -2985,7 +2917,7 @@ pre {
 /*
  * Fade version
  */
-/* line 159, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 159, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-fade > figure {
   bottom: 0;
   height: 100%;
@@ -2994,62 +2926,61 @@ pre {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transition: opacity 0.7s ease-in-out;
   transition: opacity 0.7s ease-in-out;
   width: 100%; }
-/* line 173, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 173, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-fade > figure.swipe, .carousel-fade > figure.next, .carousel-fade > figure.prev {
   left: 0\9;
   opacity: 1;
   -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+      -ms-transform: none;
+          transform: none;
   z-index: 1; }
-/* line 180, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 180, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-fade > .carousel-active {
   position: relative; }
-  /* line 183, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 183, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel-fade > .carousel-active.swipe {
     z-index: 2; }
-/* line 186, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 186, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-fade .carousel-active {
   opacity: 1; }
-  /* line 190, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+  /* line 190, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
   .carousel-fade .carousel-active.left, .carousel-fade .carousel-active.right {
     left: 0\9;
     opacity: 0;
     -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+        -ms-transform: none;
+            transform: none;
     z-index: 2; }
-/* line 200, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/carousel */
+/* line 200, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_carousel.scss */
 .carousel-fade .carousel-control, .carousel-fade .carousel-control:visited {
   z-index: 3; }
 
-/* line 1, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+/* line 1, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
 .tabs {
   position: relative; }
-  /* line 5, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+  /* line 5, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
   .tabs > * {
     display: none; }
-  /* line 7, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+  /* line 7, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
   .tabs > ul {
     border-bottom: 1px solid #c0c0c0;
     list-style: none;
     margin-top: 0;
     padding: 0; }
-    /* line 14, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+    /* line 14, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
     .tabs > ul li {
       float: left;
       margin-bottom: -1px; }
-      /* line 20, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+      /* line 20, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
       .tabs > ul li.tab-active a, .tabs > ul li.tab-active a:hover {
         background-color: #fff;
         border: 1px solid #c0c0c0;
         border-bottom-color: transparent;
         color: #454545;
         cursor: default; }
-    /* line 30, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+    /* line 30, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
     .tabs > ul a {
       border: 1px solid transparent;
       cursor: pointer;
@@ -3059,44 +2990,41 @@ pre {
       outline: none;
       padding: 0 1em;
       text-decoration: none; }
-      /* line 42, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+      /* line 42, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
       .tabs > ul a:hover {
         background-color: #ebebeb;
         border-color: #c0c0c0; }
-  /* line 51, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tabs */
+  /* line 51, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tabs.scss */
   .tabs > ul, .tabs > .tab-pane-active {
     display: block; }
 
-/* line 1, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 1, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .accordion {
   border: solid 1px #c0c0c0;
   margin-bottom: 0.125em; }
 
-/* line 6, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 6, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .accordion-head {
   border-bottom: solid 1px #c0c0c0;
   display: block; }
-  /* line 11, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+  /* line 11, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
   .accordion-head a {
     display: block;
     outline: none;
     padding: 0.5em; }
-    /* line 18, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
-    .accordion-head a:hover { }
 
-/* line 25, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 25, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .accordion-body {
   padding: 0 0.5em; }
-  /* line 29, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+  /* line 29, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
   .accordion-body.collapse {
     margin-top: -1px; }
 
-/* line 33, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 33, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .trans, .collapse {
-  -webkit-transition: height 0.5s ease, width 0.5s ease;
   transition: height 0.5s ease, width 0.5s ease; }
 
-/* line 37, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 37, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .expand, .collapse {
   display: block;
   height: auto;
@@ -3105,10 +3033,10 @@ pre {
   position: relative;
   width: auto; }
 
-/* line 46, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+/* line 46, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
 .collapse {
   height: 0; }
-  /* line 49, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/dropdown */
+  /* line 49, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_dropdown.scss */
   .collapse.width {
     height: auto;
     width: 0; }
@@ -3117,69 +3045,65 @@ pre {
   /*
 	 * Basic layout.
 	 */
-  /* line 5, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+  /* line 5, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
   [data-table-list] {
     opacity: 0; }
-  /* line 7, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+  /* line 7, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
   .table-list {
     display: block;
     /*
          * Bordered
          */ }
-    /* line 12, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 12, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list thead, .table-list tfoot, .table-list th {
       display: none; }
-    /* line 17, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 17, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list tbody, .table-list tr, .table-list td, .table-list th[scope=row] {
       display: block; }
-    /* line 21, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 21, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list tr:before, .table-list tr:after {
       content: ' ';
       display: table; }
-    /* line 26, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 26, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list tr:after {
       clear: both; }
-    /* line 30, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 30, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list td, .table-list th[scope=row] {
       float: left;
       width: 100%; }
-    /* line 37, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 37, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list td:before, .table-list td:after {
       content: attr(data-thead);
       display: block;
       font-weight: bold;
       padding: 0.5em 0; }
-    /* line 47, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 47, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list th[scope=row]:before, .table-list th[scope=row]:after {
       content: attr(data-thead);
       display: block;
       font-weight: bold;
       padding: 0.5em 0; }
-    /* line 56, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 56, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list td:after, .table-list th[scope=row]:after {
       content: attr(data-tfoot); }
-    /* line 61, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/tablelist */
+    /* line 61, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_tablelist.scss */
     .table-list.table-bordered {
       border-top-style: none; } }
 
-/* line 2, C:/Users/samuli/git/_new-Responsive/src/scss/partials/plugins/autosize */
+/* line 2, C:/Users/samuli/git/Responsive/src/scss/partials/plugins/_autosize.scss */
 .autosize, [data-autosize] {
   overflow: hidden;
-  -webkit-transition: height 0.3s linear;
   transition: height 0.3s linear; }
 
-/* ---------------------------------------------------------------------- */
-/*	Helpers
-/* ---------------------------------------------------------------------- */
 /*
  * Image replacement
  */
-/* line 4, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 4, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .ir {
   background-color: transparent;
   border: 0;
   overflow: hidden; }
-  /* line 9, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 9, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .ir:before {
     content: '';
     display: block;
@@ -3189,7 +3113,7 @@ pre {
 /*
  * Hide from both screen readers and browsers: h5bp.com/u
  */
-/* line 22, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 22, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -3197,7 +3121,7 @@ pre {
 /*
  * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
-/* line 32, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 32, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -3211,8 +3135,8 @@ pre {
 	 * Extends the .visuallyhidden class to allow the element to be focusable
 	 * when navigated to via the keyboard: h5bp.com/p
 	 */ }
-  /* line 48, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  /* line 48, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
+  .focusable.visuallyhidden:active, .focusable.visuallyhidden:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -3223,7 +3147,7 @@ pre {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 64, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 64, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .invisible {
   visibility: hidden; }
 
@@ -3238,115 +3162,114 @@ pre {
  * 2. The use of `table` rather than `block` is only necessary if using
  *	`:before` to contain the top-margins of child elements.
  */
-/* line 79, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 79, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .container:before, .row:before, .btn-group:before, .alert:before, .tabs > ul:before, .clearfix:before, .container:after, .row:after, .btn-group:after, .alert:after, .tabs > ul:after, .clearfix:after {
   content: ' ';
   /* 1 */
   display: table;
   /* 2 */ }
-/* line 84, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 84, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .container:after, .row:after, .btn-group:after, .alert:after, .tabs > ul:after, .clearfix:after {
   clear: both; }
 
 /*
  * Float helpers
  */
-/* line 92, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 92, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .push-center {
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important; }
 
-/* line 98, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 98, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .push-left {
   float: left !important; }
 
-/* line 100, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 100, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .push-right {
   float: right !important; }
 
 /*
  * Layout helpers
  */
-/* line 105, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 105, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .block {
   display: block !important; }
 
-/* line 106, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 106, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .inline-block {
   display: inline-block !important; }
 
-/* line 107, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 107, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .inline {
   display: inline !important; }
 
 /*
  * Text align helpers
  */
-/* line 112, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 112, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .text-left {
   text-align: left; }
 
-/* line 113, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 113, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .text-center {
   text-align: center; }
 
-/* line 114, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 114, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .text-right {
   text-align: right; }
 
 /*
  * Fade opacity with animation
  */
-/* line 119, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 119, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .fade-out {
   opacity: 0 !important; }
 
 /*
  * Opacity helper to add to elements to allow fade animation
  */
-/* line 125, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 125, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .fade-out, .fade-in {
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
-/* line 127, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 127, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .fade-in {
   opacity: 1 !important; }
 
 /*
  * Responsive helpers to toggle visibility.
  */
-/* line 135, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+/* line 135, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
 .visible-xs, .visible-s, .visible-m, .visible-l {
   display: none !important; }
 
 @media (max-width: 47.99em) {
-  /* line 138, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 138, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .hidden-xs {
     display: none !important; }
-  /* line 140, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 140, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .visible-xs {
     display: block !important; }
-  /* line 142, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 142, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   table.visible-xs {
     display: table; }
-  /* line 144, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 144, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   thead.visible-xs {
     display: table-header-group !important; }
-  /* line 146, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 146, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tfoot.visible-xs {
     display: table-footer-group !important; }
-  /* line 148, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 148, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tr.visible-xs {
     display: table-row !important; }
-  /* line 151, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 151, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   th.visible-xs, td.visible-xs {
     display: table-cell !important; }
-  /* line 153, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 153, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   col.visible-xs {
     display: table-column !important; }
-  /* line 155, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 155, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   caption.visible-xs {
     display: table-caption !important; } }
 
@@ -3354,31 +3277,31 @@ pre {
  * 769 > viewport < 991px
  */
 @media (min-width: 48em) and (max-width: 61.99em) {
-  /* line 162, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 162, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .hidden-s {
     display: none !important; }
-  /* line 164, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 164, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .visible-s {
     display: block !important; }
-  /* line 166, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 166, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   table.visible-s {
     display: table !important; }
-  /* line 168, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 168, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   thead.visible-s {
     display: table-header-group !important; }
-  /* line 170, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 170, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tfoot.visible-s {
     display: table-footer-group !important; }
-  /* line 172, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 172, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tr.visible-s {
     display: table-row !important; }
-  /* line 175, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 175, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   th.visible-s, td.visible-s {
     display: table-cell !important; }
-  /* line 177, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 177, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   col.visible-s {
     display: table-column !important; }
-  /* line 179, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 179, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   caption.visible-s {
     display: table-caption !important; } }
 
@@ -3386,31 +3309,31 @@ pre {
  * 992px > viewport < 1200px
  */
 @media (min-width: 62em) and (max-width: 74.99em) {
-  /* line 186, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 186, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .hidden-m {
     display: none !important; }
-  /* line 188, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 188, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .visible-m {
     display: block !important; }
-  /* line 190, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 190, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   table.visible-m {
     display: table !important; }
-  /* line 192, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 192, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   thead.visible-m {
     display: table-header-group !important; }
-  /* line 194, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 194, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tfoot.visible-m {
     display: table-footer-group !important; }
-  /* line 196, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 196, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tr.visible-m {
     display: table-row !important; }
-  /* line 199, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 199, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   th.visible-m, td.visible-m {
     display: table-cell !important; }
-  /* line 201, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 201, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   col.visible-m {
     display: table-column !important; }
-  /* line 203, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 203, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   caption.visible-m {
     display: table-caption !important; } }
 
@@ -3418,94 +3341,89 @@ pre {
  * viewport > 1200px
  */
 @media (min-width: 75em) {
-  /* line 210, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 210, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .hidden-l {
     display: none !important; }
-  /* line 212, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 212, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   .visible-l {
     display: block !important; }
-  /* line 214, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 214, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   table.visible-l {
     display: table !important; }
-  /* line 216, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 216, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   thead.visible-l {
     display: table-header-group !important; }
-  /* line 218, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 218, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tfoot.visible-l {
     display: table-footer-group !important; }
-  /* line 220, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 220, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   tr.visible-l {
     display: table-row !important; }
-  /* line 223, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 223, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   th.visible-l, td.visible-l {
     display: table-cell !important; }
-  /* line 225, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 225, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   col.visible-l {
     display: table-column !important; }
-  /* line 227, C:/Users/samuli/git/_new-Responsive/src/scss/partials/helpers */
+  /* line 227, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers.scss */
   caption.visible-l {
     display: table-caption !important; } }
 
-/* ---------------------------------------------------------------------- */
-/*	Print Styles
-/* ---------------------------------------------------------------------- */
 @media print {
-  /*
-	 * Don't show links for images, or javascript/internal links
-	 */
-  @page {
-    margin: 0.5cm; }
-
-  /* line 4, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 4, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   body:not(.prince-pdf), body:not(.prince-pdf) * {
     background: transparent !important;
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     text-shadow: none !important; }
-  /* line 13, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 13, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   a:visited {
     text-decoration: underline; }
-  /* line 15, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 15, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   a[href]:after {
     content: ' (' attr(href) ')'; }
-  /* line 18, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 18, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   abbr[title]:after {
     content: ' (' attr(title) ')'; }
-  /* line 25, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /*
+	 * Don't show links for images, or javascript/internal links
+	 */
+  /* line 25, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   .ir a:after, a[href^='javascript:']:after, a[href^='#']:after {
     content: ''; }
-  /* line 28, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 28, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-  /* line 33, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 33, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
-  /* line 36, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 36, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   tr, img {
     page-break-inside: avoid; }
-  /* line 38, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 38, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   img {
     max-width: 100% !important; }
-  /* line 44, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  @page {
+    margin: 0.5cm; }
+
+  /* line 44, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
-  /* line 50, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 50, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   h2, h3 {
     page-break-after: avoid; }
-  /* line 54, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 54, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   .no-print, .no-print * {
     display: none !important; }
-  /* line 57, C:/Users/samuli/git/_new-Responsive/src/scss/partials/print */
+  /* line 57, C:/Users/samuli/git/Responsive/src/scss/partials/_print.scss */
   [class*=col-] {
     float: none;
     min-height: 0;
     width: auto; } }
 
-/* ---------------------------------------------------------------------- */
-/*	Custom Styles
-/* ---------------------------------------------------------------------- */
+
+/*# sourceMappingURL=/style.css.map */
