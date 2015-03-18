@@ -125,14 +125,17 @@ gulp.task('img', function() {
 
 });
 
-// Create icon font from SVGs and generate CSS classes
+// Create icon font from SVGs
+// And generate also CSS classes and HTML template
 gulp.task('icons', function() {
 
 	return gulp.src(path.icons.src + '**/*.svg')
 			   .pipe($.plumber())
 			   .pipe($.iconfont({
 				   appendCodepoints : true,
-				   fontName         : 'icons'
+				   fontHeight       : 1000,
+				   fontName         : 'icons',
+				   normalize        : true
 			   }))
 			   .on('codepoints', function(codepoints, options) {
 				   gulp.src(path.css.src + 'templates/_icons.scss')
@@ -143,6 +146,15 @@ gulp.task('icons', function() {
 						   icons     : codepoints
 					   }))
 				 	  .pipe(gulp.dest(path.css.src + 'partials/components/'));
+
+				   gulp.src(path.html.src + 'templates/_icons.html')
+					   .pipe($.consolidate('lodash', {
+						   className : 'icon',
+						   fontName  : 'icons',
+						   fontPath  : 'fonts/',
+						   icons     : codepoints
+					   }))
+				 	  .pipe(gulp.dest(path.html.src + 'partials/'));
 			   })
 			   .pipe($.size({
 				   title : 'Icons'
@@ -151,7 +163,7 @@ gulp.task('icons', function() {
 
 });
 
-// Concat and minify JS files
+// Minify JS files
 gulp.task('js:plugins', function() {
 
 	return gulp.src(path.js.src + 'plugins.js')

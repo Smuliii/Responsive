@@ -1,0 +1,18 @@
+<style>
+	.icons { list-style: none; margin: 0; padding: 0; }
+	.icons li { display: inline-block; margin: 1em; text-align: center; width: 10em; }
+	.icons i, .icons span { display: block; }
+	.icons span { margin: 0.5em 0; }
+	.icon-name { word-wrap: break-word; font-size: .8em; color: #666;}
+	.icon-codepoint { color: #999; font-family: monospace; }
+</style>
+
+<ul class="icons">
+<% _.each(icons, function(icon) { %>
+	<li>
+		<i class="<%= className %>-<%= icon.name %> icon-3x"></i>
+		<span class="icon-name"><%= icon.name %></span>
+		<span class="icon-codepoint"><%= icon.codepoint.toString(16).toLowerCase() %></span>
+	</li>
+<% }); %>
+</ul>
