@@ -1,34 +1,60 @@
 #Responsive
-##A super lightweight HTML, CSS, and JavaScript framework for building responsive websites
+##A powerful, accessible, developer friendly framework for building responsive websites
 
-###Bootstrap and Foundation are too heavy.
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ResponsiveBP/Responsive?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-They're great for prototyping but every time you start a real, front-facing, project with them you have to overwrite lots of designer styles that do nothing to add to the functionality of the website. That's annoying!
+###Responsive is the developers' framework.
 
-**Responsive** has been built with that in mind. It has been specifically designed and coded to be as lightweight as possible to prevent the need to undo styles set by the framework itself and allow developers to write efficient code and speed up development time.
+Other frameworks are too design opinionated and heavy. They're great for prototyping but every time
+you start a real, front-facing, project with them you have to overwrite lots of designer styles that do nothing to add to the
+functionality of the website. That costs developers time and money.
 
-**Responsive** is tiny. The combined CSS and JavaScript is **only 20.6kb minified and gzipped** but there is a lot of functionality built into the framework. It's designed to be dropped-in, as-is to your website such as you would with [Normalize.css](http://necolas.github.io/normalize.css/).
+**Responsive** has been built with that in mind. It is the result of thousands of hours of real, client driven web development and
+testing; specifically developed to be as lightweight as possible to prevent the need to undo styles set by the framework itself
+and allow developers to write efficient code and lower costs.
+  
+**Responsive is tiny**. The combined output CSS and JavaScript is **only 22.9kb minified and gzipped** but there is a lot of functionality 
+built into the framework with touch, right-to-left language, and accessibility support. It's designed to be dropped-in, as-is to your website 
+such as you would with [Normalize.css](http://necolas.github.io/normalize.css/).
 
-Browser support covers IE8+ as well as all other modern browsers.
+Browser support covers IE9+ as well as all other modern browsers.
+
+##Downloading Responsive
+
+Several options are available for downloading Responsive:
+
+- [Download the latest release](https://github.com/ResponsiveBP/Responsive/releases/download/4.0.3/responsive.zip).
+- [Download the latest release source](https://github.com/ResponsiveBP/Responsive/archive/4.0.3.zip).
+- Clone the repo: `git clone https://github.com/ResponsiveBP/Responsive.git`.
+- Install with [Bower](http://bower.io): `bower install responsive`.
 
 ##Documentation
 
 Responsives' documentation, included in the [gh-pages](https://github.com/ResponsiveBP/Responsive/tree/gh-pages) repo. It is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at [http://responsivebp.com](http://responsivebp.com). The docs may also be run locally.
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v1.5).
+1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.2).
  - **If you are running Windows** please read this [unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems.
-2. From the root `/Responsive` directory, run `jekyll serve --baseurl '' --watch` in the command line.
+2. From the root `/Responsive` directory, run `jekyll serve` in the command line.
  - Open [http://localhost:4000](http://localhost:4000) in your browser to view the compiled docs.
+
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
 ##Contributing
 
-Contribution is most welcome, that's the whole idea! Together as a community we can build a boilerplate for building responsive sites that will ensure that high standards can be delivered across all devices.
+Contribution is most welcome, that's the whole idea! Together as a community we can build a boilerplate for building 
+responsive sites that will ensure that high standards can be delivered across all devices.   
 
-Please adhere to existing JavaScript and CSS styles though when submitting code and ensure that you test thoroughly on multiple devices, we don't want another Semicolongate ;)
+Please adhere to existing JavaScript and Sass styles though when submitting code and ensure 
+that you test thoroughly on multiple devices.
 
-##Building the CSS and Javascript
+Please take a moment to review the [guidelines for contributing](CONTRIBUTING.md).
+
+* [Bug reports](CONTRIBUTING.md#bugs)
+* [Feature requests](CONTRIBUTING.md#features)
+* [Pull requests](CONTRIBUTING.md#pull-requests)
+
+##Building the Sass and JavaScript
 
 The build process for Responsive is powered by [gulpjs](http://gulpjs.com/). To build Responsive you will need to first install the required plugins using the following commands from the root `/Responsive` directory:
 
@@ -41,43 +67,19 @@ If you are adding new functionality to the build process use:
 
 There are three types of build available:
 
-1. `gulp` Compiles the framework to the **build** folder.
-2. `gulp watch` For debug purposes. Compiles the framework to the **build** folder and watches for further changes
-3. `gulp release` Compiles the framework to the **build** folder and zips up the build in the **dist** folder for release.
-
-##Bugs and feature requests
-
-Have a bug or a feature request? Please open a new [issue](https://github.com/JimBobSquarePants/Responsive/issues) or even better submit a pull request. Before opening any issue, please search for existing issues and read the Issue Guidelines, written by [Nicolas Gallagher](https://github.com/necolas/).
+ 1. `gulp` Compiles the framework to the **build** folder.
+ 2. `gulp watch` For debug purposes. Compiles the framework to the **build** folder and watches for further changes
+ 3. `gulp release` Compiles the framework to the **build** folder and zips up the build in the **dist** folder for release.
 
 ##Authors
 
-James South [@james_m_south](http://twitter.com/james_m_south)
+James South [@james_m_south](http://twitter.com/james_m_south) and the Responsive contributors.
 
 ##Community
 
 Follow [@responsivebp](http://twitter.com/responsivebp) on Twitter.
+Discuss Responsive on [Gitter](https://gitter.im/ResponsiveBP/Responsive).
 
 ###Copyright and license
 
-Copyright 2013 James South under the [MIT license](http://opensource.org/licenses/MIT).
-
-***
-
-# How to use this fork
-
-More detailed instructions coming soon...
-
-### Installation
-
-First of all, you need to install these:
-
-1. Git: http://git-scm.com/
-2. node.js: http://nodejs.org/
-3. gulp.js: http://gulpjs.com/
-4. Bower: http://bower.io/
-5. Ruby: http://rubyinstaller.org/
-6. Compass: http://compass-style.org/
-
-### Usage
-
-Just run `gulp watch` and start coding!
+Copyright 2013-2015 James South under the [MIT license](http://opensource.org/licenses/MIT).
