@@ -38,16 +38,17 @@ var gulp       = require('gulp'),
 	bowerFiles = require('main-bower-files');
 
 // Copy minified Bower main files
-gulp.task('bower', function() {
+gulp.task('bower', function( cb ) {
 
 	return $.run('bower install').exec(function() {
 
 		return gulp.src(bowerFiles())
-				   .pipe($.changed(path.js.dest))
+				   .pipe($.changed(path.js.src + 'vendor/bower/'))
 				   .pipe($.size({
 					   title : 'Bower'
 				   }))
-				   .pipe(gulp.dest(path.js.dest));
+				   .pipe(gulp.dest(path.js.src + 'vendor/bower/'))
+				   .on('end', cb);
 
 	});
 
@@ -114,9 +115,9 @@ gulp.task('img', function() {
 			   .pipe($.plumber())
 			   .pipe($.changed(path.img.dest))
 			   .pipe($.imagemin({
-				   	interlaced : true,
-				   	optimizationLevel : 3,
-				   	progressive : true
+				   interlaced : true,
+				   optimizationLevel : 3,
+				   progressive : true
 			   }))
 			   .pipe($.size({
 				   title : 'Images'
@@ -145,7 +146,7 @@ gulp.task('icons', function() {
 						   fontPath  : 'fonts/',
 						   icons     : codepoints
 					   }))
-				 	  .pipe(gulp.dest(path.css.src + 'partials/components/'));
+					  .pipe(gulp.dest(path.css.src + 'partials/components/'));
 
 				   gulp.src(path.html.src + 'templates/_icons.html')
 					   .pipe($.consolidate('lodash', {
@@ -154,7 +155,7 @@ gulp.task('icons', function() {
 						   fontPath  : 'fonts/',
 						   icons     : codepoints
 					   }))
-				 	  .pipe(gulp.dest(path.html.src + 'partials/'));
+					  .pipe(gulp.dest(path.html.src + 'partials/'));
 			   })
 			   .pipe($.size({
 				   title : 'Icons'
@@ -164,6 +165,19 @@ gulp.task('icons', function() {
 });
 
 // Minify JS files
+gulp.task('js:jquery', function() {
+
+	return gulp.src(path.js.src + 'jquery.js')
+			   .pipe($.plumber())
+			   .pipe($.changed(path.js.dest))
+			   .pipe($.include())
+			   .pipe($.size({
+				   title : 'jQuery'
+			   }))
+			   .pipe(gulp.dest(path.js.dest));
+
+});
+
 gulp.task('js:plugins', function() {
 
 	return gulp.src(path.js.src + 'plugins.js')
@@ -171,8 +185,6 @@ gulp.task('js:plugins', function() {
 			   .pipe($.changed(path.js.dest))
 			   .pipe($.include())
 			   .pipe($.sourcemaps.init())
-			   .pipe($.jshint())
-			   .pipe($.jshint.reporter('jshint-stylish'))
 			   .pipe($.sourcemaps.write('/'))
 			   .pipe(gulp.dest(path.js.dest))
 			   .pipe($.filter('**/*.js'))
@@ -191,9 +203,10 @@ gulp.task('js:script', function() {
 			   .pipe($.plumber())
 			   .pipe($.changed(path.js.dest))
 			   .pipe($.include())
+			   .pipe($.eslint())
+			   .pipe($.eslint.format('stylish'))
+			   .pipe($.eslint.failAfterError())
 			   .pipe($.sourcemaps.init())
-			   .pipe($.jshint())
-			   .pipe($.jshint.reporter('jshint-stylish'))
 			   .pipe($.sourcemaps.write('/'))
 			   .pipe(gulp.dest(path.js.dest))
 			   .pipe($.filter('**/*.js'))
@@ -206,7 +219,7 @@ gulp.task('js:script', function() {
 
 });
 
-gulp.task('js', gulp.parallel('js:plugins', 'js:script'));
+gulp.task('js', gulp.parallel('js:jquery', 'js:plugins', 'js:script'));
 
 // Pull changes from Studio
 gulp.task('pull', function() {
@@ -240,26 +253,39 @@ gulp.task('server', function() {
 // Remove all the files which are created by gulp
 gulp.task('clean', function( cb ) {
 
-	return del([basePath.dest], cb);
+	var files = [
+		basePath.dest,
+		'bower_components/',
+		path.js.src + 'vendor/bower/',
+		path.css.src + 'partials/components/_icons.scss'
+	];
+
+	return del(files, cb);
 
 });
 
 // Watch source files
 gulp.task('watch:src', function() {
 
-	gulp.watch(path.html.src  + '**/*', 'html');
-	gulp.watch(path.icons.src + '**/*', 'icons');
 	gulp.watch(path.css.src   + '**/*', 'css');
 	gulp.watch(path.fonts.src + '**/*', 'fonts');
-	gulp.watch(path.js.src    + '**/*', 'js');
+	gulp.watch(path.html.src  + '**/*', 'html');
+	gulp.watch(path.icons.src + '**/*', 'icons');
 	gulp.watch(path.img.src   + '**/*', 'img');
+	gulp.watch(path.js.src    + '**/*', 'js');
 
 });
 
 // Watch build files
 gulp.task('watch:push', function() {
 
-	gulp.watch([path.css.dest + '**/*.css', path.js.dest + '**/*.js', path.img.dest + '**/*'], 'push');
+	var files = [
+		path.css.dest + '**/*',
+		path.js.dest  + '**/*',
+		path.img.dest + '**/*'
+	];
+
+	gulp.watch(files, 'push');
 
 });
 
@@ -267,7 +293,7 @@ gulp.task('watch:push', function() {
 gulp.task('watch', gulp.parallel('server', 'watch:src', 'watch:push'));
 
 // Build everything
-gulp.task('build', gulp.series('icons', 'fonts', 'css', 'js', 'html', 'img', 'bower'));
+gulp.task('build', gulp.series('bower', 'icons', gulp.parallel('css', 'fonts', 'html', 'img', 'js')));
 
 // Before build, get rid of all the current files
 gulp.task('default', gulp.series('clean', 'build'));

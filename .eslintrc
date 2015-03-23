@@ -1,0 +1,33 @@
+{
+	"env" : {
+		"browser" : true
+	},
+	"globals" : {
+		"jQuery" : true,
+	},
+	"rules": {
+		"curly"                    : [0],
+		"eqeqeq"                   : [2],
+		"indent"                   : [2, "tab"],
+		"key-spacing"              : [1, {
+			"afterColon"  : true,
+			"align"       : "colon",
+			"beforeColon" : true
+		}],
+		"no-alert"                 : [0],
+		"no-mixed-spaces-and-tabs" : [2, "smart-tabs"],
+		"no-multi-spaces"          : [2, {
+			"exceptions" : {
+				"VariableDeclarator" : true,
+				"Property" : true
+			}
+		}],
+		"no-underscore-dangle"     : [1],
+		"no-unused-vars"           : [1, {
+			"vars": "local",
+			"args": "after-used"
+		}],
+		"no-use-before-define"     : [2, "nofunc"],
+		"quotes"                   : [2, "single"]
+	}
+}

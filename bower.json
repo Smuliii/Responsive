@@ -17,7 +17,7 @@
 	},
 	"overrides"    : {
 		"jquery" : {
-			"main" : "dist/jquery.min.js"
+			"main" : "dist/jquery.js"
 		}
 	}
 }
