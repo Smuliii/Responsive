@@ -28,7 +28,7 @@ linters:
     enabled: true
 
   DuplicateProperty:
-    enabled: true
+    enabled: false
 
   ElsePlacement:
     enabled: true
@@ -75,7 +75,7 @@ linters:
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or 'include_zero'
+    style: include_zero # or 'exclude_zero'
 
   MergeableSelector:
     enabled: true
@@ -88,7 +88,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 35
 
   PlaceholderInExtend:
     enabled: true

@@ -9,4 +9,5 @@ node_modules/
 .sublime-gulp.cache
 
 # Other
-**/.
+**/.sass-cache/
+*.log

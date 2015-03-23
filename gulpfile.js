@@ -37,7 +37,7 @@ var gulp       = require('gulp'),
 	del        = require('del'),
 	bowerFiles = require('main-bower-files');
 
-// Copy minified Bower main files
+// Copy Bower main files
 gulp.task('bower', function( cb ) {
 
 	return $.run('bower install').exec(function() {
@@ -57,8 +57,17 @@ gulp.task('bower', function( cb ) {
 // Compile SASS files
 gulp.task('css', function() {
 
-	return gulp.src(path.css.src + 'style.scss')
+	var files = [
+			path.css.src + '**/*.scss',
+			'!' + path.css.src + 'partials/_copyright.scss',
+			'!' + path.css.src + 'templates/**/*.scss',
+			'!' + path.css.src + 'utilities/mixins/**/*.scss',
+		];
+
+	return gulp.src(files)
 			   .pipe($.plumber())
+			   .pipe($.scssLint())
+			   .pipe($.filter('style.scss'))
 			   .pipe($.sourcemaps.init())
 			   .pipe($.sass({
 				   outputStyle    : 'nested',
