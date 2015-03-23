@@ -4,9 +4,11 @@ jQuery('html').toggleClass('no-js js');
 // Run the code after the DOM has been fully loaded
 jQuery(document).ready(function( $ ) {
 
-	/* ---------------------------------------------------------------------- */
+	'use strict';
+
+	/* -------------------------------------------------------------------------- */
 	/*	Variables & Functions
-	/* ---------------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------- */
 
 	var $window      = $(window),
 		$html        = $('html'),
@@ -21,7 +23,7 @@ jQuery(document).ready(function( $ ) {
 		isMobileView     = window.matchMedia( mobileBreakpoint ).matches,
 		resizeTimer;
 
-	$window.on('resize', function()  {
+	$window.on('resize', function() {
 		clearTimeout(resizeTimer);
 
 		resizeTimer = setTimeout(function() {
@@ -32,37 +34,10 @@ jQuery(document).ready(function( $ ) {
 		}, 250);
 	}).trigger('resize');
 
-	/**
-	 * Convert pixels to ems
-	 *
-	 * @param {Number|String} value
-	 * @param {Boolean} [withUnit]
-	 * @return {Number|String}
-	 */
-	function convertPxToEm( value, withUnit ) {
-
-		if( typeof value !== 'undefined' && value )
-			return parseFloat( value ) / baseFontSize + (typeof withUnit === 'undefined' || withUnit ? 'em' : null);
-
-	}
-
-	/**
-	 * Convert ems to pixels
-	 *
-	 * @param {Number|String} value
-	 * @param {Boolean} [withUnit]
-	 * @return {Number|String}
-	 */
-	function convertEmToPx( value, withUnit ) {
-
-		if( typeof value !== 'undefined' && value )
-			return parseFloat( value ) * baseFontSize + (typeof withUnit === 'undefined' || withUnit ? 'px' : null);
-
-	}
-
-	/* ---------------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------- */
 	/*  Custom Functions
-	/* ---------------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------- */
 
 });
+
 //# sourceMappingURL=/script.js.map
