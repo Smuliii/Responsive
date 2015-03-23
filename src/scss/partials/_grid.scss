@@ -1,5 +1,6 @@
 // Manages width in a single place
 %container {
+	@extend %clearfix;
 	margin: 0 auto;
 	max-width: $grid-container-max-width;
 	width: $grid-container-width;

@@ -252,41 +252,41 @@ blockquote {
   margin: 0 auto;
   max-width: 1140px;
   width: 95%; }
-  /* line 8, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+  /* line 9, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
   .fixed.container, .fixed.modal-iframe, .fixed .container, .fixed .modal-iframe {
     width: 1140px; }
 
-/* line 17, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+/* line 18, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 [class*='block-row-'] {
   display: block;
   list-style: none;
   margin: 0;
   padding: 0; }
-  /* line 24, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+  /* line 25, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
   [class*='block-row-'].no-gutter > * {
     margin: 0 !important; }
 
-/* line 28, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+/* line 29, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 [class*=col-], [class*='block-row-'] > * {
   display: block;
   float: left;
   min-height: 1px;
   width: 100%; }
-  /* line 35, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+  /* line 36, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
   [class*=col-]:first-child, [class*='block-row-'] > *:first-child {
     margin-left: 0; }
-  /* line 37, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+  /* line 38, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
   [dir='rtl'] [class*=col-], [dir='rtl'] [class*='block-row-'] > * {
     float: right; }
-    /* line 40, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+    /* line 41, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
     [dir='rtl'] [class*=col-]:first-child, [dir='rtl'] [class*='block-row-'] > *:first-child {
       margin-right: 0; }
 
-/* line 48, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+/* line 49, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 [class*=col-][class*=offset], [class*=col-][class*=push], [class*=col-][class*=pull] {
   position: relative; }
 
-/* line 52, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
+/* line 53, C:/Users/samuli/git/Responsive/src/scss/partials/_grid.scss */
 [class*='block-row-'].no-gutter.pad-gutter > *, .no-gutter.pad-gutter > [class*=col-] {
   padding: 0 1%; }
 
@@ -6361,11 +6361,11 @@ button.modal-close, button.modal-direction {
     display: block; }
 
 /* line 12, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers-layout.scss */
-.row:before, [class*='block-row-']:before, .alert:before, .tabs > ul:before, .clearfix:before, .row:after, [class*='block-row-']:after, .alert:after, .tabs > ul:after, .clearfix:after {
+.container:before, .modal-ajax.container:before, .modal-iframe:before, .row:before, [class*='block-row-']:before, .alert:before, .tabs > ul:before, .clearfix:before, .container:after, .modal-ajax.container:after, .modal-iframe:after, .row:after, [class*='block-row-']:after, .alert:after, .tabs > ul:after, .clearfix:after {
   content: '';
   display: table; }
 /* line 17, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers-layout.scss */
-.row:after, [class*='block-row-']:after, .alert:after, .tabs > ul:after, .clearfix:after {
+.container:after, .modal-ajax.container:after, .modal-iframe:after, .row:after, [class*='block-row-']:after, .alert:after, .tabs > ul:after, .clearfix:after {
   clear: both; }
 
 /* line 23, C:/Users/samuli/git/Responsive/src/scss/partials/_helpers-layout.scss */
