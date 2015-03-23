@@ -1,0 +1,75 @@
+@include bp-max(xs) {
+	// Force the columns to display as rows on small viewports.
+	// Headers are applied with data attributes.
+	[data-table-list] { opacity: 0; }
+
+	.table-list {
+		display: block;
+
+		thead,
+		tfoot,
+		th {
+			// Hide but allow screenreaders to continue to read the values
+			clip: rect(0 0 0 0);
+			overflow: hidden;
+			position: absolute;
+			visibility: hidden;
+		}
+
+		tbody,
+		tr,
+		td,
+		th[scope=row] {
+			display: block;
+			overflow: visible;
+			position: static;
+			visibility: visible;
+		}
+
+		tr {
+			&:before,
+			&:after {
+				content: '';
+				display: table;
+			}
+
+			&:after { clear: both; }
+		}
+
+		td,
+		th[scope=row] {
+			float: left;
+			width: 100%;
+
+			[dir='rtl'] & { float: right; }
+		}
+
+		td {
+			&:before,
+			&:after {
+				display: block;
+				font-weight: bold;
+				padding: $table-cell-pad 0;
+			}
+
+			// Populate with dynamically generated attribute.
+			&:before { content: attr(data-thead); }
+		}
+
+		th[scope=row] {
+			&:before,
+			&:after {
+				display: block;
+				font-weight: bold;
+				padding: $table-cell-pad 0;
+			}
+
+			&:before { content: attr(data-thead); }
+		}
+
+		td:after,
+		th[scope=row]:after { content: attr(data-tfoot); }
+
+		&.table-bordered { border-top-style: none; }
+	}
+}

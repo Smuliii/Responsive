@@ -1,74 +1,56 @@
-/*
- * Normalize button borders, color, and padding.
- * 1: Remove rounded corners on iPhone.
- * 2: Remove 300ms touch delay.
- */
+// Normalize button borders, color, and padding.
+// 1: Remove rounded corners on iPhone.
+// 2: Remove 300ms touch delay.
 button,
-input[type=submit],
-input[type=button],
-input[type=reset],
-[role=button],
-.button {
-	-webkit-appearance: none; /* 1 */
+input[type='submit'],
+input[type='button'],
+input[type='reset'],
+.btn {
+	-webkit-appearance: none; // 1
 	background: $button-background;
 	border: $button-border;
-	border-radius: $button-border-radius; /* 1 */
-	color: $button-color;
+	border-radius: 0; // 1
+	color: inherit;
 	cursor: pointer;
 	display: inline-block;
-	line-height: normal;
 	margin-bottom: 0;
-	outline: 1px solid transparent;
-	outline-offset: -1px;
-	padding: 0.5em 1em;
-	touch-action: none; /* 2 */
+	min-height: $form-input-height;
+	padding: 0 1rem;
+	text-decoration: none;
+	touch-action: manipulation; // 2
 
-	/*
-	 * Button states.
-	 */
-	&:hover {
-		background-color: $button-background-hover;
-		color: $button-color-hover;
-		outline-color: $button-border-color-hover;
-	}
-
-	&:focus {
-		background-color: $button-background-focus;
-		color: $button-color-focus;
-		outline-color: $button-border-color-focus;
-	}
+	&:hover { background-color: darken($button-background, 5); }
 
 	&:active {
-		background-color: $button-background-active;
-		color: $button-color-active;
-		outline-color: $button-border-color-active;
+		background-color: lighten($button-background, 5);
+		outline: none;
 	}
 
-	/*
-	 * Inline buttons designed for rendering next to inputs.
-	 * 1. Fix inline-block margin.
-	 * 2. Pad buttons.
-	 */
-	&.btn-inline {
-		margin-left: -0.27em; /* 1 */
-		padding: 0.25em 1em; /* 2 */
+	// 1. Fix IOS 6/7 opacity issue
+	&[disabled] {
+		background-color: lighten($button-background, 5);
+		color: $button-color-disabled;
+		cursor: not-allowed;
+		opacity: 1; // 1
 	}
+
+	// Inline buttons designed for rendering next to inputs.
+	// 1. Fix width on Chrome.
+	.input-group & { min-width: 100%; } // 1
 }
 
-[role=button],
-.button {
+.btn {
 	&:hover,
 	&:focus,
 	&:active { text-decoration: none; }
 }
 
+// Reset button styles
 .btn-reset {
 	border: 0;
 	border-radius: 0;
-	font-size: 1em;
 	margin: 0;
 	padding: 0;
-	text-transform: none;
 
 	&,
 	&:hover,
@@ -80,43 +62,19 @@ input[type=reset],
 	}
 }
 
-/*
- * 1. Fix IOS 6/7 opacity issue
- */
-button[disabled],
-input[type=submit][disabled],
-input[type=button][disabled],
-input[type=reset][disabled],
-[role=button].disabled,
-.button.disabled {
-	background-color: $button-background-disabled;
-	border-color: $button-border-color-disabled;
-	color: $button-color-disabled;
-	cursor: not-allowed;
-	opacity: 1; /* 1 */
-}
-
-/*
- * Reset width for inputs
- */
+// Reset width for inputs
 input {
-	&[type=submit],
-	&[type=reset],
-	&[type=button] {
+	&[type='submit'],
+	&[type='reset'],
+	&[type='button'] {
 		max-width: none;
 		width: auto;
 	}
 }
 
-/*
- * Grouped buttons.
- */
-.btn-group {
-	@extend %clearfix;
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	white-space: nowrap;
+// Grouped buttons.
+.btn-group > * {
+	float: left;
 
-	> * { float: left; }
+	[dir='rtl'] & { float: right; }
 }

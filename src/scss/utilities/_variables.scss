@@ -1,250 +1,191 @@
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Colors
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
+$white: #fff;
+$black: #000;
 
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	General Styles
-// ---------------------------------------------------------------------- //
-
+// -------------------------------------------------------------------------- //
 $site-background: #fff !default;
 $site-width: 1140px !default;
 $site-min-width: 320px !default;
 
 $base-font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
 $base-font-size: 100% !default;
-$base-font-size-px: 16px !default; // used for calculations
 $base-line-height: 1.375 !default;
 $base-text-color: #222 !default;
 
-$selection-background: #b3d4fc !default;
-$selection-color: #fff !default;
-
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Typography
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
+$heading-font-family: null !default;
 
-$paragraph-margin: null;
+// These have been calculated to match the default browser sizes.
+$h1-font-size: 2rem !default;
+$h1-margin: 1.34rem !default;
 
-$heading-font-family: null;
+$h2-font-size: 1.5rem !default;
+$h2-margin: 1.245rem !default;
 
-$h1-color: null;
-$h1-font-family: null;
-$h1-font-size: null;
-$h1-line-height: null;
-$h1-text-decoration: null;
-$h1-text-transform: uppercase !default;
+$h3-font-size: 1.17rem !default;
+$h3-margin: 1.17rem !default;
 
-$h2-color: null;
-$h2-font-family: null;
-$h2-font-size:  null;
-$h2-line-height: null;
-$h2-text-decoration: null;
-$h2-text-transform: uppercase !default;
+$h4-font-size: 1rem !default;
+$h4-margin: 1.33rem !default;
 
-$h3-color: null;
-$h3-font-family: null;
-$h3-font-size: null;
-$h3-line-height: null;
-$h3-text-decoration: null;
-$h3-text-transform: uppercase !default;
+$h5-font-size: 0.83rem !default;
+$h5-margin: 1.386rem !default;
 
-$h4-color: null;
-$h4-font-family: null;
-$h4-font-size: null;
-$h4-line-height: null;
-$h4-text-decoration: null;
-$h4-text-transform: null;
+$h6-font-size: 0.67rem !default;
+$h6-margin: 1.561rem !default;
 
-$h5-color: null;
-$h5-font-family: null;
-$h5-font-size: null;
-$h5-line-height: null;
-$h5-text-decoration: null;
-$h5-text-transform: null;
+// Paragraph
+$paragraph-margin: 1rem 0 !default;
 
-$h6-color: null;
-$h6-font-family: null;
-$h6-font-size: null;
-$h6-line-height: null;
-$h6-text-decoration: null;
-$h6-text-transform: null;
+// Selected text
+$selection-background: #b3d4fc !default;
 
-// ---------------------------------------------------------------------- //
+// Focused objects
+$selection-focus-color: #4d90fe !default;
+$selection-focus-style: solid !default;
+$selection-focus-width: 1px !default;
+$selection-focus-offset: -1px !default;
+
+// -------------------------------------------------------------------------- //
 //	Grid System
-// ---------------------------------------------------------------------- //
-
-$grid-breakpoint-xs-max: 47.99em;
-$grid-breakpoint-s-min: 48em;
-$grid-breakpoint-s-max: 61.99em;
-$grid-breakpoint-m-min: 62em;
-$grid-breakpoint-m-max: 74.99em;
-$grid-breakpoint-l-max: 75em;
-
+// -------------------------------------------------------------------------- //
+$grid-container-max-width: $site-width !default;
+$grid-container-width: 95% !default;
+$grid-column-gutter: 2% !default;
 $grid-column-count: 12 !default;
-$grid-column-margin: 2% !default;
 
-// ---------------------------------------------------------------------- //
+// Breakpoints. These have been carefully considered so it
+// is recommended to leave them as they are.
+$grid-breakpoint-xxs-max: 37.49em !default;
+$grid-breakpoint-xs-min: 37.5em !default;
+$grid-breakpoint-xs-max: 47.99em !default;
+$grid-breakpoint-s-min: 48em !default;
+$grid-breakpoint-s-max: 61.99em !default;
+$grid-breakpoint-m-min: 62em !default;
+$grid-breakpoint-m-max: 74.99em !default;
+$grid-breakpoint-l-min: 75em !default;
+
+// Print Breakpoints. Printing on A4 only maintains
+// xs grid layout so we shift the xs/s breakpoint to force it to print using the
+// s grid. These are deliberately set at pixel values to ensure
+// that font-size doesn't affect output.
+$grid-print-breakpoint-xs-max: 536px !default;
+$grid-print-breakpoint-s-min: 537px !default;
+
+// -------------------------------------------------------------------------- //
 //	Basic Elements
-// ---------------------------------------------------------------------- //
-
-/**
- * Links
- */
+// -------------------------------------------------------------------------- //
+// Link
 $link-color: #0000ee !default;
 $link-text-decoration: none !default;
+
 $link-color-hover: #000 !default;
 $link-text-decoration-hover: underline !default;
 
-/**
- * Horizontal Rule
- */
-$horizontal-line-color: #c0c0c0 !default;
-$horizontal-line-height: 1px !default;
+// Horizontal Rule
+$horizontal-rule-color: #c0c0c0 !default;
 
-/**
- * Blockquote
- */
-$blockquote-background: null;
+// Tables
+$table-cell-pad: 0.5rem !default;
+$table-bordered-border: 1px solid #c0c0c0 !default;
+$table-striped-background-color: #ebebeb !default;
+
+// Blockquote
+$blockquote-background: null !default;
 $blockquote-border-left: 5px solid #c0c0c0 !default;
 
-/**
- * Tables
- */
-$table-bordered-border: 1px solid #c0c0c0 !default;
-
-$table-striped-background-color: #e7e7e7 !default;
-
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	CSS Components
-// ---------------------------------------------------------------------- //
-
-/**
- * Forms
- */
-$form-placeholder: #c0c0c0 !default;
-
+// -------------------------------------------------------------------------- //
+// Forms
+$form-line-height: 1.4 !default;
+$form-placeholder: #767676 !default;
+$form-input-padding: 0.25rem !default;
+$form-input-height: 2rem !default;
 $form-input-background: #fff !default;
 $form-input-border: 1px solid #c0c0c0 !default;
 $form-input-border-radius: 0 !default;
 $form-input-color: #222 !default;
 
-$form-input-background-focus: null;
-$form-input-border-color-focus: #00a9ec !default;
-$form-input-color-focus: null;
-
 $form-input-background-disabled: #ebebeb !default;
 $form-input-border-color-disabled: #c0c0c0 !default;
 $form-input-color-disabled: #c0c0c0 !default;
 
-$form-input-background-readonly: null;
+$form-input-background-readonly: null !default;
 $form-input-border-color-readonly: #ebebeb !default;
-$form-input-color-readonly: null;
+$form-input-color-readonly: null !default;
 
-/**
- * Buttons
- */
+// Buttons
 $button-background: #dadada !default;
 $button-border: solid 1px #c0c0c0 !default;
-$button-border-radius: 0 !default;
-$button-color: #222 !default;
-
-$button-background-hover: #cdcdcd !default;
-$button-border-color-hover: null;
-$button-color-hover: null;
-
-$button-background-focus: #cdcdcd !default;
-$button-border-color-focus: #00a9ec !default;
-$button-color-focus: null;
-
-$button-background-active: #e7e7e7 !default;
-$button-border-color-active: transparent !default;
-$button-color-active: null;
-
-$button-background-disabled: #e7e7e7 !default;
-$button-border-color-disabled: #c0c0c0 !default;
 $button-color-disabled: #5d5d5d !default;
 
-/**
- * Lists
- */
+// Lists
 $list-colored-bullet: #00a9ec !default;
 
-/**
- * Alerts
- */
-$alert-color-scheme: #f2e187 !default;
+// Alerts
+$alert-background-color: #ffd54f !default;
+$alert-border-color: #ff6f00 !default;
 
-// ---------------------------------------------------------------------- //
-//	JS Plugins
-// ---------------------------------------------------------------------- //
+// Code
+$code-font-family: monospace, monospace !default;
+$code-background-color: #f7f7f9 !default;
+$code-border-color: #c0c0c0 !default;
+$code-color: #950b2f !default;
 
-/**
- * Lightbox
- */
-$lightbox-header-background: transparent !default;
-$lightbox-header-color: #fff !default;
+// -------------------------------------------------------------------------- //
+//	Vendor Styles
+// -------------------------------------------------------------------------- //
+// Modal
+$modal-overlay-background-color: rgba(#000, 0.7) !default;
 
-$lightbox-footer-background: transparent !default;
-$lightbox-footer-color: #fff !default;
+$modal-header-background: transparent !default;
+$modal-header-color: #fff !default;
 
-$lightbox-content-background-color: #fff !default;
+$modal-footer-background: transparent !default;
+$modal-footer-color: #fff !default;
 
-$lightbox-media-background-color: #111 !default;
+$modal-content-background-color: #fff !default;
 
-$carousel-control-color: #fff !default;
-$carousel-control-text-decoration: none !default;
+$modal-media-background-color: #222 !default;
 
-$carousel-control-color-hover: #fff !default;
-$carousel-control-text-decoration-hover: underline !default;
+$modal-control-color: #fff !default;
 
-/**
- * Carousel
- */
-$carousel-caption-background-color: #111 !default;
+// Carousel
+$carousel-caption-background-color: rgba(#222, 0.4) !default;
 $carousel-caption-color: #fff !default;
 
 $carousel-control-color: #fff !default;
-$carousel-control-text-decoration: none !default;
-
-$carousel-control-color-hover: #fff !default;
-$carousel-control-text-decoration-hover: underline !default;
 
 $carousel-nav-background-color: transparent !default;
-$carousel-nav-border: 2px solid #111 !default;
+$carousel-nav-border: 1px solid #222 !default;
 
-$carousel-nav-background-color-hover: null;
-$carousel-nav-border-color-hover: null;
+$carousel-nav-background-color-hover: #c0c0c0 !default;
+$carousel-nav-border-color-hover: null !default;
 
 $carousel-nav-background-color-active: #fff !default;
-$carousel-nav-border-color-active: null;
+$carousel-nav-border-color-active: null !default;
 
-/**
- * Tabs
- */
+// Tabs
 $tabs-nav-border-color: #c0c0c0 !default;
 
-$tabs-nav-item-background-color: null;
+$tabs-nav-item-background-color: null !default;
 $tabs-nav-item-border-color: transparent !default;
-$tabs-nav-item-color: null;
+$tabs-nav-item-color: null !default;
 
 $tabs-nav-item-background-color-hover: #ebebeb !default;
 $tabs-nav-item-border-color-hover: #c0c0c0 !default;
-$tabs-nav-item-color-hover: null;
+$tabs-nav-item-color-hover: null !default;
 
 $tabs-nav-item-background-color-active: #fff !default;
 $tabs-nav-item-border-color-active: #c0c0c0 !default;
 $tabs-nav-item-color-active: #454545 !default;
 
-/**
- * Dropdown
- */
+// Dropdown
 $accordion-border-color: #c0c0c0 !default;
-
-$accordion-head-background-color: null;
-$accordion-body-background-color: null;
-
-$accordion-link-color: null;
-$accordion-link-text-decoration: null;
-
-$accordion-link-color-hover: null;
-$accordion-link-text-decoration-hover: null;

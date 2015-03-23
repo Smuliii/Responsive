@@ -1,37 +1,32 @@
-/*
- * Colors and padding.
- */
+// Colors and padding.
+// 1: Address odd `em`-unit font size rendering in all browsers.
 pre,
 code,
 samp,
 kbd {
-	background-color: #f7f7f9;
-	border: 1px solid #c0c0c0;
-	color: #ad0d36;
-	padding: 0.5em;
+	background-color: $code-background-color;
+	border: 1px solid $code-border-color;
+	color: $code-color;
+	font-family: $code-font-family;
+	font-size: 1rem; // 1
+	padding: 0.5rem;
 }
 
-/*
- * Prevent overlap on concurrent lines.
- */
+code > kbd { background-color: darken($code-background-color, 5); }
+
+// Prevent overlap on concurrent lines.
 code,
 samp,
-kbd { padding: 0.067em 0.25em; }
+kbd { padding: 0.0667rem 0.25rem; }
 
-/*
- * Prevent wrapping.
- */
+// Prevent wrapping.
 kbd { white-space: nowrap; }
 
-/*
- * Reassert no wrapping.
- */
+// Reassert no wrapping.
 pre {
 	overflow-x: auto;
 
-	/*
-	 * Remove borders etc in pre.
-	 */
+	// Remove borders etc in pre.
 	code,
 	samp {
 		border: 0;
@@ -44,10 +39,8 @@ pre {
 	}
 }
 
-/*
- * Fixed height with overflow.
- */
+// Fixed height with overflow.
 .pre-scrollable {
-	max-height: 20em;
+	max-height: 20rem;
 	overflow-y: scroll;
 }

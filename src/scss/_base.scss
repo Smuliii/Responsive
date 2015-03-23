@@ -1,57 +1,55 @@
-// ---------------------------------------------------------------------- //
+﻿// -------------------------------------------------------------------------- //
 //	Utilities
-// ---------------------------------------------------------------------- //
-
+// -------------------------------------------------------------------------- //
 @import 'utilities/variables';
-@import 'utilities/functions';
-@import 'utilities/mixins';
+@import 'utilities/mixins/breakpoints';
+@import 'utilities/mixins/grid';
+@import 'utilities/mixins/push-pull';
+@import 'utilities/mixins/grid-state';
+@import 'utilities/mixins/layout';
+@import 'utilities/mixins/text-align';
+@import 'utilities/mixins/visibility';
 
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Base Styles
-// ---------------------------------------------------------------------- //
-
+// -------------------------------------------------------------------------- //
 @import 'partials/copyright';
 @import 'partials/normalize';
 @import 'partials/base';
 
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Grid System
-// ---------------------------------------------------------------------- //
-
+// -------------------------------------------------------------------------- //
 @import 'partials/grid';
 
-// ---------------------------------------------------------------------- //
-//	CSS Components
-// ---------------------------------------------------------------------- //
-
-@import	'partials/components/icons';
-@import	'partials/components/forms';
-@import	'partials/components/buttons';
-@import	'partials/components/media';
-@import	'partials/components/lists';
-@import	'partials/components/tables';
+// -------------------------------------------------------------------------- //
+//	Components
+// -------------------------------------------------------------------------- //
 @import	'partials/components/alerts';
+@import	'partials/components/buttons';
 @import	'partials/components/code';
+@import	'partials/components/forms';
+@import	'partials/components/lists';
+@import	'partials/components/media';
+@import	'partials/components/tables';
 
-// ---------------------------------------------------------------------- //
-//	JS Plugins
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
+//	Vendor Styles
+// -------------------------------------------------------------------------- //
+@import	'partials/vendor/autosize';
+@import	'partials/vendor/carousel';
+@import	'partials/vendor/dropdown';
+@import	'partials/vendor/modal';
+@import	'partials/vendor/tablelist';
+@import	'partials/vendor/tabs';
 
-@import	'partials/plugins/lightbox';
-@import	'partials/plugins/carousel';
-@import	'partials/plugins/tabs';
-@import	'partials/plugins/dropdown';
-@import	'partials/plugins/tablelist';
-@import	'partials/plugins/autosize';
-
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Helpers
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
+@import 'partials/helpers-layout';
+@import 'partials/helpers-visibility';
 
-@import 'partials/helpers';
-
-// ---------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Print Styles
-// ---------------------------------------------------------------------- //
-
+// -------------------------------------------------------------------------- //
 @import 'partials/print';

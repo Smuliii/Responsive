@@ -1,55 +1,85 @@
-.container {
-	@extend %clearfix;
+// Manages width in a single place
+%container {
 	margin: 0 auto;
-	max-width: $site-width; /* Manages width in a single place */
-	width: 95%;
+	max-width: $grid-container-max-width;
+	width: $grid-container-width;
 
 	&.fixed,
-	.fixed & { width: $site-width; /* Manages width in a single place */ }
+	.fixed & { width: $grid-container-max-width; }
 }
 
-/*
- * Clearfix: contain floats
- */
-.row { @extend %clearfix; }
+.container { @extend %container; }
 
-/* Columns */
-[class*=col-] {
+.row,
+[class*='block-row-'] { @extend %clearfix; }
+
+// Block-row
+[class*='block-row-'] {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	// Sometimes !important should just be used.
+	&.no-gutter > * { margin: 0 !important; }
+}
+
+[class*=col-],
+[class*='block-row-'] > * {
 	display: block;
 	float: left;
 	min-height: 1px;
-	position: relative;
 	width: 100%;
+
+	// Reset margin to zero for first column.
+	&:first-child { margin-left: 0; }
+
+	[dir='rtl'] & {
+		float: right;
+
+		&:first-child { margin-right: 0; }
+	}
 }
 
-.no-gutter.pad-gutter > [class*=col-] { padding: 0 1%; }
+// Columns
+[class*=col-] {
+	&[class*=offset],
+	&[class*=push],
+	&[class*=pull] { position: relative; }
+}
 
-/*
- * Extra small (phones)
- */
-@include grid-base(xs);
-@include grid-columns(xs);
+[class*='block-row-'].no-gutter.pad-gutter > *,
+.no-gutter.pad-gutter > [class*=col-] { padding: 0 $grid-column-gutter/2; }
 
-/*
- * Small (tablets)
- */
+// Extra, extra small
+@include grid-base(xxs);
+@include grid-columns(xxs);
+@include block-grid-columns(xxs);
+
+// Extra small
+@include bp-min(xs) {
+	@include grid-base(xs);
+	@include grid-columns(xs);
+	@include block-grid-columns(xs);
+}
+
+// Small
 @include bp-min(s) {
 	@include grid-base(s);
 	@include grid-columns(s);
+	@include block-grid-columns(s);
 }
 
-/*
- * Medium (desktop)
- */
+// Medium
 @include bp-min(m) {
 	@include grid-base(m);
 	@include grid-columns(m);
+	@include block-grid-columns(m);
 }
 
-/*
- * Large (desktop)
- */
+// Large
 @include bp-min(l) {
 	@include grid-base(l);
 	@include grid-columns(l);
+	@include block-grid-columns(l);
 }

@@ -1,43 +1,44 @@
+// -------------------------------------------------------------------------- //
+//	Basic print styles
+// -------------------------------------------------------------------------- //
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+
 @media print {
 	body:not(.prince-pdf) {
-		&,
-		* {
+		*,
+		:before,
+		:after {
 			background: transparent !important;
 			box-shadow: none !important;
-			color: #000 !important; /* Black prints faster: h5bp.com/s */
+			color: #000 !important; // Black prints faster: h5bp.com/s
 			text-shadow: none !important;
 		}
 	}
 
-	a {
-		&:visited { text-decoration: underline; }
+	a,
+	a:visited { text-decoration: underline; }
 
-		&[href]:after { content: ' (' attr(href) ')'; }
-	}
+	a[href]:after { content: ' (' attr(href) ')'; }
 
-	abbr[title]:after { content: ' (' attr(title) ')'; }
+	abbr[title]:after {  content: ' (' attr(title) ')'; }
 
-	/*
-	 * Don't show links for images, or javascript/internal links
-	 */
-	.ir a:after,
-	a[href^='javascript:']:after,
-	a[href^='#']:after { content: ''; }
+	// Don't show links that are fragment identifiers,
+	// or use the `javascript:` pseudo protocol
+	a[href^='#']:after,
+	a[href^='javascript:']:after { content: ''; }
 
 	pre,
 	blockquote {
-		border: 1px solid #999;
+		border: 1px solid $code-border-color;
 		page-break-inside: avoid;
 	}
 
-	thead { display: table-header-group; /* h5bp.com/t */ }
+	thead { display: table-header-group; } // h5bp.com/t
 
 	tr,
 	img { page-break-inside: avoid; }
 
 	img { max-width: 100% !important; }
-
-	@page { margin: 0.5cm; }
 
 	p,
 	h2,
@@ -49,12 +50,16 @@
 	h2,
 	h3 { page-break-after: avoid; }
 
-	.no-print {
-		&,
-		* { display: none !important; }
+	// Responsive overrides for layout.
+	.container {
+		max-width: 100%;
+		width: 100%;
+
+		&.fixed,
+		.fixed & { width: 100%; }
 	}
 
-	[class*=col-] {
+	[class*='col-'] {
 		float: none;
 		min-height: 0;
 		width: auto;

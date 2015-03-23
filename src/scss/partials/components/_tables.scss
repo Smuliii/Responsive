@@ -1,22 +1,20 @@
-/*
- *  Make it responsive
- */
+// Make it responsive
 table {
-	margin: 1em 0;
+	margin: 1rem 0;
 	max-width: 100%;
 	width: 100%;
 
 	th,
 	td {
-		padding: 0.5em;
+		padding: $table-cell-pad;
 		text-align: left;
 		vertical-align: top;
+
+		[dir='rtl'] & { text-align: right; }
 	}
 }
 
-/*
- *  Bordered tables
- */
+// Bordered tables
 .table-bordered {
 	border: $table-bordered-border;
 	border-collapse: separate;
@@ -32,21 +30,14 @@ table {
 	tbody:first-child tr:first-child td { border-top-width: 0; }
 }
 
-/*
- *  Striped tables
- */
+// Striped tables
 .table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th,
-.table-row-alt > td,
-.table-row-alt > th { background-color: $table-striped-background-color; }
+.table-striped tbody > tr:nth-child(odd) > th { background-color: $table-striped-background-color; }
 
-/*
- * Overflow helpers
- */
-
+// Overflow helpers
 .table-scrollable {
-	margin: 1em 0;
-	overflow: auto;
+	margin: 1rem 0;
+	overflow-x: auto;
 	overflow-y: hidden;
 	width: 100%;
 
