@@ -1,5 +1,5 @@
 /*
- * Responsive Dismiss 
+ * Responsive Dismiss
  */
 
 /*global jQuery*/
@@ -58,7 +58,7 @@
             self = this,
             complete = function () {
                 self.dismissing = false;
-                $target.removeClass("fade-out").attr({ "aria-hidden": true, "tabindex": -1 });
+                $target.removeClass("fade-out").attr({ "aria-hidden": true, "hidden": true, "tabindex": -1 });
                 self.$element.trigger($.Event(edismissed));
             };
 
@@ -86,7 +86,7 @@
     // No conflict.
     var old = $.fn.dismiss;
 
-    // Plug-in definition 
+    // Plug-in definition
     $.fn.dismiss = function (options) {
 
         return this.each(function () {

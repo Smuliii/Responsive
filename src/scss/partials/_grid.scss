@@ -1,86 +1,116 @@
-// Manages width in a single place
+// 1: Ensure .row negative gutter cannot cause horizontal scrollbar.
 %container {
 	@extend %clearfix;
 	margin: 0 auto;
 	max-width: $grid-container-max-width;
-	width: $grid-container-width;
+	width: calc(100% - #{$grid-column-gutter}); // 1
 
 	&.fixed,
-	.fixed & { width: $grid-container-max-width; }
+	.fixed & { width: $grid-container-max-width; } // 1
 }
 
-.container { @extend %container; }
+.container,
+.container-full { @extend %container; }
 
+// 1: Prevent horizontal scrollbar.
+.container-full {
+	overflow-x: hidden; // 1
+
+	&.fixed,
+	.fixed & { width: 100%; }
+}
+
+// 1: .container not filling full width allows
+// for negative margin.
 .row,
-[class*='block-row-'] { @extend %clearfix; }
+[class*='block-row-'] {
+	@extend %clearfix;
+	margin: 0 (-$grid-column-gutter/2); // 1
+}
+
+// No margin required.
+.no-gutter { margin: 0; }
 
 // Block-row
 [class*='block-row-'] {
 	display: block;
 	list-style: none;
-	margin: 0;
 	padding: 0;
-
-	// Sometimes !important should just be used.
-	&.no-gutter > * { margin: 0 !important; }
 }
 
+// Columns
+// 1: Use transparent borders for padding.
+// 2: Clip to allow setting a background color without filling the whole area.
 [class*=col-],
 [class*='block-row-'] > * {
+	background-clip: padding-box; // 2
+	border-left: ($grid-column-gutter/2) solid transparent; // 1
+	border-right: ($grid-column-gutter/2) solid transparent; // 1
 	display: block;
 	float: left;
 	min-height: 1px;
 	width: 100%;
 
-	// Reset margin to zero for first column.
-	&:first-child { margin-left: 0; }
-
-	[dir='rtl'] & {
-		float: right;
-
-		&:first-child { margin-right: 0; }
-	}
+	[dir='rtl'] & { float: right; }
 }
 
-// Columns
+// Movable columns
 [class*=col-] {
 	&[class*=offset],
 	&[class*=push],
 	&[class*=pull] { position: relative; }
 }
 
-[class*='block-row-'].no-gutter.pad-gutter > *,
-.no-gutter.pad-gutter > [class*=col-] { padding: 0 $grid-column-gutter/2; }
+// 1: Remove gutter
+[class*='block-row-'].no-gutter > *,
+.no-gutter > [class*=col-] {
+	background-clip: border-box; // 1
+	border: 0; // 1
+}
+
+// Equal height
+// Stop rows collapsing
+.equal-height {
+	display: table;
+	height: 1px;
+	table-layout: fixed; // 1
+	width: calc(100% + #{$grid-column-gutter});
+
+	&.no-gutter { width: 100%; }
+
+	// Without this columns shift right.
+	&:before { display: none !important; } // 1
+
+	> [class*=col-] {
+		float: none;
+		vertical-align: top;
+	}
+}
 
 // Extra, extra small
-@include grid-base(xxs);
 @include grid-columns(xxs);
 @include block-grid-columns(xxs);
 
 // Extra small
 @include bp-min(xs) {
-	@include grid-base(xs);
 	@include grid-columns(xs);
 	@include block-grid-columns(xs);
 }
 
 // Small
 @include bp-min(s) {
-	@include grid-base(s);
 	@include grid-columns(s);
 	@include block-grid-columns(s);
 }
 
 // Medium
 @include bp-min(m) {
-	@include grid-base(m);
 	@include grid-columns(m);
 	@include block-grid-columns(m);
 }
 
 // Large
 @include bp-min(l) {
-	@include grid-base(l);
 	@include grid-columns(l);
 	@include block-grid-columns(l);
 }

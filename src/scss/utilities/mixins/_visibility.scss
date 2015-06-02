@@ -1,4 +1,4 @@
-﻿// -------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Creates visibility classes for each breakpoint.
 // -------------------------------------------------------------------------- //
 @mixin visibility($bp) {
@@ -6,6 +6,10 @@
 		.hidden-#{$bp} { display: none !important; }
 
 		.visible-#{$bp} { display: block !important; }
+
+		.visible-#{$bp}.inline { display: inline !important; }
+
+		.visible-#{$bp}.inline-block { display: inline-block !important; }
 
 		table.visible-#{$bp} { display: table; }
 

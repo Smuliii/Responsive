@@ -13,6 +13,7 @@ $site-min-width: 320px !default;
 
 $base-font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
 $base-font-size: 100% !default;
+$base-font-size-px: 16px !default;
 $base-line-height: 1.375 !default;
 $base-text-color: #222 !default;
 
@@ -56,8 +57,7 @@ $selection-focus-offset: -1px !default;
 //	Grid System
 // -------------------------------------------------------------------------- //
 $grid-container-max-width: $site-width !default;
-$grid-container-width: 95% !default;
-$grid-column-gutter: 2% !default;
+$grid-column-gutter: 16px !default;
 $grid-column-count: 12 !default;
 
 // Breakpoints. These have been carefully considered so it
@@ -142,6 +142,11 @@ $code-color: #950b2f !default;
 // -------------------------------------------------------------------------- //
 //	Vendor Styles
 // -------------------------------------------------------------------------- //
+// Navigation
+$navigation-background-color: #222 !default;
+$navigation-color: #fff !default;
+$navigation-width: 260px !default;
+
 // Modal
 $modal-overlay-background-color: rgba(#000, 0.7) !default;
 

@@ -121,14 +121,14 @@
     // No conflict.
     var old = $.fn.autoSize;
 
-    // Plug-in definition 
+    // Plug-in definition
     $.fn.autoSize = function (options) {
 
         return this.each(function () {
 
             var $this = $(this),
                 data = $this.data("r.autosize"),
-                opts = typeof options === "object" ? options : null;
+                opts = typeof options === "object" ? $.extend({}, options) : null;
 
             if (!data) {
                 // Check the data and reassign if not present.

@@ -17,8 +17,7 @@
 // Hide from both screen readers and browsers: h5bp.com/u
 %hidden { display: none !important; }
 
-.hidden,
-[aria-hidden='true'] { @extend %hidden; }
+.hidden { @extend %hidden; }
 
 // Hide only visually, but have it available for screen readers: h5bp.com/v
 %visuallyhidden {
@@ -53,19 +52,16 @@
 
 .invisible { @extend %invisible; }
 
-// Fade opacity with animation
 // Opacity helper to add to elements to allow fade animation
-%fade-out {
-	opacity: 0 !important;
-	transition: opacity 0.3s;
-}
+%fade-out,
+%fade-in { transition: opacity 0.3s; }
+
+// Fade opacity with animation
+%fade-out { opacity: 0 !important; }
 
 .fade-out { @extend %fade-out; }
 
-%fade-in {
-	opacity: 1 !important;
-	transition: opacity 0.3s;
-}
+%fade-in { opacity: 1 !important; }
 
 .fade-in { @extend %fade-in; }
 

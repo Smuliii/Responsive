@@ -94,15 +94,9 @@
 // Grid state detection.
 .grid-state-indicator {
 	height: 1px;
-	left: -99999px;
 	position: absolute;
-	top: -99999px;
+	top: -9999px;
 	width: 0;
-
-	[dir='rtl'] & {
-		left: auto;
-		right: -99999px;
-	}
 }
 
 // Breakpoint driven changes. 0 based so we can parse easily with JavaScript.
@@ -111,3 +105,22 @@
 @include grid-state(s, 2px);
 @include grid-state(m, 3px);
 @include grid-state(l, 4px);
+
+// Scrollbar width measurement helper
+.scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+
+// 1: Locks the height of the document removing the scrollbar.
+[data-lock] {
+	&,
+	& body {
+		height: 100%;
+		overflow: hidden;
+		touch-action: none;
+	}
+}

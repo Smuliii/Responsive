@@ -77,9 +77,9 @@
     };
 
     // No conflict.
-    var old = $.fn.table;
+    var old = $.fn.tablelist;
 
-    // Plug-in definition 
+    // Plug-in definition
     $.fn.tablelist = function (options) {
 
         return this.each(function () {

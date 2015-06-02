@@ -29,6 +29,10 @@ html {
 // might still respond to pointer events.
 [tabindex='-1']:focus { outline: none !important; }
 
+// IE11 on Windows 8 & WP8 show outline on divs.
+_::-ms-reveal,
+div:not([tabindex]):focus { outline: none !important; }
+
 // Headers
 // 1: Prevent page breaking.
 // 2: Improve rendering of screen fonts.
