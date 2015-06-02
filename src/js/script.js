@@ -10,11 +10,10 @@ jQuery(document).ready(function( $ ) {
 	/*	Variables & Functions
 	/* -------------------------------------------------------------------------- */
 
-	var $window      = $(window),
-		$html        = $('html'),
-		$body        = $('body'),
-		lang         = $html.attr('lang'),
-		baseFontSize = parseFloat( $html.css('font-size') );
+	var $window = $(window),
+		$html   = $('html'),
+		$body   = $('body'),
+		lang    = $html.attr('lang');
 
 	/**
 	 * Update `isMobileView` variable and trigger `mobileViewChange` event when a screen size change occurs
