@@ -6,166 +6,166 @@
 /*jshint expr:true*/
 (function ($, w, ns, da) {
 
-    "use strict";
+	"use strict";
 
-    if (w.RESPONSIVE_AUTOSIZE) {
-        return;
-    }
+	if (w.RESPONSIVE_AUTOSIZE) {
+		return;
+	}
 
-    // General variables and methods.
-    var eready = "ready" + ns + da,
-        echanged = ["domchanged" + ns + da, "shown.r.modal" + da].join(" "),
-        eresize = ["resize" + ns, "orientationchange" + ns].join(" "),
-        einput = "input",
-        ekeyup = "keyup",
-        esize = "size" + ns,
-        esized = "sized" + ns;
+	// General variables and methods.
+	var eready = "ready" + ns + da,
+		echanged = ["domchanged" + ns + da, "shown.r.modal" + da].join(" "),
+		eresize = ["resize" + ns, "orientationchange" + ns].join(" "),
+		einput = "input",
+		ekeyup = "keyup",
+		esize = "size" + ns,
+		esized = "sized" + ns;
 
-    (function (oldVal) {
-        /// <summary>Override the core val method in the jQuery object to fire an input event on autosize plugins whenever it is called.</summary>
-        /// <param name="old" type="Function">
-        ///      The jQuery function being overridden.
-        /// </param>
-        /// <returns type="jQuery">The jQuery object for chaining.</returns>
+	(function (oldVal) {
+		/// <summary>Override the core val method in the jQuery object to fire an input event on autosize plugins whenever it is called.</summary>
+		/// <param name="old" type="Function">
+		///      The jQuery function being overridden.
+		/// </param>
+		/// <returns type="jQuery">The jQuery object for chaining.</returns>
 
-        $.fn.val = function () {
-            // Execute the original val() method using the augmented arguments collection.
-            var result = oldVal.apply(this, arguments);
+		$.fn.val = function () {
+			// Execute the original val() method using the augmented arguments collection.
+			var result = oldVal.apply(this, arguments);
 
-            if (this.data("r.autosize") && arguments.length) {
-                this.trigger($.Event(einput));
-            }
+			if (this.data("r.autosize") && arguments.length) {
+				this.trigger($.Event(einput));
+			}
 
-            return result;
-        };
-    })($.fn.val);
+			return result;
+		};
+	})($.fn.val);
 
-    // AutoSize class definition
-    var AutoSize = function (element, options) {
+	// AutoSize class definition
+	var AutoSize = function (element, options) {
 
-        this.$element = $(element);
-        this.element = element,
-        this.options = $.extend({}, this.defaults, options);
-        this.sizing = null;
-        this.difference = 0;
-        this.height = this.$element.height();
+		this.$element = $(element);
+		this.element = element,
+		this.options = $.extend({}, this.defaults, options);
+		this.sizing = null;
+		this.difference = 0;
+		this.height = this.$element.height();
 
-        // Initial setup.
-        this.init();
+		// Initial setup.
+		this.init();
 
-        // Bind events. Keyup is required for IE9.
-        this.$element.on([einput, ekeyup].join(" "), $.debounce($.proxy(this.size, this), 100));
-        $(w).on(eresize, $.debounce($.proxy(this.size, this), 100));
-    };
+		// Bind events. Keyup is required for IE9.
+		this.$element.on([einput, ekeyup].join(" "), $.debounce($.proxy(this.size, this), 100));
+		$(w).on(eresize, $.debounce($.proxy(this.size, this), 100));
+	};
 
-    AutoSize.prototype.init = function () {
-        var height = this.$element.outerHeight();
-        this.difference = parseFloat(this.$element.css("paddingBottom")) +
-                          parseFloat(this.$element.css("paddingTop"));
+	AutoSize.prototype.init = function () {
+		var height = this.$element.outerHeight();
+		this.difference = parseFloat(this.$element.css("paddingBottom")) +
+						  parseFloat(this.$element.css("paddingTop"));
 
-        // Firefox: scrollHeight isn't full height on border-box
-        if (this.element.scrollHeight + this.difference <= height) {
-            this.difference = 0;
-        }
+		// Firefox: scrollHeight isn't full height on border-box
+		if (this.element.scrollHeight + this.difference <= height) {
+			this.difference = 0;
+		}
 
-        // Only set the height if textarea has value.
-        if (this.element.value.replace(/\s/g, "").length > 0) {
-            this.$element.height(this.element.scrollHeight);
-        }
-    };
+		// Only set the height if textarea has value.
+		if (this.element.value.replace(/\s/g, "").length > 0) {
+			this.$element.height(this.element.scrollHeight);
+		}
+	};
 
-    AutoSize.prototype.size = function () {
+	AutoSize.prototype.size = function () {
 
-        var self = this,
-            $element = this.$element,
-            element = this.element,
-            sizeEvent = $.Event(esize);
+		var self = this,
+			$element = this.$element,
+			element = this.element,
+			sizeEvent = $.Event(esize);
 
-        if (this.sizing) {
-            return;
-        }
+		if (this.sizing) {
+			return;
+		}
 
-        // Check and get the height
-        $element.height("auto");
-        var scrollHeight = element.scrollHeight - this.difference,
-            different = this.height !== scrollHeight;
+		// Check and get the height
+		$element.height("auto");
+		var scrollHeight = element.scrollHeight - this.difference,
+			different = this.height !== scrollHeight;
 
-        $element.height(this.height);
+		$element.height(this.height);
 
-        // Trigger events if need be.
-        if (different) {
-            $element.trigger(sizeEvent);
-        }
+		// Trigger events if need be.
+		if (different) {
+			$element.trigger(sizeEvent);
+		}
 
-        if (this.sizing || sizeEvent.isDefaultPrevented()) {
-            return;
-        }
+		if (this.sizing || sizeEvent.isDefaultPrevented()) {
+			return;
+		}
 
-        this.sizing = true;
+		this.sizing = true;
 
-        $element.height(scrollHeight);
+		$element.height(scrollHeight);
 
-        if (different) {
-            // Do our callback
-            $element.onTransitionEnd(function() {
-                self.sizing = false;
-                self.height = scrollHeight;
-                $element.trigger($.Event(esized));
-            });
-            return;
-        }
+		if (different) {
+			// Do our callback
+			$element.onTransitionEnd(function() {
+				self.sizing = false;
+				self.height = scrollHeight;
+				$element.trigger($.Event(esized));
+			});
+			return;
+		}
 
-        this.sizing = false;
-    };
+		this.sizing = false;
+	};
 
-    // No conflict.
-    var old = $.fn.autoSize;
+	// No conflict.
+	var old = $.fn.autoSize;
 
-    // Plug-in definition
-    $.fn.autoSize = function (options) {
+	// Plug-in definition
+	$.fn.autoSize = function (options) {
 
-        return this.each(function () {
+		return this.each(function () {
 
-            var $this = $(this),
-                data = $this.data("r.autosize"),
-                opts = typeof options === "object" ? $.extend({}, options) : null;
+			var $this = $(this),
+				data = $this.data("r.autosize"),
+				opts = typeof options === "object" ? $.extend({}, options) : null;
 
-            if (!data) {
-                // Check the data and reassign if not present.
-                $this.data("r.autosize", (data = new AutoSize(this, opts)));
-            }
+			if (!data) {
+				// Check the data and reassign if not present.
+				$this.data("r.autosize", (data = new AutoSize(this, opts)));
+			}
 
-            if (options === "size") {
-                data.size();
-            }
-        });
-    };
+			if (options === "size") {
+				data.size();
+			}
+		});
+	};
 
-    // Set the public constructor.
-    $.fn.autoSize.Constructor = AutoSize;
+	// Set the public constructor.
+	$.fn.autoSize.Constructor = AutoSize;
 
-    $.fn.autoSize.noConflict = function () {
-        $.fn.autoSize = old;
-        return this;
-    };
+	$.fn.autoSize.noConflict = function () {
+		$.fn.autoSize = old;
+		return this;
+	};
 
-    // Data API
-    var init = function () {
-        $("textarea[data-autosize]").each(function () {
-            var $this = $(this),
-                loaded = $this.data("r.autosizeLoaded");
-            if (!loaded) {
-                $this.data("r.autosizeLoaded", true);
-                $this.addClass("autosize").autoSize($.getDataOptions($this, "autosize"));
-            }
-        });
-    },
-    debouncedInit = $.debounce(init, 500);
+	// Data API
+	var init = function () {
+		$("textarea[data-autosize]").each(function () {
+			var $this = $(this),
+				loaded = $this.data("r.autosizeLoaded");
+			if (!loaded) {
+				$this.data("r.autosizeLoaded", true);
+				$this.addClass("autosize").autoSize($.getDataOptions($this, "autosize"));
+			}
+		});
+	},
+	debouncedInit = $.debounce(init, 500);
 
-    $(document).on([eready, echanged].join(" "), function (event) {
-        event.type === "ready" ? init() : debouncedInit();
-    });
+	$(document).on([eready, echanged].join(" "), function (event) {
+		event.type === "ready" ? init() : debouncedInit();
+	});
 
-    w.RESPONSIVE_AUTOSIZE = true;
+	w.RESPONSIVE_AUTOSIZE = true;
 
 }(jQuery, window, ".r.autosize", ".data-api"));
