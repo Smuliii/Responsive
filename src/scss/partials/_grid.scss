@@ -87,30 +87,10 @@
 	}
 }
 
-// Extra, extra small
-@include grid-columns(xxs);
-@include block-grid-columns(xxs);
-
-// Extra small
-@include bp-min(xs) {
-	@include grid-columns(xs);
-	@include block-grid-columns(xs);
-}
-
-// Small
-@include bp-min(s) {
-	@include grid-columns(s);
-	@include block-grid-columns(s);
-}
-
-// Medium
-@include bp-min(m) {
-	@include grid-columns(m);
-	@include block-grid-columns(m);
-}
-
-// Large
-@include bp-min(l) {
-	@include grid-columns(l);
-	@include block-grid-columns(l);
+// XXS, XS, S, M, L grids
+@each $bp in $grid-breakpoints {
+	@include bp-min($bp) {
+		@include grid-columns($bp);
+		@include block-grid-columns($bp);
+	}
 }

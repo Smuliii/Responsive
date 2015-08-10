@@ -36,12 +36,10 @@
 
 .pull { @extend %pull; }
 
-// XXS, XS, S, M, L viewports.
-@include push-pull(xxs);
-@include push-pull(xs);
-@include push-pull(s);
-@include push-pull(m);
-@include push-pull(l);
+// XXS, XS, S, M, L viewports
+@each $bp in $grid-breakpoints {
+	@include push-pull($bp);
+}
 
 // Layout helpers
 %block { display: block; }
@@ -56,12 +54,10 @@
 
 .inline { @extend %inline; }
 
-// XXS, XS, S, M, L viewports.
-@include layout(xxs);
-@include layout(xs);
-@include layout(s);
-@include layout(m);
-@include layout(l);
+// XXS, XS, S, M, L viewports
+@each $bp in $grid-breakpoints {
+	@include layout($bp);
+}
 
 // Text align helpers
 %text-pull {
@@ -84,12 +80,10 @@
 
 .text-center { @extend %text-center; }
 
-// XXS, XS, S, M, L viewports.
-@include text-align(xxs);
-@include text-align(xs);
-@include text-align(s);
-@include text-align(m);
-@include text-align(l);
+// XXS, XS, S, M, L viewports
+@each $bp in $grid-breakpoints {
+	@include text-align($bp);
+}
 
 // Grid state detection.
 .grid-state-indicator {
@@ -100,11 +94,9 @@
 }
 
 // Breakpoint driven changes. 0 based so we can parse easily with JavaScript.
-@include grid-state(xxs, 0);
-@include grid-state(xs, 1px);
-@include grid-state(s, 2px);
-@include grid-state(m, 3px);
-@include grid-state(l, 4px);
+@each $bp in $grid-breakpoints {
+	@include grid-state($bp, index($grid-breakpoints, $bp) - 1 * 1px);
+}
 
 // Scrollbar width measurement helper
 .scrollbar-measure {

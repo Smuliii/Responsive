@@ -45,19 +45,22 @@ input[type='reset'],
 	&:active { text-decoration: none; }
 }
 
-// Reset button styles
+// Reset button styles and make it look like a normal text
 .btn-reset {
 	border: 0;
 	border-radius: 0;
+	display: inline;
 	margin: 0;
+	min-height: 0;
 	padding: 0;
+	vertical-align: baseline;
 
 	&,
 	&:hover,
 	&:focus,
 	&:active {
 		background: none;
-		color: $link-color;
+		color: inherit;
 		outline: none;
 	}
 }

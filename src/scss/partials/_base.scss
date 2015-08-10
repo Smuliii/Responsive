@@ -5,8 +5,8 @@ html {
 	color: $base-text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 	line-height: $base-line-height;
-	min-width: $site-min-width;
 	-webkit-overflow-scrolling: touch; // 1
 }
 
@@ -42,46 +42,59 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	font-family: $heading-font-family;
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	color: $headings-color;
+	font-family: $headings-font-family;
 	page-break-after: avoid; // 1
 	text-rendering: optimizeLegibility; // 2
 }
 
 // Address variable `h1` font-size and margin within `section` and `article`
 // contexts in Firefox 4+, Safari, and Chrome.
-h1 {
+h1,
+.h1 {
 	font-size: $h1-font-size;
-	margin: $h1-margin 0;
+	margin: $h1-margin;
 }
 
-h2 {
+h2,
+.h2 {
 	font-size: $h2-font-size;
-	margin: $h2-margin 0;
+	margin: $h2-margin;
 }
 
-h3 {
+h3,
+.h3 {
 	font-size: $h3-font-size;
-	margin: $h3-margin 0;
+	margin: $h3-margin;
 }
 
-h4 {
+h4,
+.h4 {
 	font-size: $h4-font-size;
-	margin: $h4-margin 0;
+	margin: $h4-margin;
 }
 
-h5 {
+h5,
+.h5 {
 	font-size: $h5-font-size;
-	margin: $h5-margin 0;
+	margin: $h5-margin;
 }
 
-h6 {
+h6,
+.h6 {
 	font-size: $h6-font-size;
-	margin: $h6-margin 0;
+	margin: $h6-margin;
 }
 
 // Default margin for paragraph
-p { margin: $paragraph-margin 0; }
+p { margin: $paragraph-margin; }
 
 // Basic styles for links
 a {

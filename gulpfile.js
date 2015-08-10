@@ -154,7 +154,8 @@ gulp.task('icons', function() {
 						   className : 'icon',
 						   fontName  : 'icons',
 						   fontPath  : 'fonts/',
-						   icons     : codepoints
+						   icons     : codepoints,
+						   version   : Date.now()
 					   }))
 					  .pipe(gulp.dest(path.css.src + 'partials/components/'));
 
@@ -279,16 +280,16 @@ gulp.task('clean', function( cb ) {
 // Watch source files
 gulp.task('watch:src', function() {
 
-	gulp.watch(path.css.src   + '**/*', 'css');
-	gulp.watch(path.fonts.src + '**/*', 'fonts');
-	gulp.watch(path.html.src  + '**/*', 'html');
-	gulp.watch(path.icons.src + '**/*', 'icons');
-	gulp.watch(path.img.src   + '**/*', 'img');
+	gulp.watch(path.css.src   + '**/*', gulp.parallel('css'));
+	gulp.watch(path.fonts.src + '**/*', gulp.parallel('fonts'));
+	gulp.watch(path.html.src  + '**/*', gulp.parallel('html'));
+	gulp.watch(path.icons.src + '**/*', gulp.parallel('icons'));
+	gulp.watch(path.img.src   + '**/*', gulp.parallel('img'));
 	gulp.watch(path.js.src    + '**/*', gulp.parallel('js:plugins', 'js:script'));
 
 });
 
-// Watch build files
+// Watch source files and auto-push
 gulp.task('watch:push', function() {
 
 	gulp.watch(path.css.src   + '**/*', gulp.series('css', 'push'));

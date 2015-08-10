@@ -72,9 +72,7 @@
 .visible-m,
 .visible-l { display: none !important; }
 
-// XS, S, M, L viewports.
-@include visibility(xxs);
-@include visibility(xs);
-@include visibility(s);
-@include visibility(m);
-@include visibility(l);
+// XXS, XS, S, M, L viewports
+@each $bp in $grid-breakpoints {
+	@include visibility($bp);
+}
