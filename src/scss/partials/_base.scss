@@ -15,6 +15,12 @@ html {
 :before,
 :after { box-sizing: inherit; }
 
+// Remove text-shadow in selection highlight: h5bp.com/i
+::selection {
+	background: $selection-background;
+	text-shadow: none;
+}
+
 // Set focus on elements that can recieve it.
 // http://www.w3.org/TR/html401/interact/forms.html#adef-tabindex
 :focus {
@@ -107,19 +113,13 @@ a {
 	}
 }
 
-// Remove text-shadow in selection highlight: h5bp.com/i
-::selection {
-	background: $selection-background;
-	text-shadow: none;
-}
-
 // A better looking default horizontal rule
 hr {
 	border: 0;
 	border-top: 1px solid $horizontal-rule-color;
 	display: block;
 	height: 1px;
-	margin: 1rem 0;
+	margin: 1em 0;
 	padding: 0;
 }
 
@@ -127,5 +127,5 @@ hr {
 blockquote {
 	background: $blockquote-background;
 	border-left: $blockquote-border-left;
-	padding: 1rem 1rem 1rem 1.5rem;
+	padding: 1em 1em 1em 1.5em;
 }

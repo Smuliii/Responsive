@@ -3,37 +3,37 @@
 	background-color: $alert-background-color;
 	border-left: 5px solid $alert-border-color;
 	color: darken($alert-background-color, 50);
-	margin: 1rem 0;
-	padding: 0 1rem;
+	margin: 1em 0;
+	padding: 0 1em;
 	position: relative;
 
 	.close {
-		background-color: transparent;
-		border: 0;
-		color: inherit;
+		@extend %btn-reset;
 		float: right;
-		font-size: 1.17rem;
+		font-size: 1.1875em;
 		font-weight: bold;
+		padding: 0.4211em 0.9474em;
 		position: relative;
-		right: -2.73rem;
-		top: 0.13rem;
+		right: -2.4211em;
+		top: 0;
 
 		[dir='rtl'] & {
 			float: left;
-			left: -2.73rem;
+			left: -2.4211em;
 			right: auto;
 		}
 
 		&:hover { text-decoration: underline; }
 	}
+
 }
 
 .alert-dismissable {
-	padding-right: 2.87rem;
+	padding-right: 2.87em;
 
 	[dir='rtl'] & {
-		padding-left: 2.87rem;
-		padding-right: 1rem;
+		padding-left: 2.87em;
+		padding-right: 1em;
 	}
 }
 

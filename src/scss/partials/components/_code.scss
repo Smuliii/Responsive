@@ -8,8 +8,8 @@ kbd {
 	border: 1px solid $code-border-color;
 	color: $code-color;
 	font-family: $code-font-family;
-	font-size: 1rem; // 1
-	padding: 0.5rem;
+	font-size: 1em; // 1
+	padding: 0.5em;
 }
 
 code > kbd { background-color: darken($code-background-color, 5); }
@@ -17,7 +17,7 @@ code > kbd { background-color: darken($code-background-color, 5); }
 // Prevent overlap on concurrent lines.
 code,
 samp,
-kbd { padding: 0.0667rem 0.25rem; }
+kbd { padding: 0.0667em 0.25em; }
 
 // Prevent wrapping.
 kbd { white-space: nowrap; }
@@ -41,6 +41,6 @@ pre {
 
 // Fixed height with overflow.
 .pre-scrollable {
-	max-height: 20rem;
+	max-height: 20em;
 	overflow-y: scroll;
 }

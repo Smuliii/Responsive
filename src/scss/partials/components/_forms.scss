@@ -7,13 +7,13 @@ fieldset {
 
 legend {
 	display: block;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 	width: 100%;
 }
 
 label {
 	display: block;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 
 	&[for] { cursor: pointer; }
 
@@ -22,10 +22,10 @@ label {
 	> input[type='radio'],
 	> select {
 		display: inline-block;
-		margin: 0 1rem 0 0;
+		margin: 0 1em 0 0;
 		vertical-align: text-top;
 
-		[dir=rtl] & { margin: 0 0 0 1rem; }
+		[dir=rtl] & { margin: 0 0 0 1em; }
 	}
 }
 
@@ -40,7 +40,7 @@ input,
 	display: block;
 	font-family: inherit;
 	height: $form-input-height;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 	padding: $form-input-padding;
 	width: 100%;
 
@@ -82,14 +82,14 @@ input[type='file']::-webkit-file-upload-button {
 	&:active { background-color: lighten($button-background, 5); }
 }
 
-input[type='color'] { max-width: 6.563rem; }
+input[type='color'] { max-width: 6.563em; }
 
 // Declared separately to reduce selector duplication for padding
 input[type='radio'],
 input[type='checkbox'] {
-	height: 1.334rem;
-	margin-bottom: 1.1rem;
-	min-width: 1.334rem;
+	height: 1.334em;
+	margin-bottom: 1.1em;
+	min-width: 1.334em;
 	padding: 0;
 	width: auto;
 }
@@ -147,7 +147,7 @@ select option { height: 100%; }
 // 3: None
 textarea {
 	height: auto;
-	min-height: 5.25rem;
+	min-height: 5.25em;
 	resize: both;
 
 	&.horizontal { resize: horizontal; } // 1
@@ -199,13 +199,13 @@ textarea {
 	// 2. Remove for multiple
 	select {
 		background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMC41Ij48cG9seWdvbiBmaWxsPSIjMjIyIiBwb2ludHM9IjExLDAgNS41LDkgMCwwIi8+PC9zdmc+'); // 1
-		background-position: right 0.6rem center;
+		background-position: right 0.6em center;
 		background-repeat: no-repeat;
-		padding-right: 1.67rem;
+		padding-right: 1.67em;
 
 		[dir=rtl] & {
-			background-position: 0.6rem center;
-			padding-left: 1.67rem;
+			background-position: 0.6em center;
+			padding-left: 1.67em;
 			padding-right: 0;
 		}
 
@@ -223,8 +223,8 @@ select.inline-block { width: auto; }
 
 // Actions - Contains buttons
 .form-actions {
-	margin: 1rem 0;
-	padding: 1rem 0;
+	margin: 1em 0;
+	padding: 1em 0;
 }
 
 // Grouped inputs.
@@ -232,7 +232,7 @@ select.inline-block { width: auto; }
 .btn-group {
 	border-collapse: separate;
 	display: table;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 	position: relative;
 	width: 100%;
 }
@@ -260,7 +260,7 @@ select.inline-block { width: auto; }
 	background: $button-background;
 	border: $button-border;
 	line-height: $form-line-height;
-	padding: 0 1rem;
+	padding: 0 1em;
 
 	html:not([dir=rtl]) &:first-child { border-right: 0; }
 

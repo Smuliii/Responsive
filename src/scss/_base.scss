@@ -19,6 +19,13 @@
 @import 'partials/base';
 
 // -------------------------------------------------------------------------- //
+//	Helpers
+// -------------------------------------------------------------------------- //
+@import 'partials/helpers-components';
+@import 'partials/helpers-layout';
+@import 'partials/helpers-visibility';
+
+// -------------------------------------------------------------------------- //
 //	Grid System
 // -------------------------------------------------------------------------- //
 @import 'partials/grid';
@@ -45,12 +52,6 @@
 @import	'partials/vendor/modal';
 @import	'partials/vendor/tablelist';
 @import	'partials/vendor/tabs';
-
-// -------------------------------------------------------------------------- //
-//	Helpers
-// -------------------------------------------------------------------------- //
-@import 'partials/helpers-layout';
-@import 'partials/helpers-visibility';
 
 // -------------------------------------------------------------------------- //
 //	Print Styles

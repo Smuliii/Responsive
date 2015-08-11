@@ -15,7 +15,7 @@ input[type='reset'],
 	display: inline-block;
 	margin-bottom: 0;
 	min-height: $form-input-height;
-	padding: 0 1rem;
+	padding: 0 1em;
 	text-decoration: none;
 	touch-action: manipulation; // 2
 
@@ -45,25 +45,7 @@ input[type='reset'],
 	&:active { text-decoration: none; }
 }
 
-// Reset button styles and make it look like a normal text
-.btn-reset {
-	border: 0;
-	border-radius: 0;
-	display: inline;
-	margin: 0;
-	min-height: 0;
-	padding: 0;
-	vertical-align: baseline;
-
-	&,
-	&:hover,
-	&:focus,
-	&:active {
-		background: none;
-		color: inherit;
-		outline: none;
-	}
-}
+.btn-reset { @extend %btn-reset; }
 
 // Reset width for inputs
 input {

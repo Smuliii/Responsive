@@ -1,7 +1,7 @@
 // Set container styles
 .accordion {
 	border: solid 1px $accordion-border-color;
-	margin-bottom: 0.125rem;
+	margin-bottom: 0.125em;
 }
 
 .accordion-head {
@@ -9,13 +9,13 @@
 
 	a {
 		display: block;
-		padding: 0.5rem;
+		padding: 0.5em;
 	}
 }
 
 .accordion-body {
 	border-top: solid 1px $accordion-border-color;
-	padding: 0 0.5rem;
+	padding: 0 0.5em;
 }
 
 // Animation styles

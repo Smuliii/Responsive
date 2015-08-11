@@ -84,7 +84,7 @@
 	background-color: $modal-content-background-color;
 	max-height: 100%;
 	overflow: auto;
-	padding: 1rem;
+	padding: 1em;
 	text-align: left;
 
 	[dir='rtl'] & { text-align: right; }
@@ -99,7 +99,7 @@
 	top: 0;
 }
 
-.modal-header { padding: 0 4.555rem; }
+.modal-header { padding: 0 4.555em; }
 
 .modal-footer {
 	bottom: 0;
@@ -109,9 +109,9 @@
 .modal-close {
 	color: $modal-control-color;
 	display: inline-block;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	font-weight: bold;
-	padding: 1.245rem;
+	padding: 0.8333em;
 	position: fixed;
 	right: 1px;
 	top: 1px;
@@ -126,14 +126,14 @@
 .modal-direction {
 	color: $modal-control-color;
 	display: block;
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: bold;
 	left: 0;
-	padding: 1rem;
+	padding: 1em;
 	position: fixed;
 	text-align: center;
 	top: 49%;
-	width: 3rem;
+	width: 3em;
 	z-index: 2;
 
 	[dir='rtl'] & { right: 0; }

@@ -25,39 +25,6 @@ $base-text-color: #222 !default;
 // -------------------------------------------------------------------------- //
 //	Typography
 // -------------------------------------------------------------------------- //
-// Link
-$link-color: $brand-primary !default;
-$link-text-decoration: none !default;
-
-$link-color-hover: #000 !default;
-$link-text-decoration-hover: underline !default;
-
-// Paragraph
-$paragraph-margin: 1rem 0 !default;
-
-// Headings
-$headings-color: null !default;
-$headings-font-family: null !default;
-
-// These have been calculated to match the default browser sizes.
-$h1-font-size: 2rem !default;
-$h1-margin: 1.34rem 0 !default;
-
-$h2-font-size: 1.5rem !default;
-$h2-margin: 1.245rem 0 !default;
-
-$h3-font-size: 1.17rem !default;
-$h3-margin: 1.17rem 0 !default;
-
-$h4-font-size: 1rem !default;
-$h4-margin: 1.33rem 0 !default;
-
-$h5-font-size: 0.83rem !default;
-$h5-margin: 1.386rem 0 !default;
-
-$h6-font-size: 0.67rem !default;
-$h6-margin: 1.561rem 0 !default;
-
 // Selected text
 $selection-background: #b3d4fc !default;
 
@@ -66,6 +33,39 @@ $selection-focus-color: #4d90fe !default;
 $selection-focus-style: solid !default;
 $selection-focus-width: 1px !default;
 $selection-focus-offset: -1px !default;
+
+// Link
+$link-color: $brand-primary !default;
+$link-text-decoration: none !default;
+
+$link-color-hover: #000 !default;
+$link-text-decoration-hover: underline !default;
+
+// Paragraph
+$paragraph-margin: 1em 0 !default;
+
+// Headings
+$headings-color: null !default;
+$headings-font-family: null !default;
+
+// These have been calculated to match the default browser sizes.
+$h1-font-size: 2em !default;
+$h1-margin: 1.34em 0 !default;
+
+$h2-font-size: 1.5em !default;
+$h2-margin: 1.245em 0 !default;
+
+$h3-font-size: 1.17em !default;
+$h3-margin: 1.17em 0 !default;
+
+$h4-font-size: 1em !default;
+$h4-margin: 1.33em 0 !default;
+
+$h5-font-size: 0.83em !default;
+$h5-margin: 1.386em 0 !default;
+
+$h6-font-size: 0.67em !default;
+$h6-margin: 1.561em 0 !default;
 
 // -------------------------------------------------------------------------- //
 //	Grid System
@@ -77,14 +77,14 @@ $grid-column-count: 12 !default;
 // Breakpoints. These have been carefully considered so it
 // is recommended to leave them as they are.
 $grid-breakpoints: xxs, xs, s, m, l;
-$grid-breakpoint-xxs-max: 37.49rem !default;
-$grid-breakpoint-xs-min: 37.5rem !default;
-$grid-breakpoint-xs-max: 47.99rem !default;
-$grid-breakpoint-s-min: 48rem !default;
-$grid-breakpoint-s-max: 61.99rem !default;
-$grid-breakpoint-m-min: 62rem !default;
-$grid-breakpoint-m-max: 74.99rem !default;
-$grid-breakpoint-l-min: 75rem !default;
+$grid-breakpoint-xxs-max: 37.49em !default;
+$grid-breakpoint-xs-min: 37.5em !default;
+$grid-breakpoint-xs-max: 47.99em !default;
+$grid-breakpoint-s-min: 48em !default;
+$grid-breakpoint-s-max: 61.99em !default;
+$grid-breakpoint-m-min: 62em !default;
+$grid-breakpoint-m-max: 74.99em !default;
+$grid-breakpoint-l-min: 75em !default;
 
 // Print Breakpoints. Printing on A4 only maintains
 // xs grid layout so we shift the xs/s breakpoint to force it to print using the
@@ -100,7 +100,7 @@ $grid-print-breakpoint-s-min: 537px !default;
 $horizontal-rule-color: #c0c0c0 !default;
 
 // Tables
-$table-cell-pad: 0.5rem !default;
+$table-cell-pad: 0.5em !default;
 $table-bordered-border: 1px solid #c0c0c0 !default;
 $table-striped-background-color: #ebebeb !default;
 
@@ -114,8 +114,8 @@ $blockquote-border-left: 5px solid #c0c0c0 !default;
 // Forms
 $form-line-height: 1.4 !default;
 $form-placeholder: #767676 !default;
-$form-input-padding: 0.25rem !default;
-$form-input-height: 2rem !default;
+$form-input-padding: 0.25em !default;
+$form-input-height: 2em !default;
 $form-input-background: #fff !default;
 $form-input-border: 1px solid #c0c0c0 !default;
 $form-input-border-radius: 0 !default;
