@@ -1,9 +1,8 @@
 // -------------------------------------------------------------------------- //
 //	Utilities
 // -------------------------------------------------------------------------- //
+@import 'utilities/functions';
 @import 'utilities/variables';
-@import 'utilities/mixins/bem';
-@import 'utilities/mixins/breakpoints';
 @import 'utilities/mixins/grid';
 @import 'utilities/mixins/push-pull';
 @import 'utilities/mixins/grid-state';

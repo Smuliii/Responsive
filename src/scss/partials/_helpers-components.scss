@@ -17,6 +17,8 @@
 	}
 }
 
+.btn-reset { @extend %btn-reset; }
+
 // No bullets on first level
 %no-bullets {
 	padding-left: 0;
@@ -25,3 +27,6 @@
 
 	> li { list-style: none; }
 }
+
+ul.no-bullets,
+ol.no-bullets { @extend %no-bullets; }

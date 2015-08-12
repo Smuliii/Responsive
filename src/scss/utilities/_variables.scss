@@ -5,6 +5,47 @@ $blue: #0000ee;
 
 $brand-primary: $blue;
 
+$colors: (
+
+);
+
+// -------------------------------------------------------------------------- //
+//	Grid System
+// -------------------------------------------------------------------------- //
+// Breakpoints have been carefully considered
+// so it is recommended to leave them as they are.
+// Printing on A4 only maintains xs grid layout
+// so we shift the xs/s breakpoint to force it to print using the
+// s grid. These are deliberately set at pixel values to ensure
+// that font-size doesn't affect output.
+$grid: (
+	breakpoints : (
+		xxs : (
+			max : 37.49em
+		),
+		xs  : (
+			min   : 37.5em,
+			max   : 47.99em,
+			print : 536px
+		),
+		s  : (
+			min   : 48em,
+			max   : 61.99em,
+			print : 537px
+		),
+		m  : (
+			min : 62em,
+			max : 74.99em
+		),
+		l  : (
+			min : 75em
+		)
+	),
+	columns   : 12,
+	gutter    : 16px,
+	max-width : 1140px
+) !default;
+
 // -------------------------------------------------------------------------- //
 //	Font Stacks
 // -------------------------------------------------------------------------- //
@@ -14,7 +55,7 @@ $font-primary: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
 //	General Styles
 // -------------------------------------------------------------------------- //
 $site-background: #fff !default;
-$site-width: 1140px !default;
+$site-width: map-get($grid, max-width) !default;
 
 $base-font-family: $font-primary !default;
 $base-font-size: 100% !default;
@@ -66,32 +107,6 @@ $h5-margin: 1.386em 0 !default;
 
 $h6-font-size: 0.67em !default;
 $h6-margin: 1.561em 0 !default;
-
-// -------------------------------------------------------------------------- //
-//	Grid System
-// -------------------------------------------------------------------------- //
-$grid-container-max-width: $site-width !default;
-$grid-column-gutter: 16px !default;
-$grid-column-count: 12 !default;
-
-// Breakpoints. These have been carefully considered so it
-// is recommended to leave them as they are.
-$grid-breakpoints: xxs, xs, s, m, l;
-$grid-breakpoint-xxs-max: 37.49em !default;
-$grid-breakpoint-xs-min: 37.5em !default;
-$grid-breakpoint-xs-max: 47.99em !default;
-$grid-breakpoint-s-min: 48em !default;
-$grid-breakpoint-s-max: 61.99em !default;
-$grid-breakpoint-m-min: 62em !default;
-$grid-breakpoint-m-max: 74.99em !default;
-$grid-breakpoint-l-min: 75em !default;
-
-// Print Breakpoints. Printing on A4 only maintains
-// xs grid layout so we shift the xs/s breakpoint to force it to print using the
-// s grid. These are deliberately set at pixel values to ensure
-// that font-size doesn't affect output.
-$grid-print-breakpoint-xs-max: 536px !default;
-$grid-print-breakpoint-s-min: 537px !default;
 
 // -------------------------------------------------------------------------- //
 //	Basic Elements

@@ -45,8 +45,6 @@ input[type='reset'],
 	&:active { text-decoration: none; }
 }
 
-.btn-reset { @extend %btn-reset; }
-
 // Reset width for inputs
 input {
 	&[type='submit'],

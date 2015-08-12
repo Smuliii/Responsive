@@ -1,8 +1,8 @@
-﻿// -------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Creates grid state classes for each breakpoint.
 // -------------------------------------------------------------------------- //
-@mixin grid-state($breakpoint, $width) {
-	@include bp($breakpoint) {
+@mixin grid-state($bp, $width) {
+	@media #{bp($bp)} {
 		.grid-state-indicator {
 			width: $width;
 		}

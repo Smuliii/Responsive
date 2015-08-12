@@ -2,11 +2,11 @@
 %container {
 	@extend %clearfix;
 	margin: 0 auto;
-	max-width: $grid-container-max-width;
-	width: calc(100% - #{$grid-column-gutter}); // 1
+	max-width: $site-width;
+	width: calc(100% - #{map-get($grid, gutter)}); // 1
 
 	&.fixed,
-	.fixed & { width: $grid-container-max-width; } // 1
+	.fixed & { width: $site-width; } // 1
 }
 
 .container,
@@ -25,7 +25,7 @@
 .row,
 [class*='block-row-'] {
 	@extend %clearfix;
-	margin: 0 (-$grid-column-gutter/2); // 1
+	margin: 0 (- map-get($grid, gutter)/2); // 1
 }
 
 // No margin required.
@@ -44,8 +44,8 @@
 [class*=col-],
 [class*='block-row-'] > * {
 	background-clip: padding-box; // 2
-	border-left: ($grid-column-gutter/2) solid transparent; // 1
-	border-right: ($grid-column-gutter/2) solid transparent; // 1
+	border-left: (map-get($grid, gutter)/2) solid transparent; // 1
+	border-right: (map-get($grid, gutter)/2) solid transparent; // 1
 	display: block;
 	float: left;
 	min-height: 1px;
@@ -74,7 +74,7 @@
 	display: table;
 	height: 1px;
 	table-layout: fixed; // 1
-	width: calc(100% + #{$grid-column-gutter});
+	width: calc(100% + #{map-get($grid, gutter)});
 
 	&.no-gutter { width: 100%; }
 
@@ -88,8 +88,8 @@
 }
 
 // XXS, XS, S, M, L grids
-@each $bp in $grid-breakpoints {
-	@include bp-min($bp) {
+@each $bp in map-keys(map-get($grid, breakpoints)) {
+	@media #{bp-min($bp)} {
 		@include grid-columns($bp);
 		@include block-grid-columns($bp);
 	}

@@ -3,8 +3,8 @@
 // -------------------------------------------------------------------------- //
 @mixin grid-columns($breakpoint) {
     // Calculate column width and without gutter.
-    $column-width: (100% / $grid-column-count);
-    $max-columns: $grid-column-count + 1;
+    $column-width: (100% / map-get($grid, columns));
+    $max-columns: map-get($grid, columns) + 1;
 
     // Loop through and build the columns.
     @for $i from 1 to ($max-columns) {
@@ -51,7 +51,7 @@
 //	Grid System - Block Grid Columns
 // -------------------------------------------------------------------------- //
 @mixin block-grid-columns($breakpoint) {
-    $max-columns: $grid-column-count + 1;
+    $max-columns: map-get($grid, columns) + 1;
     // Loop through and set width.
     @for $i from 1 to ($max-columns) {
         // Calculate column width .

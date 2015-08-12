@@ -1,4 +1,4 @@
-@include bp-max(xs) {
+@media #{bp-max(xs)} {
 	// Force the columns to display as rows on small viewports.
 	// Headers are applied with data attributes.
 	[data-table-list] { opacity: 0; }

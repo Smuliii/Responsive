@@ -37,7 +37,7 @@
 .pull { @extend %pull; }
 
 // XXS, XS, S, M, L viewports
-@each $bp in $grid-breakpoints {
+@each $bp in map-keys(map-get($grid, breakpoints)) {
 	@include push-pull($bp);
 }
 
@@ -55,7 +55,7 @@
 .inline { @extend %inline; }
 
 // XXS, XS, S, M, L viewports
-@each $bp in $grid-breakpoints {
+@each $bp in map-keys(map-get($grid, breakpoints)) {
 	@include layout($bp);
 }
 
@@ -81,7 +81,7 @@
 .text-center { @extend %text-center; }
 
 // XXS, XS, S, M, L viewports
-@each $bp in $grid-breakpoints {
+@each $bp in map-keys(map-get($grid, breakpoints)) {
 	@include text-align($bp);
 }
 
@@ -94,8 +94,8 @@
 }
 
 // Breakpoint driven changes. 0 based so we can parse easily with JavaScript.
-@each $bp in $grid-breakpoints {
-	@include grid-state($bp, index($grid-breakpoints, $bp) - 1 * 1px);
+@each $bp in map-keys(map-get($grid, breakpoints)) {
+	@include grid-state($bp, index(map-keys(map-get($grid, breakpoints)), $bp) - 1 * 1px);
 }
 
 // Scrollbar width measurement helper

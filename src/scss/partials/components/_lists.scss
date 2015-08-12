@@ -14,9 +14,6 @@ ol {
 ul ul,
 ol ol { margin: 0; }
 
-ul.no-bullets,
-ol.no-bullets { @extend %no-bullets; }
-
 // Coloured lists.
 ul.colored,
 ol.colored {
@@ -77,7 +74,7 @@ ol.colored {
 dt,
 dd { min-height: 1.4em; }
 
-@include bp-min(s) {
+@media #{bp-min(s)} {
 	// Horizontally styled definition list
 	.dl-horizontal {
 		> dt {

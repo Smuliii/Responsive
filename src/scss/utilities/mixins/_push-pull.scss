@@ -1,4 +1,4 @@
-﻿// -------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------- //
 //	Creates float classes for each breakpoint.
 // -------------------------------------------------------------------------- //
 @mixin push-pull($bp) {
@@ -16,7 +16,7 @@
 			[dir='rtl'] & { float: right; }
 		}
 
-		@include bp-max($bp) {
+		@media #{bp-max($bp)} {
 			.push-#{$bp}-only {
 				float: right;
 
@@ -30,7 +30,7 @@
 			}
 		}
 	} @else {
-		@include bp-min($bp) {
+		@media #{bp-min($bp)} {
 			.push-#{$bp} {
 				float: right;
 
@@ -45,7 +45,7 @@
 
 			// Large doesn't need an "only" since it operates on min width.
 			@if $bp != l {
-				@include bp-max($bp) {
+				@media #{bp-max($bp)} {
 					.push-#{$bp}-only {
 						float: right;
 
