@@ -7,7 +7,16 @@
 	padding: 0 1em;
 	position: relative;
 
-	.close {
+	&.-type-dismissable {
+		padding-right: 2.87em;
+
+		[dir='rtl'] & {
+			padding-left: 2.87em;
+			padding-right: 1em;
+		}
+	}
+
+	&__close {
 		@extend %btn-reset;
 		float: right;
 		font-size: 1.1875em;
@@ -26,15 +35,5 @@
 		&:hover { text-decoration: underline; }
 	}
 
+	&__heading { color: inherit; }
 }
-
-.alert-dismissable {
-	padding-right: 2.87em;
-
-	[dir='rtl'] & {
-		padding-left: 2.87em;
-		padding-right: 1em;
-	}
-}
-
-.alert-heading { color: inherit; }

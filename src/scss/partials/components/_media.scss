@@ -34,21 +34,21 @@ a img { border: 0; }
 	padding-bottom: 56.25%; // 1
 	position: relative;
 
-	&.four-by-three { padding-bottom: 75%; }
+	&.-type-four-by-three { padding-bottom: 75%; }
 
-	&.instagram {
+	&.-type-instagram {
 		height: auto;
 		max-width: none;
 		padding-bottom: 120%;
 	}
 
-	&.vine {
+	&.-type-vine {
 		height: auto;
 		max-width: none;
 		padding-bottom: 100%;
 	}
 
-	&.getty {
+	&.-type-getty {
 		height: auto;
 		padding-bottom: 79.9663%;
 	}
@@ -83,7 +83,7 @@ a img { border: 0; }
 		width: 100%;
 	}
 
-	&.media-scroll {
+	&.-media-scroll {
 		-webkit-overflow-scrolling: touch;
 		overflow-y: auto;
 	}
