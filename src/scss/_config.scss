@@ -13,6 +13,27 @@ $colors: (
 $primary-color: color(blue);
 
 // -------------------------------------------------------------------------- //
+//	Fonts
+// -------------------------------------------------------------------------- //
+$fonts: (
+	base: (
+		color: #222,
+		family: 'Helvetica Neue, Arial, Helvetica, sans-serif',
+		line-height: 1.375,
+		size: 100%,
+		weight: null
+	),
+	code: (
+		color: #950b2f,
+		family: 'monospace'
+	),
+	heading: (
+		color: null,
+		family: null
+	)
+) !default;
+
+// -------------------------------------------------------------------------- //
 //	Grid System
 // -------------------------------------------------------------------------- //
 // Breakpoints have been carefully considered so it is recommended
@@ -50,35 +71,11 @@ $grid: (
 ) !default;
 
 // -------------------------------------------------------------------------- //
-//	Font Stacks
-// -------------------------------------------------------------------------- //
-$fonts: (
-	base: (
-		color: #222,
-		family: 'Helvetica Neue, Arial, Helvetica, sans-serif',
-		line-height: 1.375,
-		size: 100%,
-		weight: null
-	),
-	code: (
-		color: #950b2f,
-		font-family: 'monospace'
-	),
-	heading: (
-		color: null,
-		family: null
-	)
-) !default;
-
-// -------------------------------------------------------------------------- //
-//	General Styles
+//	Typography
 // -------------------------------------------------------------------------- //
 $site-background: #fff !default;
 $site-width: map-get($grid, max-width) !default;
 
-// -------------------------------------------------------------------------- //
-//	Typography
-// -------------------------------------------------------------------------- //
 // Selected text
 $selection-background: #b3d4fc !default;
 
@@ -118,9 +115,6 @@ $h5-margin: 1.386em 0 !default;
 $h6-font-size: 0.67em !default;
 $h6-margin: 1.561em 0 !default;
 
-// -------------------------------------------------------------------------- //
-//	Basic Elements
-// -------------------------------------------------------------------------- //
 // Horizontal Rule
 $horizontal-rule-color: #c0c0c0 !default;
 
