@@ -43,7 +43,6 @@ window.matchMedia || (window.matchMedia = function() {
 		};
 	};
 }());
-
 /*! matchMedia() polyfill addListener/removeListener extension. Author & copyright (c) 2012: Scott Jehl. Dual MIT/BSD license */
 (function(){
 	// Bail out for browsers that have addListener support
@@ -119,7 +118,6 @@ window.matchMedia || (window.matchMedia = function() {
 		return mql;
 	};
 }());
-
 
 
 //# sourceMappingURL=plugins.js.map

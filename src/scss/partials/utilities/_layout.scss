@@ -7,7 +7,7 @@
 //	  that receive the `clearfix` class.
 // 2. The use of `table` rather than `block` is only necessary if using
 //	  `:before` to contain the top-margins of child elements.
-%clearfix {
+%u-clearfix {
 	&:before,
 	&:after {
 		content: ''; // 1
@@ -17,24 +17,24 @@
 	&:after { clear: both; }
 }
 
-.clearfix { @extend %clearfix; }
+.u-clearfix { @extend %u-clearfix; }
 
 // Float helpers
-%push {
+%u-push {
 	float: right;
 
 	[dir='rtl'] & { float: left; }
 }
 
-.push { @extend %push; }
+.u-push { @extend %u-push; }
 
-%pull {
+%u-pull {
 	float: left;
 
 	[dir='rtl'] & { float: right; }
 }
 
-.pull { @extend %pull; }
+.u-pull { @extend %u-pull; }
 
 // XXS, XS, S, M, L viewports
 @each $bp in map-keys(map-get($grid, breakpoints)) {
@@ -42,17 +42,17 @@
 }
 
 // Layout helpers
-%block { display: block; }
+%u-block { display: block; }
 
-.block { @extend %block; }
+.u-block { @extend %u-block; }
 
-%inline-block { display: inline-block; }
+%u-inline-block { display: inline-block; }
 
-.inline-block { @extend %inline-block; }
+.u-inline-block { @extend %u-inline-block; }
 
-%inline { display: inline; }
+%u-inline { display: inline; }
 
-.inline { @extend %inline; }
+.u-inline { @extend %u-inline; }
 
 // XXS, XS, S, M, L viewports
 @each $bp in map-keys(map-get($grid, breakpoints)) {
@@ -60,25 +60,25 @@
 }
 
 // Text align helpers
-%text-pull {
+%u-text-pull {
 	text-align: left;
 
 	[dir='rtl'] & { text-align: right; }
 }
 
-.text-pull { @extend %text-pull; }
+.u-text-pull { @extend %u-text-pull; }
 
-%text-push {
+%u-text-push {
 	text-align: right;
 
 	[dir='rtl'] & { text-align: left; }
 }
 
-.text-push { @extend %text-push; }
+.u-text-push { @extend %u-text-push; }
 
-%text-center { text-align: center; }
+%u-text-center { text-align: center; }
 
-.text-center { @extend %text-center; }
+.u-text-center { @extend %u-text-center; }
 
 // XXS, XS, S, M, L viewports
 @each $bp in map-keys(map-get($grid, breakpoints)) {

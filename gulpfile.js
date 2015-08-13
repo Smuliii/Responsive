@@ -59,9 +59,10 @@ gulp.task('css', function( cb ) {
 
 	var files = [
 			path.css.src + '**/*.scss',
-			'!' + path.css.src + 'partials/_copyright.scss',
+			'!' + path.css.src + 'functions/**/*.scss',
+			'!' + path.css.src + 'mixins/**/*.scss',
+			'!' + path.css.src + 'partials/*.scss',
 			'!' + path.css.src + 'templates/**/*.scss',
-			'!' + path.css.src + 'utilities/mixins/**/*.scss',
 		];
 
 	return gulp.src(files)

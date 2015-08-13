@@ -1,72 +1,60 @@
 // -------------------------------------------------------------------------- //
-//	Misc
-// -------------------------------------------------------------------------- //
-
-@function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
-}
-
-// -------------------------------------------------------------------------- //
 //	Media Query Breakpoints
 // -------------------------------------------------------------------------- //
+@function bp($bp) {
+	$breakpoints: map-get($grid, breakpoints);
 
-@function bp($point) {
-	$breakpoints: map-deep-get($grid, breakpoints);
-
-	@if map-has-key($breakpoints, $point) {
-		$breakpoint: map-get($breakpoints, $point);
+	@if map-has-key($breakpoints, $bp) {
+		$breakpoint: map-get($breakpoints, $bp);
 	} @else {
-		@warn 'Breakpoint `#{$point}` not found!';
+		@warn 'Breakpoint `#{$bp}` not found!';
 	}
 
-	@if $point == xxs {
+	@if $bp == xxs {
 		@return '(max-width: #{map-get($breakpoint, max)})';
-	} @elseif $point == xs {
+	} @elseif $bp == xs {
 		@return 'print and (max-width: #{map-get($breakpoint, print)}), screen and (min-width: #{map-get($breakpoint, min)}) and (max-width: #{map-get($breakpoint, max)})';
-	} @elseif $point == s {
+	} @elseif $bp == s {
 		@return 'print and (min-width: #{map-get($breakpoint, print)}) and (max-width: #{map-get($breakpoint, max)}), screen and (min-width: #{map-get($breakpoint, min)}) and (max-width: #{map-get($breakpoint, max)})';
-	} @elseif $point == m {
+	} @elseif $bp == m {
 		@return '(min-width: #{map-get($breakpoint, min)}) and (max-width: #{map-get($breakpoint, max)})';
-	} @elseif $point == l {
+	} @elseif $bp == l {
 		@return '(min-width: #{map-get($breakpoint, min)})';
 	} @else {
 		@return 'all';
 	}
 }
 
-@function bp-min($point) {
-	$breakpoints: map-deep-get($grid, breakpoints);
+@function bp-min($bp) {
+	$breakpoints: map-get($grid, breakpoints);
 
-	@if map-has-key($breakpoints, $point) {
-		$breakpoint: map-get($breakpoints, $point);
+	@if map-has-key($breakpoints, $bp) {
+		$breakpoint: map-get($breakpoints, $bp);
 	} @else {
-		@warn 'Breakpoint `#{$point}` not found!';
+		@warn 'Breakpoint `#{$bp}` not found!';
 	}
 
-	@if $point == xs or $point == s {
+	@if $bp == xs or $bp == s {
 		@return 'print and (min-width: #{map-get($breakpoint, print)}), screen and (min-width: #{map-get($breakpoint, min)})';
-	} @elseif $point == m or $point == l {
+	} @elseif $bp == m or $bp == l {
 		@return '(min-width: #{map-get($breakpoint, min)})';
 	} @else {
 		@return 'all';
 	}
 }
 
-@function bp-max($point) {
-	$breakpoints: map-deep-get($grid, breakpoints);
+@function bp-max($bp) {
+	$breakpoints: map-get($grid, breakpoints);
 
-	@if map-has-key($breakpoints, $point) {
-		$breakpoint: map-get($breakpoints, $point);
+	@if map-has-key($breakpoints, $bp) {
+		$breakpoint: map-get($breakpoints, $bp);
 	} @else {
-		@warn 'Breakpoint `#{$point}` not found!';
+		@warn 'Breakpoint `#{$bp}` not found!';
 	}
 
-	@if $point == xxs or $point == s or $point == m {
+	@if $bp == xxs or $bp == s or $bp == m {
 		@return '(max-width: #{map-get($breakpoint, max)})';
-	} @elseif $point == xs {
+	} @elseif $bp == xs {
 		@return 'print and (max-width: #{map-get($breakpoint, print)}), screen and (max-width: #{map-get($breakpoint, max)})';
 	} @else {
 		@return 'all';

@@ -89,8 +89,13 @@
 
 // XXS, XS, S, M, L grids
 @each $bp in map-keys(map-get($grid, breakpoints)) {
-	@media #{bp-min($bp)} {
+	@if $bp == xxs {
 		@include grid-columns($bp);
 		@include block-grid-columns($bp);
+	} @else {
+		@media #{bp-min($bp)} {
+			@include grid-columns($bp);
+			@include block-grid-columns($bp);
+		}
 	}
 }

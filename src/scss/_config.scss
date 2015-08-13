@@ -1,67 +1,80 @@
 // -------------------------------------------------------------------------- //
 //	Colors
 // -------------------------------------------------------------------------- //
-$blue: #0000ee;
-
-$brand-primary: $blue;
-
 $colors: (
+	blue: #0000ee,
+	black: #000,
+	grey: (
+		dark: #222,
+	),
+	white: #fff
+) !default;
 
-);
+$primary-color: color(blue);
 
 // -------------------------------------------------------------------------- //
 //	Grid System
 // -------------------------------------------------------------------------- //
-// Breakpoints have been carefully considered
-// so it is recommended to leave them as they are.
-// Printing on A4 only maintains xs grid layout
-// so we shift the xs/s breakpoint to force it to print using the
-// s grid. These are deliberately set at pixel values to ensure
-// that font-size doesn't affect output.
+// Breakpoints have been carefully considered so it is recommended
+// to leave them as they are.
+// Printing on A4 only maintains xs grid layout so we shift the xs/s
+// breakpoint to force it to print using the s grid.
+// These are deliberately set at pixel values to ensure that font-size
+// doesn't affect output.
 $grid: (
-	breakpoints : (
-		xxs : (
-			max : 37.49em
+	breakpoints: (
+		xxs: (
+			max: 37.49em
 		),
-		xs  : (
-			min   : 37.5em,
-			max   : 47.99em,
-			print : 536px
+		xs: (
+			min: 37.5em,
+			max: 47.99em,
+			print: 536px
 		),
-		s  : (
-			min   : 48em,
-			max   : 61.99em,
-			print : 537px
+		s: (
+			min: 48em,
+			max: 61.99em,
+			print: 537px
 		),
-		m  : (
-			min : 62em,
-			max : 74.99em
+		m: (
+			min: 62em,
+			max: 74.99em
 		),
-		l  : (
-			min : 75em
+		l: (
+			min: 75em
 		)
 	),
-	columns   : 12,
-	gutter    : 16px,
-	max-width : 1140px
+	columns: 12,
+	gutter: 16px,
+	max-width: 1140px
 ) !default;
 
 // -------------------------------------------------------------------------- //
 //	Font Stacks
 // -------------------------------------------------------------------------- //
-$font-primary: 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+$fonts: (
+	base: (
+		color: #222,
+		family: 'Helvetica Neue, Arial, Helvetica, sans-serif',
+		line-height: 1.375,
+		size: 100%,
+		weight: null
+	),
+	code: (
+		color: #950b2f,
+		font-family: 'monospace'
+	),
+	heading: (
+		color: null,
+		family: null
+	)
+) !default;
 
 // -------------------------------------------------------------------------- //
 //	General Styles
 // -------------------------------------------------------------------------- //
 $site-background: #fff !default;
 $site-width: map-get($grid, max-width) !default;
-
-$base-font-family: $font-primary !default;
-$base-font-size: 100% !default;
-$base-font-weight: 400 !default;
-$base-line-height: 1.375 !default;
-$base-text-color: #222 !default;
 
 // -------------------------------------------------------------------------- //
 //	Typography
@@ -76,7 +89,7 @@ $selection-focus-width: 1px !default;
 $selection-focus-offset: -1px !default;
 
 // Link
-$link-color: $brand-primary !default;
+$link-color: $primary-color !default;
 $link-text-decoration: none !default;
 
 $link-color-hover: #000 !default;
@@ -86,9 +99,6 @@ $link-text-decoration-hover: underline !default;
 $paragraph-margin: 1em 0 !default;
 
 // Headings
-$headings-color: null !default;
-$headings-font-family: null !default;
-
 // These have been calculated to match the default browser sizes.
 $h1-font-size: 2em !default;
 $h1-margin: 1.34em 0 !default;

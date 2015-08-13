@@ -1,0 +1,37 @@
+@mixin layout($bp) {
+	// XXS doesn't have a min value.
+	@if $bp == xxs {
+		.u-block-#{$bp} { display: block; }
+
+		.u-inline-block-#{$bp} { display: inline-block; }
+
+		.u-inline-#{$bp} {display: inline; }
+
+		@media #{bp-max($bp)} {
+			.u-block-#{$bp}-only { display: block; }
+
+			.u-inline-block-#{$bp}-only { display: inline-block; }
+
+			.u-inline-#{$bp}-only { display: inline; }
+		}
+	} @else {
+		@media #{bp-min($bp)} {
+			.u-block-#{$bp} { display: block; }
+
+			.u-inline-block-#{$bp} { display: inline-block; }
+
+			.u-inline-#{$bp} { display: inline; }
+
+			// Large doesn't need an "only" since it operates on min width.
+			@if $bp != l {
+				@media #{bp-max($bp)} {
+					.u-block-#{$bp}-only { display: block; }
+
+					.u-inline-block-#{$bp}-only { display: inline-block; }
+
+					.u-inline-#{$bp}-only { display: inline; }
+				}
+			}
+		}
+	}
+}

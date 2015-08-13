@@ -1,18 +1,18 @@
 // -------------------------------------------------------------------------- //
 //	Basic print styles
 // -------------------------------------------------------------------------- //
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
 
 @media print {
-	body:not(.prince-pdf) {
-		*,
-		:before,
-		:after {
-			background: transparent !important;
-			box-shadow: none !important;
-			color: #000 !important; // Black prints faster: h5bp.com/s
-			text-shadow: none !important;
-		}
+	*,
+	*:before,
+	*:after,
+	*:first-letter,
+	*:first-line {
+		background: transparent !important;
+		box-shadow: none !important;
+		color: #000 !important; // Black prints faster: h5bp.com/s
+		text-shadow: none !important;
 	}
 
 	a,
@@ -57,11 +57,5 @@
 
 		&.fixed,
 		.fixed & { width: 100%; }
-	}
-
-	[class*='col-'] {
-		float: none;
-		min-height: 0;
-		width: auto;
 	}
 }

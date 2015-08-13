@@ -1,0 +1,34 @@
+// -------------------------------------------------------------------------- //
+//	Get Font by Property and/or by Type
+// -------------------------------------------------------------------------- //
+@function font($args...) {
+	$type: base;
+	$prop: null;
+
+	@if length($args) == 1 {
+		@if map-has-key($fonts, nth($args, 1)) {
+			$type: nth($args, 1);
+		} @elseif map-has-key(map-get($fonts, $type), nth($args, 1)) {
+			$prop: nth($args, 1);
+		} @else {
+			@warn 'Font `#{nth($args, 1)}` not found!';
+			@return null;
+		}
+	} @elseif (length($args) > 1) {
+		$type: nth($args, 1);
+		$prop: nth($args, 2);
+	}
+
+	@if not map-has-key($fonts, $type) {
+		@warn 'Font `#{nth($args, 1)}` not found!';
+		@return null;
+	}
+
+	$font: map-get($fonts, $type);
+
+	@if $prop {
+		@return map-get($font, $prop);
+	} @else {
+		@return if(map-get($font, family), map-get($font, weight) map-get($font, size)/#{map-get($font, line-height)} map-get($font, family), null);
+	}
+}

@@ -1,0 +1,20 @@
+// -------------------------------------------------------------------------- //
+//	Get Colors by Name
+// -------------------------------------------------------------------------- //
+@function color($name, $variation: null) {
+	$color: map-get($colors, $name);
+
+	@if not map-has-key($colors, $name) {
+		@warn 'Color `#{$name}` not found!';
+		@return null;
+	} @elseif ($variation and type-of($color) != map) or (type-of($color) == map and not map-has-key($color, $variation)) {
+		@warn 'Color variation `#{$variation}` for `#{$name}` not found!';
+		@return null;
+	} @else {
+		@if $variation and type-of($color) == map {
+			@return map-get($color, $variation);
+		} @else {
+			@return map-get($colors, $name);
+		}
+	}
+}

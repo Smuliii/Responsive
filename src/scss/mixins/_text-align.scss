@@ -1,70 +1,70 @@
 // -------------------------------------------------------------------------- //
-//	Creates text align classes for each breakpoint.
+//	Creates text align classes for each breakpoint
 // -------------------------------------------------------------------------- //
 @mixin text-align($bp) {
-	// XS doesn't have a min value.
+	// XS doesn't have a min value
 	@if $bp == xxs {
-		.text-#{$bp}-pull {
+		.u-text-#{$bp}-pull {
 			text-align: left;
 
 			[dir='rtl'] & { text-align: right; }
 		}
 
-		.text-#{$bp}-push {
+		.u-text-#{$bp}-push {
 			text-align: right;
 
 			[dir='rtl'] & { text-align: left; }
 		}
 
-		.text-#{$bp}-center { text-align: center; }
+		.u-text-#{$bp}-center { text-align: center; }
 
 		@media #{bp-max($bp)} {
-			.text-#{$bp}-pull-only {
+			.u-text-#{$bp}-pull-only {
 				text-align: left;
 
 				[dir='rtl'] & { text-align: right; }
 			}
 
-			.text-#{$bp}-push-only {
+			.u-text-#{$bp}-push-only {
 				text-align: right;
 
 				[dir='rtl'] & { text-align: left; }
 			}
 
-			.text-#{$bp}-center-only { text-align: center; }
+			.u-text-#{$bp}-center-only { text-align: center; }
 		}
 	} @else {
 		@media #{bp-min($bp)} {
-			.text-#{$bp}-pull {
+			.u-text-#{$bp}-pull {
 				text-align: left;
 
 				[dir='rtl'] & { text-align: right; }
 			}
 
-			.text-#{$bp}-push {
+			.u-text-#{$bp}-push {
 				text-align: right;
 
 				[dir='rtl'] & { text-align: left; }
 			}
 
-			.text-#{$bp}-center { text-align: center; }
+			.u-text-#{$bp}-center { text-align: center; }
 
 			// Large doesn't need an "only" since it operates on min width.
 			@if $bp != l {
 				@media #{bp-max($bp)} {
-					.text-#{$bp}-pull {
+					.u-text-#{$bp}-pull {
 						text-align: left;
 
 						[dir='rtl'] & { text-align: right; }
 					}
 
-					.text-#{$bp}-push {
+					.u-text-#{$bp}-push {
 						text-align: right;
 
 						[dir='rtl'] & { text-align: left; }
 					}
 
-					.text-#{$bp}-center { text-align: center; }
+					.u-text-#{$bp}-center { text-align: center; }
 				}
 			}
 		}
