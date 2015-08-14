@@ -1,9 +1,13 @@
 // -------------------------------------------------------------------------- //
 //	Media Query Breakpoints
+//
+//	@param {String} $bp
+//	@return {String}
 // -------------------------------------------------------------------------- //
 @function bp($bp) {
-	$breakpoints: map-get($grid, breakpoints);
+	$breakpoints: grid(breakpoints);
 
+	// Does breakpoint exist
 	@if map-has-key($breakpoints, $bp) {
 		$breakpoint: map-get($breakpoints, $bp);
 	} @else {
@@ -26,8 +30,9 @@
 }
 
 @function bp-min($bp) {
-	$breakpoints: map-get($grid, breakpoints);
+	$breakpoints: grid(breakpoints);
 
+	// Does breakpoint exist
 	@if map-has-key($breakpoints, $bp) {
 		$breakpoint: map-get($breakpoints, $bp);
 	} @else {
@@ -44,8 +49,9 @@
 }
 
 @function bp-max($bp) {
-	$breakpoints: map-get($grid, breakpoints);
+	$breakpoints: grid(breakpoints);
 
+	// Does breakpoint exist
 	@if map-has-key($breakpoints, $bp) {
 		$breakpoint: map-get($breakpoints, $bp);
 	} @else {

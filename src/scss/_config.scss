@@ -1,8 +1,12 @@
 // -------------------------------------------------------------------------- //
 //	Colors
+//
+//	@example color: color($name);
+//	@example color: color($name, $variation);
 // -------------------------------------------------------------------------- //
 $colors: (
-	blue: #0000ee,
+	primary: #0000ee,
+
 	black: #000,
 	grey: (
 		dark: #222,
@@ -10,15 +14,18 @@ $colors: (
 	white: #fff
 ) !default;
 
-$primary-color: color(blue);
-
 // -------------------------------------------------------------------------- //
 //	Fonts
+//
+//	@example font: font();
+//	@example font: font($name);
+//	@example color: font($prop);
+//	@example font-family: font($name, $prop);
 // -------------------------------------------------------------------------- //
 $fonts: (
 	base: (
 		color: #222,
-		family: 'Helvetica Neue, Arial, Helvetica, sans-serif',
+		family: '"Helvetica Neue", Arial, Helvetica, sans-serif',
 		line-height: 1.375,
 		size: 100%,
 		weight: null
@@ -35,6 +42,8 @@ $fonts: (
 
 // -------------------------------------------------------------------------- //
 //	Grid System
+//
+//	@example @media #{bp($bp)} { ... }
 // -------------------------------------------------------------------------- //
 // Breakpoints have been carefully considered so it is recommended
 // to leave them as they are.
@@ -73,8 +82,8 @@ $grid: (
 // -------------------------------------------------------------------------- //
 //	Typography
 // -------------------------------------------------------------------------- //
+// Site
 $site-background: #fff !default;
-$site-width: map-get($grid, max-width) !default;
 
 // Selected text
 $selection-background: #b3d4fc !default;
@@ -86,7 +95,7 @@ $selection-focus-width: 1px !default;
 $selection-focus-offset: -1px !default;
 
 // Link
-$link-color: $primary-color !default;
+$link-color: color(primary) !default;
 $link-text-decoration: none !default;
 
 $link-color-hover: #000 !default;
@@ -161,10 +170,8 @@ $alert-background-color: #ffd54f !default;
 $alert-border-color: #ff6f00 !default;
 
 // Code
-$code-font-family: monospace, monospace !default;
 $code-background-color: #f7f7f9 !default;
 $code-border-color: #c0c0c0 !default;
-$code-color: #950b2f !default;
 
 // -------------------------------------------------------------------------- //
 //	Vendor Styles

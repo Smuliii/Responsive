@@ -1,4 +1,49 @@
 // -------------------------------------------------------------------------- //
+//	Image Replacement
+// -------------------------------------------------------------------------- //
+@mixin ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		display: block;
+		height: 150%;
+		width: 0;
+	}
+}
+
+// -------------------------------------------------------------------------- //
+//	Visually Hidden
+// -------------------------------------------------------------------------- //
+// Hide only visually, but have it available for screen readers: h5bp.com/v
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Extends the .visuallyhidden class to allow the element to be focusable
+	// when navigated to via the keyboard: h5bp.com/p
+	&.focusable {
+		&:active,
+		&:focus {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
+}
+
+// -------------------------------------------------------------------------- //
 //	Creates visibility classes for each breakpoint.
 // -------------------------------------------------------------------------- //
 @mixin visibility($bp) {

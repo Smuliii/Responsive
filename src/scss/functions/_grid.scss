@@ -1,10 +1,6 @@
 // -------------------------------------------------------------------------- //
-//	Creates grid state classes for each breakpoint.
+//	Get Grid Values
 // -------------------------------------------------------------------------- //
-@mixin grid-state($bp, $width) {
-	@media #{bp($bp)} {
-		.grid-state-indicator {
-			width: $width;
-		}
-	}
+@function grid($args...) {
+	@return map-deep-get($grid, #{$args});
 }

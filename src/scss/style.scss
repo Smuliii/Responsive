@@ -6,6 +6,7 @@
 @import 'functions/breakpoints';
 @import 'functions/color';
 @import 'functions/font';
+@import 'functions/grid';
 @import 'functions/helpers';
 
 // -------------------------------------------------------------------------- //
@@ -16,11 +17,9 @@
 // -------------------------------------------------------------------------- //
 //	Mixins
 // -------------------------------------------------------------------------- //
+@import 'mixins/components';
 @import 'mixins/grid';
-@import 'mixins/push-pull';
-@import 'mixins/grid-state';
 @import 'mixins/layout';
-@import 'mixins/text-align';
 @import 'mixins/visibility';
 
 // -------------------------------------------------------------------------- //
@@ -32,20 +31,13 @@
 @import 'partials/base/grid';
 
 // -------------------------------------------------------------------------- //
-//	Utilities
-// -------------------------------------------------------------------------- //
-@import 'partials/utilities/components';
-@import 'partials/utilities/layout';
-@import 'partials/utilities/visibility';
-
-// -------------------------------------------------------------------------- //
 //	Components
 // -------------------------------------------------------------------------- //
 @import	'partials/components/alerts';
 @import	'partials/components/buttons';
 @import	'partials/components/code';
 @import	'partials/components/forms';
-@import	'partials/components/icons';
+// @import	'partials/components/icons';
 @import	'partials/components/lists';
 @import	'partials/components/media';
 @import	'partials/components/tables';
@@ -60,6 +52,12 @@
 @import	'partials/vendor/modal';
 @import	'partials/vendor/tablelist';
 @import	'partials/vendor/tabs';
+
+// -------------------------------------------------------------------------- //
+//	Utilities
+// -------------------------------------------------------------------------- //
+@import 'partials/utilities/layout';
+@import 'partials/utilities/visibility';
 
 // -------------------------------------------------------------------------- //
 //	Print

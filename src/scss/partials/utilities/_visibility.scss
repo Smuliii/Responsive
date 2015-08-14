@@ -1,69 +1,21 @@
-// Image replacement
-%u-ir {
-	background-color: transparent;
-	border: 0;
-	overflow: hidden;
+.u-ir { @include ir; }
 
-	&:before {
-		content: '';
-		display: block;
-		height: 150%;
-		width: 0;
-	}
-}
-
-.u-ir { @extend %u-ir; }
+.u-visuallyhidden { @include visuallyhidden; }
 
 // Hide from both screen readers and browsers: h5bp.com/u
-%u-hidden { display: none !important; }
-
-.u-hidden { @extend %u-hidden; }
-
-// Hide only visually, but have it available for screen readers: h5bp.com/v
-%u-visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-
-	// Extends the .visuallyhidden class to allow the element to be focusable
-	// when navigated to via the keyboard: h5bp.com/p
-	&.focusable {
-		&:active,
-		&:focus {
-			clip: auto;
-			height: auto;
-			margin: 0;
-			overflow: visible;
-			position: static;
-			width: auto;
-		}
-	}
-}
-
-.u-visuallyhidden { @extend %u-visuallyhidden; }
+.u-hidden { display: none !important; }
 
 // Hide visually and from screen readers, but maintain layout
-%u-invisible { visibility: hidden; }
-
-.u-invisible { @extend %u-invisible; }
+.u-invisible { visibility: hidden; }
 
 // Opacity helper to add to elements to allow fade animation
-%u-fade-out,
-%u-fade-in { transition: opacity 0.3s; }
+.u-fade-out,
+.u-fade-in { transition: opacity 0.3s; }
 
 // Fade opacity with animation
-%u-fade-out { opacity: 0 !important; }
+.u-fade-out { opacity: 0 !important; }
 
-.u-fade-out { @extend %u-fade-out; }
-
-%u-fade-in { opacity: 1 !important; }
-
-.u-fade-in { @extend %u-fade-in; }
+.u-fade-in { opacity: 1 !important; }
 
 // Responsive helpers to toggle visibility.
 .u-visible-xxs,
@@ -73,6 +25,6 @@
 .u-visible-l { display: none !important; }
 
 // XXS, XS, S, M, L viewports
-@each $bp in map-keys(map-get($grid, breakpoints)) {
+@each $bp in map-keys(grid(breakpoints)) {
 	@include visibility($bp);
 }

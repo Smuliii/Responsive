@@ -1,16 +1,5 @@
-// 1: Ensure .row negative gutter cannot cause horizontal scrollbar.
-%container {
-	@extend %clearfix;
-	margin: 0 auto;
-	max-width: $site-width;
-	width: calc(100% - #{map-get($grid, gutter)}); // 1
-
-	&.fixed,
-	.fixed & { width: $site-width; } // 1
-}
-
 .container,
-.container-full { @extend %container; }
+.container-full { @include container; }
 
 // 1: Prevent horizontal scrollbar.
 .container-full {
@@ -24,8 +13,8 @@
 // for negative margin.
 .row,
 [class*='block-row-'] {
-	@extend %clearfix;
-	margin: 0 (- map-get($grid, gutter)/2); // 1
+	@include clearfix;
+	margin: 0 (- grid(gutter)/2); // 1
 }
 
 // No margin required.
@@ -44,8 +33,8 @@
 [class*=col-],
 [class*='block-row-'] > * {
 	background-clip: padding-box; // 2
-	border-left: (map-get($grid, gutter)/2) solid transparent; // 1
-	border-right: (map-get($grid, gutter)/2) solid transparent; // 1
+	border-left: (grid(gutter)/2) solid transparent; // 1
+	border-right: (grid(gutter)/2) solid transparent; // 1
 	display: block;
 	float: left;
 	min-height: 1px;
@@ -74,7 +63,7 @@
 	display: table;
 	height: 1px;
 	table-layout: fixed; // 1
-	width: calc(100% + #{map-get($grid, gutter)});
+	width: calc(100% + #{grid(gutter)});
 
 	&.no-gutter { width: 100%; }
 
@@ -88,7 +77,7 @@
 }
 
 // XXS, XS, S, M, L grids
-@each $bp in map-keys(map-get($grid, breakpoints)) {
+@each $bp in map-keys(grid(breakpoints)) {
 	@if $bp == xxs {
 		@include grid-columns($bp);
 		@include block-grid-columns($bp);

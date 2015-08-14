@@ -1,34 +1,43 @@
 // -------------------------------------------------------------------------- //
-//	Get Font by Property and/or by Type
+//	Get Font Property
+//
+//	@param {String} [$name|$prop]
+//	@param {String} [$prop]
+//	@return {String}
 // -------------------------------------------------------------------------- //
 @function font($args...) {
-	$type: base;
+	$name: base;
 	$prop: null;
 
 	@if length($args) == 1 {
+		// Is the argument a font name
 		@if map-has-key($fonts, nth($args, 1)) {
-			$type: nth($args, 1);
-		} @elseif map-has-key(map-get($fonts, $type), nth($args, 1)) {
+			$name: nth($args, 1);
+		// Or is it a font property
+		} @elseif map-has-key(map-get($fonts, $name), nth($args, 1)) {
 			$prop: nth($args, 1);
+		// Or maybe it's nothing
 		} @else {
 			@warn 'Font `#{nth($args, 1)}` not found!';
 			@return null;
 		}
 	} @elseif (length($args) > 1) {
-		$type: nth($args, 1);
+		$name: nth($args, 1);
 		$prop: nth($args, 2);
 	}
 
-	@if not map-has-key($fonts, $type) {
+	// Does font name exist
+	@if not map-has-key($fonts, $name) {
 		@warn 'Font `#{nth($args, 1)}` not found!';
 		@return null;
 	}
 
-	$font: map-get($fonts, $type);
+	$font: map-get($fonts, $name);
 
+	// Return either single property or all together
 	@if $prop {
-		@return map-get($font, $prop);
+		@return if(map-get($font, family), #{map-get($font, $prop)}, map-get($font, $prop));
 	} @else {
-		@return if(map-get($font, family), map-get($font, weight) map-get($font, size)/#{map-get($font, line-height)} map-get($font, family), null);
+		@return if(map-get($font, family), map-get($font, weight) map-get($font, size)/#{map-get($font, line-height)} #{map-get($font, family)}, null);
 	}
 }

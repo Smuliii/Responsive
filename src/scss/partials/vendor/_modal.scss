@@ -55,7 +55,7 @@
 }
 
 .modal-ajax.container,
-.modal-iframe { @extend %container; }
+.modal-iframe { @include container; }
 
 .modal-iframe,
 .modal-image { overflow: hidden; }

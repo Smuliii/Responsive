@@ -15,24 +15,6 @@ jQuery(document).ready(function( $ ) {
 		$body   = $('body'),
 		lang    = $html.attr('lang');
 
-	/**
-	 * Update `isMobileView` variable and trigger `mobileViewChange` event when a screen size change occurs
-	 */
-	var mobileBreakpoint = '(max-width: 47.99em)',
-		isMobileView     = window.matchMedia( mobileBreakpoint ).matches,
-		resizeTimer;
-
-	$window.on('resize', function() {
-		clearTimeout(resizeTimer);
-
-		resizeTimer = setTimeout(function() {
-			if( isMobileView !== window.matchMedia( mobileBreakpoint ).matches ) {
-				isMobileView = window.matchMedia( mobileBreakpoint ).matches;
-				$body.trigger('mobileViewChange', isMobileView);
-			}
-		}, 250);
-	}).trigger('resize');
-
 	/* -------------------------------------------------------------------------- */
 	/*  Custom Functions
 	/* -------------------------------------------------------------------------- */

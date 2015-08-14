@@ -1,5 +1,5 @@
 .alert {
-	@extend %clearfix;
+	@include clearfix;
 	background-color: $alert-background-color;
 	border-left: 5px solid $alert-border-color;
 	color: darken($alert-background-color, 50);
@@ -17,7 +17,7 @@
 	}
 
 	&__close {
-		@extend %btn-reset;
+		@include button-reset;
 		float: right;
 		font-size: 1.1875em;
 		font-weight: bold;

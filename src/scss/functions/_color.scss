@@ -1,15 +1,22 @@
 // -------------------------------------------------------------------------- //
-//	Get Colors by Name
+//	Get Color or Color Variation
+//
+//	@param {String} $name
+//	@param {String} [$variation]
+//	@return {String}
 // -------------------------------------------------------------------------- //
 @function color($name, $variation: null) {
 	$color: map-get($colors, $name);
 
+	// Does color exist
 	@if not map-has-key($colors, $name) {
 		@warn 'Color `#{$name}` not found!';
 		@return null;
+	// Does color variation exist
 	} @elseif ($variation and type-of($color) != map) or (type-of($color) == map and not map-has-key($color, $variation)) {
 		@warn 'Color variation `#{$variation}` for `#{$name}` not found!';
 		@return null;
+	// Return either color or color variation
 	} @else {
 		@if $variation and type-of($color) == map {
 			@return map-get($color, $variation);

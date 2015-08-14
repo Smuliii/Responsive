@@ -2,7 +2,7 @@
 	position: relative;
 
 	> ul {
-		@extend %clearfix;
+		@include clearfix;
 		border-bottom: 1px solid $tabs-nav-border-color;
 		list-style: none;
 		margin-top: 0;

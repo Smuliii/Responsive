@@ -1,10 +1,24 @@
 // -------------------------------------------------------------------------- //
-//	Grid System - Columns
+//	Container
+// -------------------------------------------------------------------------- //
+// 1: Ensure .row negative gutter cannot cause horizontal scrollbar.
+@mixin container {
+	@include clearfix;
+	margin: 0 auto;
+	max-width: grid(max-width);
+	width: calc(100% - #{grid(gutter)}); // 1
+
+	&.fixed,
+	.fixed & { width: grid(max-width); } // 1
+}
+
+// -------------------------------------------------------------------------- //
+//	Columns
 // -------------------------------------------------------------------------- //
 @mixin grid-columns($breakpoint) {
     // Calculate column width and without gutter.
-    $column-width: (100% / map-get($grid, columns));
-    $max-columns: map-get($grid, columns) + 1;
+    $column-width: (100% / grid(columns));
+    $max-columns: grid(columns) + 1;
 
     // Loop through and build the columns.
     @for $i from 1 to ($max-columns) {
@@ -20,7 +34,7 @@
             .push-#{$breakpoint}-#{$i} {
                 left: $temp-width;
 
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                     left: auto;
                     right: $temp-width;
                 }
@@ -29,7 +43,7 @@
             .pull-#{$breakpoint}-#{$i} {
                 right: $temp-width;
 
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                     right: auto;
                     left: $temp-width;
                 }
@@ -48,10 +62,10 @@
 }
 
 // -------------------------------------------------------------------------- //
-//	Grid System - Block Grid Columns
+//	Block Grid Columns
 // -------------------------------------------------------------------------- //
 @mixin block-grid-columns($breakpoint) {
-    $max-columns: map-get($grid, columns) + 1;
+    $max-columns: grid(columns) + 1;
     // Loop through and set width.
     @for $i from 1 to ($max-columns) {
         // Calculate column width .
