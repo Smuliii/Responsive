@@ -37,7 +37,7 @@
 
 		<h3>Internal target</h3>
 		<a href="#" data-modal-target="#overlay1">Launch internal overlay</a>
-		<div id="overlay1" aria-hidden="true">
+		<div id="overlay1" hidden aria-hidden="true">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -76,7 +76,7 @@
 		</div>
 
 		<h3>Internal target</h3>
-		<a href="#" class="modal" data-modal-target="#modal" data-modal-modal="button">Launch modal overlay</a>
+		<a href="#" data-modal-target="#modal" data-modal-modal="button">Launch modal overlay</a>
 		<div id="modal" class="hidden">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -165,10 +165,12 @@
     <script src="../../../../src/js/vendor/responsive.autosize.js"></script>
     <script src="../../../../src/js/vendor/responsive.carousel.js"></script>
     <script src="../../../../src/js/vendor/responsive.conditional.js"></script>
+    <script src="../../../../src/js/vendor/responsive.dismiss.js"></script>
     <script src="../../../../src/js/vendor/responsive.dropdown.js"></script>
     <script src="../../../../src/js/vendor/responsive.modal.js"></script>
-    <script src="../../../../src/js/vendor/responsive.tabs.js"></script>
+    <script src="../../../../src/js/vendor/responsive.navigation.js"></script>
     <script src="../../../../src/js/vendor/responsive.tablelist.js"></script>
+    <script src="../../../../src/js/vendor/responsive.tabs.js"></script>
 	<script>
 		var $target = $(":attrStart(data-modal)"),
 			$h1 = $("h1");
