@@ -15,8 +15,7 @@ ul ul,
 ol ol { margin: 0; }
 
 // Coloured lists.
-ul.colored,
-ol.colored {
+.list-colored {
 	padding-left: 2.5em;
 
 	> li {
@@ -47,7 +46,7 @@ ol.colored {
 }
 
 // Counter increment to replace standard numbers.
-ol.colored {
+ol.list-colored {
 	counter-reset: foo;
 
 	> li {

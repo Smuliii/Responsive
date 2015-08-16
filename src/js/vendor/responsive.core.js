@@ -57,7 +57,7 @@
 		///   &#10;    3: range - The available grid range.
 		///</returns>
 		return function () {
-			var $div = $("<div/>").addClass("grid-state-indicator").prependTo("body");
+			var $div = $("<div/>").addClass("u-grid-state-indicator").prependTo("body");
 
 			// These numbers match values in the css
 			var grids = ["xxs", "xs", "s", "m", "l"],
@@ -81,7 +81,7 @@
 			var width = 0;
 			if (d.body.clientWidth < w.innerWidth) {
 
-				var $div = $("<div/>").addClass("scrollbar-measure").prependTo("body");
+				var $div = $("<div/>").addClass("u-scrollbar-measure").prependTo("body");
 				width = $div[0].offsetWidth - $div[0].clientWidth;
 
 				$div.remove();

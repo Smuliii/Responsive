@@ -203,7 +203,7 @@
 // -------------------------------------------------------------------------- //
 @mixin grid-state($bp, $width) {
 	@media #{bp($bp)} {
-		.grid-state-indicator {
+		.u-grid-state-indicator {
 			width: $width;
 		}
 	}

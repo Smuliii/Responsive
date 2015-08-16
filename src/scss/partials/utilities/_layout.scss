@@ -52,7 +52,7 @@
 }
 
 // Grid state detection.
-.grid-state-indicator {
+.u-grid-state-indicator {
 	height: 1px;
 	position: absolute;
 	top: -9999px;
@@ -65,7 +65,7 @@
 }
 
 // Scrollbar width measurement helper
-.scrollbar-measure {
+.u-scrollbar-measure {
 	position: absolute;
 	top: -9999px;
 	width: 50px;

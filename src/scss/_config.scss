@@ -1,8 +1,8 @@
 // -------------------------------------------------------------------------- //
 //	Colors
 //
-//	@example color: color($name);
-//	@example color: color($name, $variation);
+//	@example color($name)
+//	@example color($name, $variation)
 // -------------------------------------------------------------------------- //
 $colors: (
 	primary: #0000ee,
@@ -17,10 +17,10 @@ $colors: (
 // -------------------------------------------------------------------------- //
 //	Fonts
 //
-//	@example font: font();
-//	@example font: font($name);
-//	@example color: font($prop);
-//	@example font-family: font($name, $prop);
+//	@example font()
+//	@example font($name)
+//	@example font($prop)
+//	@example font($name, $prop)
 // -------------------------------------------------------------------------- //
 $fonts: (
 	base: (
@@ -43,7 +43,8 @@ $fonts: (
 // -------------------------------------------------------------------------- //
 //	Grid System
 //
-//	@example @media #{bp($bp)} { ... }
+//	@example grid($args...)
+//	@example bp($bp)
 // -------------------------------------------------------------------------- //
 // Breakpoints have been carefully considered so it is recommended
 // to leave them as they are.
