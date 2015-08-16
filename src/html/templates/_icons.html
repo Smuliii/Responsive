@@ -8,11 +8,11 @@
 </style>
 
 <ul class="icons">
-<% _.each(icons, function(icon) { %>
+<% _.each(glyphs, function(glyph) { %>
 	<li>
-		<i class="<%= className %>-<%= icon.name %> icon-3x"></i>
-		<span class="icon-name"><%= icon.name %></span>
-		<span class="icon-codepoint"><%= icon.codepoint.toString(16).toLowerCase() %></span>
+		<i class="icon -i-<%= glyph.name %> -size-3x"></i>
+		<span class="icon-name"><%= glyph.name %></span>
+		<span class="icon-codepoint"><%= glyph.codepoint.toString(16).toLowerCase() %></span>
 	</li>
 <% }); %>
 </ul>

@@ -31,12 +31,12 @@
 }
 
 // -------------------------------------------------------------------------- //
-//	Icon Fonts
+//	Icon Font
 // -------------------------------------------------------------------------- //
-@mixin icon-fonts {
+@mixin icon-font {
 	cursor: default;
 	display: inline-block;
-	font: normal normal normal 1em/1 '<%= fontName %>';
+	font: normal normal normal 1em/1 'icons';
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	speak: none;

@@ -35,7 +35,8 @@ var gulp       = require('gulp'),
 	$          = require('gulp-load-plugins')(),
 	es         = require('event-stream'),
 	del        = require('del'),
-	bowerFiles = require('main-bower-files');
+	bowerFiles = require('main-bower-files'),
+	timestamp  = Math.round( Date.now() / 1000 );
 
 // Copy Bower main files
 gulp.task('bower', function( cb ) {
@@ -144,30 +145,26 @@ gulp.task('icons', function() {
 	return gulp.src(path.icons.src + '**/*.svg')
 			   .pipe($.plumber())
 			   .pipe($.iconfont({
-				   appendCodepoints : true,
-				   fontHeight       : 1000,
-				   fontName         : 'icons',
-				   normalize        : true
+					appendUnicode : true,
+					fontHeight    : 1001,
+					fontName      : 'icons',
+					formats       : ['eot', 'ttf', 'woff'],
+					normalize     : true,
+					timestamp     : timestamp
 			   }))
-			   .on('codepoints', function(codepoints, options) {
+			   .on('glyphs', function(glyphs, options) {
+				   options.fontPath = 'fonts/';
+				   options.glyphs = glyphs.map(function(glyph) {
+									   return { name : glyph.name, codepoint : glyph.unicode[0].charCodeAt(0) };
+								   });
+
 				   gulp.src(path.css.src + 'templates/_icons.scss')
-					   .pipe($.consolidate('lodash', {
-						   className : 'icon',
-						   fontName  : 'icons',
-						   fontPath  : 'fonts/',
-						   icons     : codepoints,
-						   version   : Date.now()
-					   }))
-					  .pipe(gulp.dest(path.css.src + 'partials/components/'));
+					   .pipe($.consolidate('lodash', options))
+					   .pipe(gulp.dest(path.css.src + 'partials/components/'));
 
 				   gulp.src(path.html.src + 'templates/_icons.html')
-					   .pipe($.consolidate('lodash', {
-						   className : 'icon',
-						   fontName  : 'icons',
-						   fontPath  : 'fonts/',
-						   icons     : codepoints
-					   }))
-					  .pipe(gulp.dest(path.html.src + 'partials/'));
+					   .pipe($.consolidate('lodash', options))
+					   .pipe(gulp.dest(path.html.src + 'partials/'));
 			   })
 			   .pipe($.size({
 				   title : 'Icons'
@@ -271,7 +268,8 @@ gulp.task('clean', function( cb ) {
 		basePath.dest,
 		'bower_components/',
 		path.js.src + 'vendor/bower/',
-		path.css.src + 'partials/components/_icons.scss'
+		path.css.src + 'partials/components/_icons.scss',
+		path.html.src + 'partials/_icons.html'
 	];
 
 	return del(files, cb);

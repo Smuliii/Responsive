@@ -1,30 +1,28 @@
 @font-face {
-	font-family: '<%= fontName %>';
-	src: url('<%= fontPath %><%= fontName %>.eot?v=<%= version %>');
-	src: url('<%= fontPath %><%= fontName %>.eot?#iefix&v=<%= version %>')          format('embedded-opentype'),
-	     url('<%= fontPath %><%= fontName %>.woff?v=<%= version %>')                format('woff'),
-	     url('<%= fontPath %><%= fontName %>.ttf?v=<%= version %>')                 format('truetype'),
-	     url('<%= fontPath %><%= fontName %>.svg?v=<%= version %>#<%= fontName %>') format('svg');
+	font-family: 'icons';
+	src: url('fonts/icons.eot?v=<%= timestamp %>');
+	src: url('fonts/icons.eot?#iefix&v=<%= timestamp %>') format('embedded-opentype'),
+	     url('fonts/icons.woff?v=<%= timestamp %>')       format('woff'),
+	     url('fonts/icons.ttf?v=<%= timestamp %>')        format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
-[data-icon],
-[class^='icon-'],
-[class*=' icon-'] {
+.icon {
 	line-height: 1;
 
 	&:before {
-		@include icon-fonts;
+		@include icon-font;
 		content: attr(data-icon);
 	}
+
+	&.-size-2x { font-size: 2em; }
+	&.-size-3x { font-size: 3em; }
+	&.-size-4x { font-size: 4em; }
+	&.-size-5x { font-size: 5em; }
+
+	// Generated icon classes
+	<% _.each(glyphs, function(glyph) { %>
+	&.-i-<%= glyph.name %>:before { content: '\<%= glyph.codepoint.toString(16).toLowerCase() %>'; }
+	<% }); %>
 }
-
-.icon-2x:before { font-size: 2.27em; }
-.icon-3x:before { font-size: 3.40em; }
-.icon-4x:before { font-size: 4.53em; }
-.icon-5x:before { font-size: 5.67em; }
-
-// Generated icon classes
-<% _.each(icons, function(icon) { %>
-.<%= className %>-<%= icon.name %>:before { content: '\<%= icon.codepoint.toString(16).toLowerCase() %>'; }<% }); %>
