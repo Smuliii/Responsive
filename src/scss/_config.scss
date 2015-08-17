@@ -41,10 +41,38 @@ $fonts: (
 ) !default;
 
 // -------------------------------------------------------------------------- //
+//	Layers
+//
+//	@example z($name)
+//	@example z($name, $child)
+// -------------------------------------------------------------------------- //
+$layers: (
+	carousel: (
+		button: 3,
+		indicator: 3,
+		slide-active: 1,
+		slide-move: 0,
+	),
+	carousel-fade: (
+		control: 3,
+		slide-active-move: 2,
+		slide-move: 1
+	),
+	modal: (
+		base: 2147483647,
+		button: 2,
+		loader: 3
+	),
+	navigation: 2147483647
+);
+
+// -------------------------------------------------------------------------- //
 //	Grid System
 //
 //	@example grid($args...)
 //	@example bp($bp)
+//	@example bp-min($bp)
+//	@example bp-max($bp)
 // -------------------------------------------------------------------------- //
 // Breakpoints have been carefully considered so it is recommended
 // to leave them as they are.

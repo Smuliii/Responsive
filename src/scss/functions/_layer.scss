@@ -1,0 +1,31 @@
+// -------------------------------------------------------------------------- //
+//	Get Z-Index by name
+//
+//	@param {String} $name
+//	@param {String} [$child]
+//	@return {String}
+// -------------------------------------------------------------------------- //
+@function z($name, $child: null) {
+	$z-index: map-get($layers, $name);
+
+	@if type-of($z-index) == map and not $child {
+		$child: base;
+	}
+
+	// Does z-index exist
+	@if not map-has-key($layers, $name) {
+		@warn 'Z-index `#{$name}` not found!';
+		@return null;
+	// Does child z-index exist
+	} @elseif ($child and type-of($z-index) != map) or (type-of($z-index) == map and not map-has-key($z-index, $child)) {
+		@warn 'Child z-index `#{$child}` for `#{$name}` not found!';
+		@return null;
+	// Return z-index
+	} @else {
+		@if $child and type-of($z-index) == map {
+			@return map-get($z-index, $child);
+		} @else {
+			@return map-get($layers, $name);
+		}
+	}
+}

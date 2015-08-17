@@ -2,7 +2,7 @@
 .navigation {
 	transform: translate3d(0, 0, 0);
 	position: fixed;
-	z-index: 2147483647;
+	z-index: z(navigation);
 	width: 1px;
 	height: 100%;
 	top: 0;

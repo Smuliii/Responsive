@@ -12,7 +12,7 @@
 	top: 0;
 	touch-action: none;
 	width: 100%;
-	z-index: 2147483647;
+	z-index: z(modal);
 
 	&:before {
 		content: '';
@@ -42,7 +42,7 @@
 	right: 0;
 	top: 0;
 	width: 12px;
-	z-index: 3;
+	z-index: z(modal, loader);
 }
 
 .modal {
@@ -115,7 +115,7 @@
 	position: fixed;
 	right: 1px;
 	top: 1px;
-	z-index: 2;
+	z-index: z(modal, button);
 
 	[dir='rtl'] & {
 		left: 1px;
@@ -134,7 +134,7 @@
 	text-align: center;
 	top: 49%;
 	width: 3em;
-	z-index: 2;
+	z-index: z(modal, button);
 
 	[dir='rtl'] & { right: 0; }
 

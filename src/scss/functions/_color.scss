@@ -8,6 +8,10 @@
 @function color($name, $variation: null) {
 	$color: map-get($colors, $name);
 
+	@if type-of($color) == map and not $variation {
+		$variation: base;
+	}
+
 	// Does color exist
 	@if not map-has-key($colors, $name) {
 		@warn 'Color `#{$name}` not found!';

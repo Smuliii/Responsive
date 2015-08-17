@@ -45,7 +45,7 @@
 		right: 0;
 		text-align: center;
 		top: 1em;
-		z-index: 3;
+		z-index: z(carousel, indicator);
 
 		li {
 			background-color: $carousel-nav-background-color;
@@ -93,7 +93,7 @@
 
 	.carousel-active {
 		position: relative !important;
-		z-index: 1;
+		z-index: z(carousel, slide-active);
 	}
 
 	.next,
@@ -103,7 +103,7 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 0;
+		z-index: z(carousel, slide-move);
 	}
 
 	.next,
@@ -145,7 +145,7 @@
 		text-decoration: none;
 		top: 40%;
 		width: 1.5em;
-		z-index: 3;
+		z-index: z(carousel, button);
 
 		[dir='rtl'] & {
 			left: auto;
@@ -186,7 +186,7 @@
 	> figure.next,
 	> figure.prev {
 		opacity: 1;
-		z-index: 1;
+		z-index: z(carousel-fade, slide-move);
 	}
 
 	.carousel-active {
@@ -195,14 +195,14 @@
 		&.left,
 		&.right {
 			opacity: 0;
-			z-index: 2;
+			z-index: z(carousel-fade, slide-active-move);
 		}
 
-		&.swipe { z-index: 2; }
+		&.swipe { z-index: z(carousel-fade, slide-active-move); }
 	}
 
 	.carousel-control {
 		&,
-		&:visited { z-index: 3; }
+		&:visited { z-index: z(carousel-fade, control); }
 	}
 }
