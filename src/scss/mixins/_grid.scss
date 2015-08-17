@@ -8,82 +8,84 @@
 	max-width: grid(max-width);
 	width: calc(100% - #{grid(gutter)}); // 1
 
-	&.fixed,
-	.fixed & { width: grid(max-width); } // 1
+	&.-layout-fixed,
+	&.-layout-fixed & { width: grid(max-width); } // 1
 }
 
 // -------------------------------------------------------------------------- //
 //	Columns
 // -------------------------------------------------------------------------- //
 @mixin grid-columns($breakpoint) {
-    // Calculate column width and without gutter.
-    $column-width: (100% / grid(columns));
-    $max-columns: grid(columns) + 1;
+	// Calculate column width and without gutter.
+	$column-width: (100% / grid(columns));
+	$max-columns: grid(columns) + 1;
 
-    // Loop through and build the columns.
-    @for $i from 1 to ($max-columns) {
-        $temp-width: $column-width * $i;
+	// Loop through and build the columns.
+	@for $i from 1 to ($max-columns) {
+		$temp-width: $column-width * $i;
 
-        .col-#{$breakpoint}-#{$i} {
-            width: $temp-width;
-        }
-        // We don't want add offsets etc to full width columns.
-        @if $i < $max-columns {
-            // Keep offset for now for backwards compatibility.
-            .offset-#{$breakpoint}-#{$i},
-            .push-#{$breakpoint}-#{$i} {
-                left: $temp-width;
+		.col-#{$breakpoint}-#{$i} {
+			width: $temp-width;
+		}
+		// We don't want add offsets etc to full width columns.
+		@if $i < $max-columns {
+			// Keep offset for now for backwards compatibility.
+			.u-offset-#{$breakpoint}-#{$i},
+			.u-push-#{$breakpoint}-#{$i} {
+				left: $temp-width;
 
-                [dir='rtl'] & {
-                    left: auto;
-                    right: $temp-width;
-                }
-            }
+				[dir='rtl'] & {
+					left: auto;
+					right: $temp-width;
+				}
+			}
 
-            .pull-#{$breakpoint}-#{$i} {
-                right: $temp-width;
+			.u-pull-#{$breakpoint}-#{$i} {
+				right: $temp-width;
 
-                [dir='rtl'] & {
-                    right: auto;
-                    left: $temp-width;
-                }
-            }
-        }
-    }
-    // Equal height
-    .equal-height > [class*=col-#{$breakpoint}] {
-        display: table-cell;
-        height: 100%;
-    }
+				[dir='rtl'] & {
+					right: auto;
+					left: $temp-width;
+				}
+			}
+		}
+	}
 
-    .equal-height > .col-#{$breakpoint}-#{$max-columns} {
-        display: table-caption;
-    }
+	.row {
+		// Equal height
+		&.-height-equal > [class*='col-#{$breakpoint}'] {
+			display: table-cell;
+			height: 100%;
+		}
+
+		&.-height-equal > .col-#{$breakpoint}-#{$max-columns - 1} {
+			display: table-caption;
+		}
+	}
 }
 
 // -------------------------------------------------------------------------- //
 //	Block Grid Columns
 // -------------------------------------------------------------------------- //
 @mixin block-grid-columns($breakpoint) {
-    $max-columns: grid(columns) + 1;
-    // Loop through and set width.
-    @for $i from 1 to ($max-columns) {
-        // Calculate column width .
-        $column-width: (100% / $i);
+	$max-columns: grid(columns) + 1;
+	// Loop through and set width.
+	@for $i from 1 to ($max-columns) {
+		// Calculate column width .
+		$column-width: (100% / $i);
 
-        .block-row-#{$breakpoint}-#{$i} {
+		.block-row-#{$breakpoint}-#{$i} {
+			> * {
+				width: $column-width;
+			}
 
-            > * {
-                width: $column-width;
-            }
+			> :nth-of-type(n+1) {
+				clear: none;
+			}
 
-            > :nth-of-type(n+1) {
-                clear: none;
-            }
-
-            > :nth-of-type(#{$i}n+1) {
-                clear: both;
-            }
-        }
-    }
+			> :nth-of-type(#{$i}n+1) {
+				clear: both;
+			}
+		}
+	}
 }

@@ -55,7 +55,7 @@
 		max-width: 100%;
 		width: 100%;
 
-		&.fixed,
-		.fixed & { width: 100%; }
+		&.-layout-fixed,
+		&.-layout-fixed & { width: 100%; }
 	}
 }

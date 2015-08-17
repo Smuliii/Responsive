@@ -67,7 +67,7 @@
 }
 
 .modal-iframe .media {
-	background-color: #fff;
+	background-color: $modal-iframe-media-background-color;
 	margin-bottom: 0;
 }
 
@@ -92,7 +92,7 @@
 
 .modal-header,
 .modal-footer {
-	color: #fff;
+	color: $modal-header-color;
 	left: 0;
 	position: fixed;
 	right: 0;

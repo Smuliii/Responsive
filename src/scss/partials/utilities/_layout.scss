@@ -32,13 +32,13 @@
 }
 
 // Text align helpers
-.u-text-pull {
+.u-text-left {
 	text-align: left;
 
 	[dir='rtl'] & { text-align: right; }
 }
 
-.u-text-push {
+.u-text-right {
 	text-align: right;
 
 	[dir='rtl'] & { text-align: left; }

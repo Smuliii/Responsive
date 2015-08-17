@@ -83,7 +83,6 @@
 	}
 }
 
-
 // -------------------------------------------------------------------------- //
 //	Layout
 // -------------------------------------------------------------------------- //
@@ -131,13 +130,13 @@
 @mixin text-align($bp) {
 	// XS doesn't have a min value
 	@if $bp == xxs {
-		.u-text-#{$bp}-pull {
+		.u-text-#{$bp}-left {
 			text-align: left;
 
 			[dir='rtl'] & { text-align: right; }
 		}
 
-		.u-text-#{$bp}-push {
+		.u-text-#{$bp}-right {
 			text-align: right;
 
 			[dir='rtl'] & { text-align: left; }
@@ -146,13 +145,13 @@
 		.u-text-#{$bp}-center { text-align: center; }
 
 		@media #{bp-max($bp)} {
-			.u-text-#{$bp}-pull-only {
+			.u-text-#{$bp}-left-only {
 				text-align: left;
 
 				[dir='rtl'] & { text-align: right; }
 			}
 
-			.u-text-#{$bp}-push-only {
+			.u-text-#{$bp}-right-only {
 				text-align: right;
 
 				[dir='rtl'] & { text-align: left; }
@@ -162,13 +161,13 @@
 		}
 	} @else {
 		@media #{bp-min($bp)} {
-			.u-text-#{$bp}-pull {
+			.u-text-#{$bp}-left {
 				text-align: left;
 
 				[dir='rtl'] & { text-align: right; }
 			}
 
-			.u-text-#{$bp}-push {
+			.u-text-#{$bp}-right {
 				text-align: right;
 
 				[dir='rtl'] & { text-align: left; }
@@ -179,13 +178,13 @@
 			// Large doesn't need an "only" since it operates on min width.
 			@if $bp != l {
 				@media #{bp-max($bp)} {
-					.u-text-#{$bp}-pull {
+					.u-text-#{$bp}-left {
 						text-align: left;
 
 						[dir='rtl'] & { text-align: right; }
 					}
 
-					.u-text-#{$bp}-push {
+					.u-text-#{$bp}-right {
 						text-align: right;
 
 						[dir='rtl'] & { text-align: left; }

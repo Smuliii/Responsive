@@ -1,12 +1,13 @@
-.container,
-.container-full { @include container; }
+.container {
+	@include container;
 
-// 1: Prevent horizontal scrollbar.
-.container-full {
-	overflow-x: hidden; // 1
+	// 1: Prevent horizontal scrollbar.
+	&.-width-full {
+		overflow-x: hidden; // 1
 
-	&.fixed,
-	.fixed & { width: 100%; }
+		&.-layout-fixed,
+		&.-layout-fixed & { width: 100%; }
+	}
 }
 
 // 1: .container not filling full width allows
@@ -15,10 +16,10 @@
 [class*='block-row-'] {
 	@include clearfix;
 	margin: 0 (- grid(gutter)/2); // 1
-}
 
-// No margin required.
-.no-gutter { margin: 0; }
+	// No margin required.
+	&.-gutter-none { margin: 0; }
+}
 
 // Block-row
 [class*='block-row-'] {
@@ -30,7 +31,7 @@
 // Columns
 // 1: Use transparent borders for padding.
 // 2: Clip to allow setting a background color without filling the whole area.
-[class*=col-],
+[class*='col-'],
 [class*='block-row-'] > * {
 	background-clip: padding-box; // 2
 	border-left: (grid(gutter)/2) solid transparent; // 1
@@ -44,35 +45,37 @@
 }
 
 // Movable columns
-[class*=col-] {
-	&[class*=offset],
-	&[class*=push],
-	&[class*=pull] { position: relative; }
+[class*='col-'] {
+	&[class*='u-offset'],
+	&[class*='u-push'],
+	&[class*='u-pull'] { position: relative; }
 }
 
 // 1: Remove gutter
-[class*='block-row-'].no-gutter > *,
-.no-gutter > [class*=col-] {
+[class*='block-row-'].-gutter-none > *,
+.row.-gutter-none > [class*=col-] {
 	background-clip: border-box; // 1
 	border: 0; // 1
 }
 
 // Equal height
 // Stop rows collapsing
-.equal-height {
-	display: table;
-	height: 1px;
-	table-layout: fixed; // 1
-	width: calc(100% + #{grid(gutter)});
+.row {
+	&.-height-equal {
+		display: table;
+		height: 1px;
+		table-layout: fixed; // 1
+		width: calc(100% + #{grid(gutter)});
 
-	&.no-gutter { width: 100%; }
+		&.-gutter-none { width: 100%; }
 
-	// Without this columns shift right.
-	&:before { display: none !important; } // 1
+		// Without this columns shift right.
+		&:before { display: none !important; } // 1
 
-	> [class*=col-] {
-		float: none;
-		vertical-align: top;
+		> [class*='col-'] {
+			float: none;
+			vertical-align: top;
+		}
 	}
 }
 
