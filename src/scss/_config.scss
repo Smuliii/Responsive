@@ -21,14 +21,14 @@ $colors: (
 $fonts: (
 	base: (
 		color: #222,
-		family: '"Helvetica Neue", Arial, Helvetica, sans-serif',
+		family: ('Helvetica Neue', Arial, Helvetica, sans-serif),
 		line-height: 1.375,
 		size: 100%,
 		weight: null
 	),
 	code: (
 		color: #950b2f,
-		family: 'monospace'
+		family: (monospace)
 	),
 	heading: (
 		color: null,

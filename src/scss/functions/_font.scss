@@ -36,8 +36,8 @@
 
 	// Return either single property or all together
 	@if $prop {
-		@return if(map-get($font, family), #{map-get($font, $prop)}, map-get($font, $prop));
+		@return map-get($font, $prop);
 	} @else {
-		@return if(map-get($font, family), map-get($font, weight) map-get($font, size)/#{map-get($font, line-height)} #{map-get($font, family)}, null);
+		@return if(map-get($font, family), map-get($font, weight) map-get($font, size)/#{map-get($font, line-height)} map-get($font, family), null);
 	}
 }
