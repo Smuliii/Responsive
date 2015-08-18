@@ -103,7 +103,7 @@
 			var $this = $(this).attr({ "tabindex": 0, "aria-controls": self.id });
 			!$this.is("button") ? $this.attr({ "role": "button" }) : $this.attr({ "type": "button" });
 			if (!$this.find(".visuallyhidden").length) {
-				$("<span/>").addClass("visuallyhidden")
+				$("<span/>").addClass("u-visuallyhidden")
 							.html(this === self.$nextTrigger.get(0) ? self.options.nextHint : self.options.previousHint)
 							.appendTo($this);
 			}

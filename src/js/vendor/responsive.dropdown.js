@@ -49,14 +49,14 @@
 		// Add accessibility features.
 		if (this.$parent) {
 			this.$parent.attr({ "role": "tablist", "aria-multiselectable": "true" })
-				.find("div:not(.collapse,.accordion-body)").attr("role", "presentation");
+				.find("div:not(.is-collapsed,.accordion__body)").attr("role", "presentation");
 		} else {
-			$(".accordion").find("div:not(.collapse,.accordion-body)").addBack().attr("role", "presentation");
+			$(".accordion").find("div:not(.is-collapsed,.accordion__body)").addBack().attr("role", "presentation");
 		}
 
 		var id = this.$element.attr("id") || "dropdown-" + $.pseudoUnique(),
 			paneId = this.$target.attr("id") || "dropdown-" + $.pseudoUnique(),
-			active = !this.$target.hasClass("collapse");
+			active = !this.$target.hasClass("is-collapsed");
 
 		this.$element.attr({
 			"id": id,
@@ -83,7 +83,7 @@
 
 	Dropdown.prototype.show = function () {
 
-		if (this.transitioning || this.$target.hasClass("expand")) {
+		if (this.transitioning || this.$target.hasClass("is-expanded")) {
 			return;
 		}
 
@@ -102,7 +102,7 @@
 				var data = $(a).data("r.dropdown"),
 					$target = data && data.$target;
 
-				return $target && $target.hasClass("dropdown-group") && !$target.hasClass("collapse") && data.$parent && data.$parent[0] === self.$parent[0];
+				return $target && $target.hasClass("dropdown-group") && !$target.hasClass("is-collapsed") && data.$parent && data.$parent[0] === self.$parent[0];
 			});
 		}
 
@@ -114,7 +114,7 @@
 
 			// Calculate the height/width.
 			this.$target[dimension]("auto").attr({ "aria-hidden": false, "hidden": false });
-			this.$target.find("[tabindex]:not(.collapse)").attr({ "aria-hidden": false, "hidden": false });
+			this.$target.find("[tabindex]:not(.is-collapsed)").attr({ "aria-hidden": false, "hidden": false });
 
 			size = w.getComputedStyle(this.$target[0])[dimension];
 
@@ -135,7 +135,7 @@
 
 	Dropdown.prototype.hide = function () {
 
-		if (this.transitioning || this.$target.hasClass("collapse")) {
+		if (this.transitioning || this.$target.hasClass("is-collapsed")) {
 			return;
 		}
 
@@ -154,7 +154,7 @@
 			this.$target[dimension](size).redraw(); // Force reflow ;
 		}
 
-		this.$target.removeClass("expand");
+		this.$target.removeClass("is-expanded");
 		this.$target[dimension](0);
 		this.transition("addClass", $.Event(ehide), ehidden);
 	};
@@ -165,8 +165,8 @@
 			return;
 		}
 
-		// Run the correct command based on the presence of the class "collapse".
-		this[this.$target.hasClass("collapse") ? "show" : "hide"]();
+		// Run the correct command based on the presence of the class "is-collapsed".
+		this[this.$target.hasClass("is-collapsed") ? "show" : "hide"]();
 	};
 
 	Dropdown.prototype.transition = function (method, startEvent, completeEvent) {
@@ -179,7 +179,7 @@
 				var eventToTrigger = $.Event(completeEvent);
 
 				// Ensure the height/width is set to auto.
-				self.$target.removeClass("trans")[self.options.dimension]("");
+				self.$target.removeClass("-has-transition")[self.options.dimension]("");
 
 				// Set the correct aria attributes.
 				self.$target.attr({
@@ -198,7 +198,7 @@
 				}
 
 				// Toggle any children.
-				self.$target.find("[tabindex]:not(.collapse)").attr({
+				self.$target.find("[tabindex]:not(.is-collapsed)").attr({
 					"aria-hidden": !doShow,
 					"hidden": !doShow,
 					"tabindex": doShow ? 0 : -1
@@ -216,8 +216,8 @@
 		}
 
 		// Remove or add the expand classes.
-		this.$target[method]("collapse");
-		this.$target[startEvent.type === "show" ? "addClass" : "removeClass"]("trans expand");
+		this.$target[method]("is-collapsed");
+		this.$target[startEvent.type === "show" ? "addClass" : "removeClass"]("-has-transition is-expanded");
 
 		this.$target.onTransitionEnd(complete);
 	};

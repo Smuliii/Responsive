@@ -41,8 +41,8 @@
 			this.$target.attr({ "role": "alert" });
 		}
 
-		if (!this.$element.find(".visuallyhidden").length) {
-			$("<span/>").addClass("visuallyhidden")
+		if (!this.$element.find(".u-visuallyhidden").length) {
+			$("<span/>").addClass("u-visuallyhidden")
 						.html(this.options.closeHint)
 						.appendTo(this.$element);
 		}
@@ -58,7 +58,7 @@
 			self = this,
 			complete = function () {
 				self.dismissing = false;
-				$target.removeClass("fade-out").attr({ "aria-hidden": true, "hidden": true, "tabindex": -1 });
+				$target.removeClass("u-fade-out").attr({ "aria-hidden": true, "hidden": true, "tabindex": -1 });
 				self.$element.trigger($.Event(edismissed));
 			};
 
@@ -70,9 +70,9 @@
 
 		this.dismissing = true;
 
-		$target.addClass("fade-in fade-out")
+		$target.addClass("u-fade-in u-fade-out")
 			   .redraw()
-			   .removeClass("fade-in");
+			   .removeClass("u-fade-in");
 
 		// Do our callback
 		this.$target.onTransitionEnd(complete);

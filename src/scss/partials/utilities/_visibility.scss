@@ -1,5 +1,7 @@
+// Image Replacement
 .u-ir { @include ir; }
 
+// Hide only visually, but have it available for screen readers: h5bp.com/v
 .u-visuallyhidden { @include visuallyhidden; }
 
 // Hide from both screen readers and browsers: h5bp.com/u
@@ -14,7 +16,6 @@
 
 // Fade opacity with animation
 .u-fade-out { opacity: 0 !important; }
-
 .u-fade-in { opacity: 1 !important; }
 
 // Responsive helpers to toggle visibility.

@@ -245,7 +245,7 @@ select.inline-block { width: auto; }
 	margin-bottom: 0;
 }
 
-.input-group-addon {
+.input-group__addon {
 	vertical-align: middle;
 	white-space: nowrap;
 	width: 1%;
@@ -255,7 +255,7 @@ select.inline-block { width: auto; }
 }
 
 // Supplementary content for displaying symbols.
-.form-supplement {
+.input-supplement {
 	background: $button-background;
 	border: $button-border;
 	line-height: $form-line-height;

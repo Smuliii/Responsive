@@ -88,7 +88,7 @@
 
 			var complete = function () {
 				self.tabbing = false;
-				$item.siblings().addBack().removeClass("fade-out fade-in");
+				$item.siblings().addBack().removeClass("u-fade-out u-fade-in");
 				self.$element.trigger($.Event(eshown, { relatedTarget: $item[0] }));
 			};
 
@@ -119,12 +119,12 @@
 		$nextTab.children("a").attr({ "aria-selected": true }).focus();
 
 		// Do some class shuffling to allow the transition.
-		$currentPane.addClass("fade-out fade-in");
-		$nextPane.attr({ "tabIndex": 0 }).addClass("fade-out");
-		$childPanes.filter(".fade-in").attr({ "tabIndex": -1 }).removeClass("fade-in");
+		$currentPane.addClass("u-fade-out u-fade-in");
+		$nextPane.attr({ "tabIndex": 0 }).addClass("u-fade-out");
+		$childPanes.filter(".u-fade-in").attr({ "tabIndex": -1 }).removeClass("u-fade-in");
 
 		// Force redraw.
-		$nextPane.redraw().addClass("fade-in");
+		$nextPane.redraw().addClass("u-fade-in");
 
 		// Do the callback
 		callback.call(this, $nextPane);

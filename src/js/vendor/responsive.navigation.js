@@ -60,7 +60,7 @@
 		// Clone and add the nav to the body so it is accessible.
 		this.$clone = this.$element.clone().removeAttr("id data-navigation")
 			.removeClass("canvas-navigation")
-			.addClass("visuallyhidden");
+			.addClass("u-visuallyhidden");
 
 		this.$clone.children("button").first().remove();
 
@@ -72,7 +72,7 @@
 	};
 
 	Navigation.prototype.toggle = function () {
-		this[this.$element.hasClass("open") ? "hide" : "show"]();
+		this[this.$element.hasClass("is-open") ? "hide" : "show"]();
 	};
 
 	Navigation.prototype.show = function () {
@@ -108,7 +108,7 @@
 		$.toggleBodyLock();
 
 		// Do our callback
-		this.$element.addClass("open visible").onTransitionEnd(complete);
+		this.$element.addClass("is-open is-visible").onTransitionEnd(complete);
 	};
 
 	Navigation.prototype.hide = function (noLock) {
@@ -129,7 +129,7 @@
 		}
 
 		var complete = function () {
-			this.$element.removeClass("visible");
+			this.$element.removeClass("is-visible");
 			this.$button.attr({
 				"aria-expanded": false
 			});
@@ -148,7 +148,7 @@
 		}
 
 		// Do our callback
-		this.$element.removeClass("open")
+		this.$element.removeClass("is-open")
 			.onTransitionEnd(complete)
 			.ensureTransitionEnd();
 	};
@@ -159,7 +159,7 @@
 
 	Navigation.prototype.keydown = function (event) {
 
-		if (event.which === keys.ESCAPE && this.$element.hasClass("open")) {
+		if (event.which === keys.ESCAPE && this.$element.hasClass("is-open")) {
 			this.hide();
 		}
 	};
@@ -167,7 +167,7 @@
 	Navigation.prototype.focus = function (event) {
 
 		// Ensure that focus is maintained within the menu.
-		if (this.$element.hasClass("open")) {
+		if (this.$element.hasClass("is-open")) {
 
 			if (!event.shiftKey && event.target !== this.$element[0] && !$.contains(this.$element[0], event.target)) {
 				this.$button.focus();

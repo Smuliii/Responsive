@@ -13,7 +13,7 @@
 <body>
 	<article class="container">
 		<div>
-			<p class="clearfix"><a class="push" href="../../index.html">Back to Index</a></p>
+			<p class="u-clearfix"><a class="u-push" href="../../index.html">Back to Index</a></p>
 		</div>
 		<h1>Dropdown</h1>
 		<hr />
@@ -27,12 +27,12 @@
 					<h3>Un-Grouped</h3>
 
 					<div class="accordion">
-						<div class="accordion-head">
+						<div class="accordion__head">
 							<a data-dropdown-target="#cllps1" href="#">
 								Accordion group item 1
 							</a>
 						</div>
-						<div class="accordion-body" id="cllps1">
+						<div class="accordion__body" id="cllps1">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -44,12 +44,12 @@
 						</div>
 					</div>
 					<div class="accordion">
-						<div class="accordion-head">
+						<div class="accordion__head">
 							<a data-dropdown-target="#cllps2" href="#">
 								Accordion group item 2
 							</a>
 						</div>
-						<div class="accordion-body collapse" id="cllps2">
+						<div class="accordion__body is-collapsed" id="cllps2">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -61,12 +61,12 @@
 						</div>
 					</div>
 					<div class="accordion">
-						<div class="accordion-head">
+						<div class="accordion__head">
 							<a data-dropdown-target="#cllps3" href="#">
 								Accordion group item 3
 							</a>
 						</div>
-						<div class="accordion-body collapse" id="cllps3">
+						<div class="accordion__body is-collapsed" id="cllps3">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -85,12 +85,12 @@
 					</p>
 					<div class="accordion-group">
 						<div class="accordion">
-							<div class="accordion-head">
+							<div class="accordion__head">
 								<a data-dropdown-target="#cllps4" data-dropdown-parent=".accordion-group" href="#">
 									Accordion group item 1
 								</a>
 							</div>
-							<div class="accordion-body dropdown-group" id="cllps4">
+							<div class="accordion__body dropdown-group" id="cllps4">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -100,12 +100,12 @@
 									deserunt mollit anim id est laborum.
 								</p>
 								<div class="accordion">
-									<div class="accordion-head">
+									<div class="accordion__head">
 										<a data-dropdown-target="#cllps5" href="#">
 											Accordion group item 1
 										</a>
 									</div>
-									<div class="accordion-body dropdown-group" id="cllps5">
+									<div class="accordion__body dropdown-group" id="cllps5">
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 											incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -119,12 +119,12 @@
 							</div>
 						</div>
 						<div class="accordion">
-							<div class="accordion-head">
+							<div class="accordion__head">
 								<a data-dropdown-target="#cllps6" data-dropdown-parent=".accordion-group" href="#">
 									Accordion group item 2
 								</a>
 							</div>
-							<div class="accordion-body dropdown-group collapse" id="cllps6">
+							<div class="accordion__body dropdown-group is-collapsed" id="cllps6">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -136,12 +136,12 @@
 							</div>
 						</div>
 						<div class="accordion">
-							<div class="accordion-head">
+							<div class="accordion__head">
 								<a data-dropdown-target="#cllps7" data-dropdown-parent=".accordion-group" href="#">
 									Accordion group item 3
 								</a>
 							</div>
-							<div class="accordion-body dropdown-group collapse" id="cllps7">
+							<div class="accordion__body dropdown-group is-collapsed" id="cllps7">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -162,7 +162,7 @@
 				<div class="col-s-6">
 					<h3>Below</h3>
 					<button data-dropdown-target="#Div1">Click me to toggle</button>
-					<div class="collapse" id="Div1">
+					<div class="dropdown is-collapsed" id="Div1">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -175,7 +175,7 @@
 				</div>
 				<div class="col-s-6">
 					<h3>Above</h3>
-					<div class="collapse" id="Div2">
+					<div class="dropdown is-collapsed" id="Div2">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -197,7 +197,7 @@
 			<div class="row">
 				<div class="col-s-6">
 					<button data-dropdown-target="#Div3" data-dropdown-dimension="width">Click me to toggle</button>
-					<div id="Div3" class="collapse width">
+					<div id="Div3" class="dropdown is-collapsed -type-horizontal">
 						<div class="dropdown-filler">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

@@ -13,11 +13,11 @@
 	color: $navigation-color;
 	transition: .3s linear width;
 
-	&.open {
+	&.is-open {
 		width: $navigation-width;
 	}
 
-	&.visible {
+	&.is-visible {
 		visibility: visible;
 	}
 
@@ -35,7 +35,7 @@
 	}
 	// Rtl + pull support.
 	[dir='rtl'] &,
-	&.pull {
+	&.u-pull {
 		float: none;
 		right: auto;
 		left: 0;
@@ -48,7 +48,7 @@
 	}
 	// Ensure Rtl switches side with pull
 	[dir='rtl'] & {
-		&.pull {
+		&.u-pull {
 			left: auto;
 			right: 0;
 

@@ -70,7 +70,7 @@
 			});
 		});
 
-		this.$element.redraw().addClass("fade-in");
+		this.$element.redraw().addClass("u-fade-in");
 
 		// Do our callback
 		this.$element.onTransitionEnd(complete);

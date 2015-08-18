@@ -11,13 +11,13 @@
 
 	var $window = $(w),
 		$body = $("body"),
-		$overlay = $("<div/>").attr({ "role": "document" }).addClass("modal-overlay modal-loader fade-out"),
-		$modal = $("<div/>").addClass("modal fade-out").appendTo($overlay),
-		$header = $("<div/>").addClass("modal-header fade-out"),
-		$footer = $("<div/>").addClass("modal-footer fade-out"),
-		$close = $("<button/>").attr({ "type": "button" }).addClass("modal-close fade-out"),
-		$prev = $("<button/>").attr({ "type": "button" }).addClass("modal-direction prev fade-out"),
-		$next = $("<button/>").attr({ "type": "button" }).addClass("modal-direction next fade-out"),
+		$overlay = $("<div/>").attr({ "role": "document" }).addClass("modal-overlay modal-loader u-fade-out"),
+		$modal = $("<div/>").addClass("modal u-fade-out").appendTo($overlay),
+		$header = $("<div/>").addClass("modal-header u-fade-out"),
+		$footer = $("<div/>").addClass("modal-footer u-fade-out"),
+		$close = $("<button/>").attr({ "type": "button" }).addClass("modal-close u-fade-out"),
+		$prev = $("<button/>").attr({ "type": "button" }).addClass("modal-direction prev u-fade-out"),
+		$next = $("<button/>").attr({ "type": "button" }).addClass("modal-direction next u-fade-out"),
 		$placeholder = $("<div/>").addClass("modal-placeholder"),
 		// Events
 		eready = "ready" + ns + da,
@@ -175,7 +175,7 @@
 		}
 
 		// Fade out.
-		if ($overlay.hasClass("fade-in")) {
+		if ($overlay.hasClass("u-fade-in")) {
 
 			var complete = function () {
 				$modal.removeData("currentModal").removeAttr("tabindex");
@@ -184,7 +184,7 @@
 				$window.scrollTop(lastScroll);
 			}.bind(this);
 
-			$overlay.removeClass("fade-in").onTransitionEnd(complete);
+			$overlay.removeClass("u-fade-in").onTransitionEnd(complete);
 			return;
 		}
 
@@ -195,7 +195,7 @@
 		}
 		$overlay.removeAttr("hidden")
 			.redraw()
-			.addClass("fade-in")
+			.addClass("u-fade-in")
 			.onTransitionEnd(function () { this.toggleModal(); }.bind(this));
 	};
 
@@ -256,7 +256,7 @@
 		$overlay.removeClass("modal-loader");
 		$.each([$header, $footer, $close, $next, $prev, $modal], function () {
 
-			this.removeClass("fade-in");
+			this.removeClass("u-fade-in");
 		});
 
 		complete = function () {
@@ -316,7 +316,7 @@
 
 			$.each([$header, $footer, $close, $next, $prev, $modal], function () {
 
-				this.addClass("fade-in");
+				this.addClass("u-fade-in");
 			});
 
 			$modal.redraw();
@@ -333,12 +333,12 @@
 			external = isExternalUrl(target),
 			local = !notHash && !external,
 			$group = this.$group,
-			nextText = this.options.next + "<span class=\"visuallyhidden\">" + this.options.nextHint + "</span>",
-			prevText = this.options.previous + "<span class=\"visuallyhidden\">" + this.options.previousHint + "</span>",
+			nextText = this.options.next + "<span class=\"u-visuallyhidden\">" + this.options.nextHint + "</span>",
+			prevText = this.options.previous + "<span class=\"u-visuallyhidden\">" + this.options.previousHint + "</span>",
 			iframeScroll = this.options.iframeScroll,
 			image = this.options.image || rimage.test(target),
 			iframe = this.options.iframe || notHash && external ? !image : false,
-			$iframeWrap = $("<div/>").addClass(iframeScroll ? "media media-scroll" : "media"),
+			$iframeWrap = $("<div/>").addClass(iframeScroll ? "media -scroll-y" : "media"),
 			$content = $("<div/>").addClass("modal-content");
 
 		if ($group) {
@@ -364,7 +364,7 @@
 			}
 
 			if (!modal) {
-				$close.html("x <span class=\"visuallyhidden\">" + this.options.closeHint + "</span>").appendTo($overlay);
+				$close.html("x <span class=\"u-visuallyhidden\">" + this.options.closeHint + "</span>").appendTo($overlay);
 			}
 		}
 
@@ -382,7 +382,7 @@
 			this.isLocalHidden = $target.is(":hidden");
 			$modal.addClass(this.options.fitViewport ? "container" : "");
 			$placeholder.detach().insertAfter($target);
-			$target.detach().appendTo($content).removeClass("hidden").attr({ "aria-hidden": false, "hidden": false });
+			$target.detach().appendTo($content).removeClass("u-hidden").attr({ "aria-hidden": false, "hidden": false });
 			$content.appendTo($modal);
 			// Fade in.
 			complete();
@@ -483,7 +483,7 @@
 		if (!this.options.external && !$modal.is(".modal-iframe, .modal-ajax, .modal-image")) {
 
 			// Put that kid back where it came from or so help me.
-			$(this.options.target).addClass(this.isLocalHidden ? "hidden" : "")
+			$(this.options.target).addClass(this.isLocalHidden ? "u-hidden" : "")
 								  .attr({ "aria-hidden": this.isLocalHidden ? true : false, "hidden": this.isLocalHidden ? true : false })
 								  .detach().insertAfter($placeholder);
 

@@ -6,7 +6,7 @@
 	-webkit-perspective: 1000; // 1
 	position: relative;
 
-	&.no-transition > figure { transition-duration: 0s !important; }
+	&.-no-transition > figure { transition-duration: 0s !important; }
 
 	// Default slide version
 	> figure {

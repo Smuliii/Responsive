@@ -2,42 +2,47 @@
 .accordion {
 	border: solid 1px $accordion-border-color;
 	margin-bottom: 0.125em;
-}
 
-.accordion-head {
-	display: block;
-
-	a {
+	&__head {
 		display: block;
-		padding: 0.5em;
+
+		a {
+			display: block;
+			padding: 0.5em;
+		}
 	}
-}
 
-.accordion-body {
-	border-top: solid 1px $accordion-border-color;
-	padding: 0 0.5em;
-}
+	&__body {
+		border-top: solid 1px $accordion-border-color;
+		padding: 0 0.5em;
+	}
 
-// Animation styles
-.trans,
-.collapse { transition: height 0.5s ease, width 0.5s ease; }
+	// Animation styles
+	@at-root {
+		&__body,
+		.dropdown {
+			&.-has-transition,
+			&.is-collapsed { transition: height 0.5s ease, width 0.5s ease; }
 
-.expand,
-.collapse {
-	display: block;
-	height: auto;
-	margin-top: 0;
-	overflow: hidden;
-	position: relative;
-	width: auto;
-}
+			&.is-expanded,
+			&.is-collapsed {
+				display: block;
+				height: auto;
+				margin-top: 0;
+				overflow: hidden;
+				position: relative;
+				width: auto;
+			}
 
-.collapse {
-	height: 0;
+			&.is-collapsed {
+				height: 0;
 
-	// Width variant
-	&.width {
-		height: auto;
-		width: 0;
+				// Width variant
+				&.-type-horizontal {
+					height: auto;
+					width: 0;
+				}
+			}
+		}
 	}
 }

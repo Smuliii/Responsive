@@ -3311,19 +3311,19 @@ select.inline-block {
 }
 
 /* line 248, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-.input-group-addon {
+.input-group__addon {
   vertical-align: middle;
   white-space: nowrap;
   width: 1%;
 }
 
 /* line 254, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-.input-group-addon > * {
+.input-group__addon > * {
   margin-bottom: 0 !important;
 }
 
 /* line 258, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-.form-supplement {
+.input-supplement {
   background: #dadada;
   border: solid 1px #c0c0c0;
   line-height: 1.4;
@@ -3331,22 +3331,22 @@ select.inline-block {
 }
 
 /* line 264, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-html:not([dir=rtl]) .form-supplement:first-child {
+html:not([dir=rtl]) .input-supplement:first-child {
   border-right: 0;
 }
 
 /* line 266, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-html:not([dir=rtl]) .form-supplement:last-child {
+html:not([dir=rtl]) .input-supplement:last-child {
   border-left: 0;
 }
 
 /* line 268, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-[dir=rtl] .form-supplement:first-child {
+[dir=rtl] .input-supplement:first-child {
   border-left: 0;
 }
 
 /* line 270, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_forms.scss */
-[dir=rtl] .form-supplement:last-child {
+[dir=rtl] .input-supplement:last-child {
   border-right: 0;
 }
 
@@ -3371,18 +3371,33 @@ ol ol {
 }
 
 /* line 18, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-.list-colored {
-  padding-left: 2.5em;
+.list-no-bullets {
+  padding-left: 0;
+}
+
+/* line 28, C:/Users/Samuli/git/Responsive/src/scss/mixins/_components.scss */
+[dir='rtl'] .list-no-bullets {
+  padding-right: 0;
+}
+
+/* line 30, C:/Users/Samuli/git/Responsive/src/scss/mixins/_components.scss */
+.list-no-bullets > li {
+  list-style: none;
 }
 
 /* line 21, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-.list-colored > li {
+.list-colored-bullets {
+  padding-left: 2.5em;
+}
+
+/* line 24, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+.list-colored-bullets > li {
   list-style-type: none;
   position: relative;
 }
 
-/* line 28, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-.list-colored > li:before {
+/* line 31, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+.list-colored-bullets > li:before {
   color: #00a9ec;
   content: '\25cf';
   font-size: 0.8em;
@@ -3394,25 +3409,25 @@ ol ol {
   top: 0.125em;
 }
 
-/* line 39, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-[dir='rtl'] .list-colored > li:before {
+/* line 42, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+[dir='rtl'] .list-colored-bullets > li:before {
   left: auto;
   right: -1.25em;
   text-align: left;
 }
 
-/* line 49, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-ol.list-colored {
+/* line 52, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+ol.list-colored-bullets {
   counter-reset: foo;
 }
 
-/* line 52, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-ol.list-colored > li {
+/* line 55, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+ol.list-colored-bullets > li {
   counter-increment: foo;
 }
 
-/* line 58, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-ol.list-colored > li:before {
+/* line 61, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+ol.list-colored-bullets > li:before {
   content: counter(foo) ".";
   font-size: 1em;
   left: -3.125em;
@@ -3421,19 +3436,19 @@ ol.list-colored > li:before {
   width: 2.5em;
 }
 
-/* line 66, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
-[dir='rtl'] ol.list-colored > li:before {
+/* line 69, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+[dir='rtl'] ol.list-colored-bullets > li:before {
   right: -3.125em;
 }
 
-/* line 74, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+/* line 77, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
 dt,
 dd {
   min-height: 1.4em;
 }
 
 @media print and (min-width: 537px), screen and (min-width: 48em) {
-  /* line 79, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+  /* line 82, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   .dl-horizontal > dt {
     clear: left;
     float: left;
@@ -3443,17 +3458,17 @@ dd {
     white-space: nowrap;
     width: 9.375em;
   }
-  /* line 88, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+  /* line 91, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   [dir='rtl'] .dl-horizontal > dt {
     clear: right;
     float: right;
     text-align: left;
   }
-  /* line 95, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+  /* line 98, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   .dl-horizontal > dd {
     margin-left: 10.375em;
   }
-  /* line 98, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
+  /* line 101, C:/Users/Samuli/git/Responsive/src/scss/partials/components/_lists.scss */
   [dir='rtl'] .dl-horizontal > dd {
     margin-left: auto;
     margin-right: 10.375em;
@@ -3639,7 +3654,7 @@ table td {
 }
 
 /* line 9, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_carousel.scss */
-.carousel.no-transition > figure {
+.carousel.-no-transition > figure {
   -webkit-transition-duration: 0s !important;
           transition-duration: 0s !important;
 }
@@ -3895,33 +3910,37 @@ table td {
   margin-bottom: 0.125em;
 }
 
-/* line 7, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.accordion-head {
+/* line 6, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__head {
   display: block;
 }
 
-/* line 10, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.accordion-head a {
+/* line 9, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__head a {
   display: block;
   padding: 0.5em;
 }
 
-/* line 16, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.accordion-body {
+/* line 15, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__body {
   border-top: solid 1px #c0c0c0;
   padding: 0 0.5em;
 }
 
-/* line 23, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.trans,
-.collapse {
+/* line 25, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__body.-has-transition,
+.accordion__body.is-collapsed,
+.dropdown.-has-transition,
+.dropdown.is-collapsed {
   -webkit-transition: height 0.5s ease, width 0.5s ease;
           transition: height 0.5s ease, width 0.5s ease;
 }
 
-/* line 26, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.expand,
-.collapse {
+/* line 28, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__body.is-expanded,
+.accordion__body.is-collapsed,
+.dropdown.is-expanded,
+.dropdown.is-collapsed {
   display: block;
   height: auto;
   margin-top: 0;
@@ -3930,13 +3949,15 @@ table td {
   width: auto;
 }
 
-/* line 35, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.collapse {
+/* line 37, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__body.is-collapsed,
+.dropdown.is-collapsed {
   height: 0;
 }
 
-/* line 39, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
-.collapse.width {
+/* line 41, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_dropdown.scss */
+.accordion__body.is-collapsed.-type-horizontal,
+.dropdown.is-collapsed.-type-horizontal {
   height: auto;
   width: 0;
 }
@@ -3961,14 +3982,14 @@ table td {
 }
 
 /* line 16, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
-[data-navigation].open,
-.navigation.open {
+[data-navigation].is-open,
+.navigation.is-open {
   width: 260px;
 }
 
 /* line 20, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
-[data-navigation].visible,
-.navigation.visible {
+[data-navigation].is-visible,
+.navigation.is-visible {
   visibility: visible;
 }
 
@@ -3990,9 +4011,9 @@ table td {
 
 /* line 38, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
 [dir='rtl'] [data-navigation],
-[data-navigation].pull,
+[data-navigation].u-pull,
 [dir='rtl'] .navigation,
-.navigation.pull {
+.navigation.u-pull {
   float: none;
   right: auto;
   left: 0;
@@ -4000,9 +4021,9 @@ table td {
 
 /* line 43, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
 [dir='rtl'] [data-navigation] > button:first-child,
-[data-navigation].pull > button:first-child,
+[data-navigation].u-pull > button:first-child,
 [dir='rtl'] .navigation > button:first-child,
-.navigation.pull > button:first-child {
+.navigation.u-pull > button:first-child {
   left: auto;
   right: 1px;
   -webkit-transform: translate3d(100%, 0, 0);
@@ -4010,15 +4031,15 @@ table td {
 }
 
 /* line 51, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
-[dir='rtl'] [data-navigation].pull,
-[dir='rtl'] .navigation.pull {
+[dir='rtl'] [data-navigation].u-pull,
+[dir='rtl'] .navigation.u-pull {
   left: auto;
   right: 0;
 }
 
 /* line 55, C:/Users/Samuli/git/Responsive/src/scss/partials/vendor/_navigation.scss */
-[dir='rtl'] [data-navigation].pull > button:first-child,
-[dir='rtl'] .navigation.pull > button:first-child {
+[dir='rtl'] [data-navigation].u-pull > button:first-child,
+[dir='rtl'] .navigation.u-pull > button:first-child {
   right: auto;
   left: 1px;
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -5081,7 +5102,7 @@ button.modal-direction:hover {
       touch-action: none;
 }
 
-/* line 1, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 2, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-ir {
   background-color: transparent;
   border: 0;
@@ -5096,7 +5117,7 @@ button.modal-direction:hover {
   width: 0;
 }
 
-/* line 3, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 5, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -5108,7 +5129,7 @@ button.modal-direction:hover {
   width: 1px;
 }
 
-/* line 35, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+/* line 34, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
 .u-visuallyhidden.-type-focusable:active,
 .u-visuallyhidden.-type-focusable:focus {
   clip: auto;
@@ -5119,34 +5140,34 @@ button.modal-direction:hover {
   width: auto;
 }
 
-/* line 6, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 8, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-hidden {
   display: none !important;
 }
 
-/* line 9, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 11, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-invisible {
   visibility: hidden;
 }
 
-/* line 13, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 15, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-fade-out,
 .u-fade-in {
   -webkit-transition: opacity 0.3s;
           transition: opacity 0.3s;
 }
 
-/* line 16, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 18, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-fade-out {
   opacity: 0 !important;
 }
 
-/* line 18, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 19, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-fade-in {
   opacity: 1 !important;
 }
 
-/* line 25, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
+/* line 26, C:/Users/Samuli/git/Responsive/src/scss/partials/utilities/_visibility.scss */
 .u-visible-xxs,
 .u-visible-xs,
 .u-visible-s,
@@ -5156,240 +5177,240 @@ button.modal-direction:hover {
 }
 
 @media (max-width: 37.49em) {
-  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 49, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-hidden-xxs {
     display: none !important;
   }
-  /* line 51, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xxs {
     display: block !important;
   }
-  /* line 53, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 52, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xxs.u-inline {
     display: inline !important;
   }
-  /* line 55, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 54, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xxs.u-inline-block {
     display: inline-block !important;
   }
-  /* line 57, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 56, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   table.u-visible-xxs {
     display: table;
   }
-  /* line 59, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 58, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   thead.u-visible-xxs {
     display: table-header-group !important;
   }
-  /* line 61, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 60, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tfoot.u-visible-xxs {
     display: table-footer-group !important;
   }
-  /* line 63, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 62, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tr.u-visible-xxs {
     display: table-row !important;
   }
-  /* line 65, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 64, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   th.u-visible-xxs,
   td.u-visible-xxs {
     display: table-cell !important;
   }
-  /* line 67, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 66, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   col.u-visible-xxs {
     display: table-column !important;
   }
-  /* line 69, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 68, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   caption.u-visible-xxs {
     display: table-caption !important;
   }
 }
 
 @media print and (max-width: 536px), screen and (min-width: 37.5em) and (max-width: 47.99em) {
-  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 49, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-hidden-xs {
     display: none !important;
   }
-  /* line 51, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xs {
     display: block !important;
   }
-  /* line 53, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 52, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xs.u-inline {
     display: inline !important;
   }
-  /* line 55, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 54, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-xs.u-inline-block {
     display: inline-block !important;
   }
-  /* line 57, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 56, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   table.u-visible-xs {
     display: table;
   }
-  /* line 59, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 58, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   thead.u-visible-xs {
     display: table-header-group !important;
   }
-  /* line 61, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 60, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tfoot.u-visible-xs {
     display: table-footer-group !important;
   }
-  /* line 63, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 62, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tr.u-visible-xs {
     display: table-row !important;
   }
-  /* line 65, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 64, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   th.u-visible-xs,
   td.u-visible-xs {
     display: table-cell !important;
   }
-  /* line 67, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 66, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   col.u-visible-xs {
     display: table-column !important;
   }
-  /* line 69, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 68, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   caption.u-visible-xs {
     display: table-caption !important;
   }
 }
 
 @media print and (min-width: 537px) and (max-width: 61.99em), screen and (min-width: 48em) and (max-width: 61.99em) {
-  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 49, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-hidden-s {
     display: none !important;
   }
-  /* line 51, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-s {
     display: block !important;
   }
-  /* line 53, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 52, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-s.u-inline {
     display: inline !important;
   }
-  /* line 55, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 54, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-s.u-inline-block {
     display: inline-block !important;
   }
-  /* line 57, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 56, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   table.u-visible-s {
     display: table;
   }
-  /* line 59, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 58, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   thead.u-visible-s {
     display: table-header-group !important;
   }
-  /* line 61, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 60, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tfoot.u-visible-s {
     display: table-footer-group !important;
   }
-  /* line 63, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 62, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tr.u-visible-s {
     display: table-row !important;
   }
-  /* line 65, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 64, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   th.u-visible-s,
   td.u-visible-s {
     display: table-cell !important;
   }
-  /* line 67, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 66, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   col.u-visible-s {
     display: table-column !important;
   }
-  /* line 69, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 68, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   caption.u-visible-s {
     display: table-caption !important;
   }
 }
 
 @media (min-width: 62em) and (max-width: 74.99em) {
-  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 49, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-hidden-m {
     display: none !important;
   }
-  /* line 51, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-m {
     display: block !important;
   }
-  /* line 53, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 52, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-m.u-inline {
     display: inline !important;
   }
-  /* line 55, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 54, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-m.u-inline-block {
     display: inline-block !important;
   }
-  /* line 57, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 56, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   table.u-visible-m {
     display: table;
   }
-  /* line 59, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 58, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   thead.u-visible-m {
     display: table-header-group !important;
   }
-  /* line 61, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 60, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tfoot.u-visible-m {
     display: table-footer-group !important;
   }
-  /* line 63, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 62, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tr.u-visible-m {
     display: table-row !important;
   }
-  /* line 65, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 64, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   th.u-visible-m,
   td.u-visible-m {
     display: table-cell !important;
   }
-  /* line 67, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 66, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   col.u-visible-m {
     display: table-column !important;
   }
-  /* line 69, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 68, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   caption.u-visible-m {
     display: table-caption !important;
   }
 }
 
 @media (min-width: 75em) {
-  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 49, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-hidden-l {
     display: none !important;
   }
-  /* line 51, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 50, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-l {
     display: block !important;
   }
-  /* line 53, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 52, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-l.u-inline {
     display: inline !important;
   }
-  /* line 55, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 54, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   .u-visible-l.u-inline-block {
     display: inline-block !important;
   }
-  /* line 57, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 56, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   table.u-visible-l {
     display: table;
   }
-  /* line 59, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 58, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   thead.u-visible-l {
     display: table-header-group !important;
   }
-  /* line 61, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 60, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tfoot.u-visible-l {
     display: table-footer-group !important;
   }
-  /* line 63, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 62, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   tr.u-visible-l {
     display: table-row !important;
   }
-  /* line 65, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 64, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   th.u-visible-l,
   td.u-visible-l {
     display: table-cell !important;
   }
-  /* line 67, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 66, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   col.u-visible-l {
     display: table-column !important;
   }
-  /* line 69, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
+  /* line 68, C:/Users/Samuli/git/Responsive/src/scss/mixins/_visibility.scss */
   caption.u-visible-l {
     display: table-caption !important;
   }

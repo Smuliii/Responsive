@@ -14,8 +14,11 @@ ol {
 ul ul,
 ol ol { margin: 0; }
 
+// No bullets on first level
+.list-no-bullets { @include list-no-bullets; }
+
 // Coloured lists.
-.list-colored {
+.list-colored-bullets {
 	padding-left: 2.5em;
 
 	> li {
@@ -46,7 +49,7 @@ ol ol { margin: 0; }
 }
 
 // Counter increment to replace standard numbers.
-ol.list-colored {
+ol.list-colored-bullets {
 	counter-reset: foo;
 
 	> li {
